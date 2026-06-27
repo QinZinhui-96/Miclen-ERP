@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_miclen_product_category">
+            <field name="name">产品大类编码类别</field>
+            <field name="res_model">miclen.product.category</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_miclen_category_details">
+            <field name="name">产品中类编码类别</field>
+            <field name="res_model">miclen.category.details</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_miclen_category_subcategory">
+            <field name="name">产品小类编码类别</field>
+            <field name="res_model">miclen.category.subcategory</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_miclen_mrp_workcenter">
+            <field name="name">工序配置</field>
+            <field name="res_model">miclen.mrp.workcenter</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="praetorx_base.AppStore">
+        <div class="praetorx-appstore o_action">
+            <div class="o_content">
+
+                <!-- Loading -->
+                <div t-if="state.loading" class="d-flex align-items-center justify-content-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Laden...</span>
+                    </div>
+                </div>
+
+                <!-- Error -->
+                <div t-elif="state.error" class="alert alert-danger m-3" role="alert">
+                    <i class="fa fa-exclamation-triangle me-2"/>
+                    <t t-esc="state.error"/>
+                    <button class="btn btn-sm btn-outline-danger ms-3" t-on-click="loadModules">
+                        Erneut versuchen
+                    </button>
+                </div>
+
+                <!-- Main content -->
+                <t t-else="">
+                    <!-- Header -->
+                    <div class="praetorx-appstore-header">
+                        <div class="d-flex align-items-center gap-3 p-3">
+                            <h4 class="mb-0">PraetorX Module-Verwaltung</h4>
+                            <div class="ms-auto">
+                                <button class="btn btn-sm btn-light" t-on-click="loadModules"
+                                        title="Aktualisieren">
+                                    <i class="fa fa-refresh"/>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tabs -->
+                        <div class="d-flex gap-1 px-3 pb-2">
+                            <t t-foreach="tabs" t-as="tab" t-key="tab.key">
+                                <button t-att-class="'btn btn-sm ' + (state.activeTab === tab.key ? 'btn-primary' : 'btn-outline-secondary')"
+                                        t-on-click="() => this.onTabSwitch(tab.key)">
+                                    <t t-esc="tab.label"/>
+                                    <span class="badge bg-light text-dark ms-1"
+                                          t-esc="moduleCount[tab.key]"/>
+                                </button>
+                            </t>
+                        </div>
+                    </div>
+
+                    <!-- Module grid -->
+                    <div class="praetorx-appstore-body p-3">
+                        <div t-if="filteredModules.length === 0" class="text-center text-muted py-5">
+                            <i class="fa fa-puzzle-piece fa-3x mb-3 d-block"/>
+                            <p>Keine Module in dieser Kategorie</p>
+                        </div>
+
+                        <div t-else="" class="praetorx-appstore-grid">
+                            <t t-foreach="filteredModules" t-as="mod" t-key="mod.id">
+                                <div class="praetorx-appstore-card">
+                                    <!-- Card header: icon + info -->
+                                    <div class="d-flex gap-3">
+                                        <img t-att-src="mod.icon"
+                                             class="praetorx-appstore-icon"
+                                             alt=""
+                                             loading="lazy"/>
+                                        <div class="flex-grow-1 overflow-hidden">
+                                            <div class="d-flex align-items-center gap-2 mb-1">
+                                                <strong class="text-truncate" t-esc="mod.shortdesc"/>
+                                                <span t-att-class="getStateBadgeClass(mod)"
+                                                      t-esc="getStateBadgeLabel(mod)"/>
+                                            </div>
+                                            <p class="praetorx-appstore-summary mb-1"
+                                               t-esc="mod.summary"/>
+                                            <small class="text-muted" t-if="mod.version">
+                                                v<t t-esc="mod.version"/>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <!-- Actions -->
+                                    <div class="praetorx-appstore-actions mt-2 pt-2">
+                                        <a class="btn btn-sm btn-outline-primary"
+                                           t-att-href="mod.app_store_url"
+                                           target="_blank"
+                                           rel="noopener noreferrer">
+                                            <i class="fa fa-external-link me-1"/>
+                                            App Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+
+</templates>

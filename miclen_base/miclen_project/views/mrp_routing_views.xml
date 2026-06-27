@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <record id="miclen_inherit_mrp_routing_workcenter_bom_tree_view" model="ir.ui.view">-->
+<!--        <field name="name">miclen.mrp.routing.workcenter.bom.list</field>-->
+<!--        <field name="model">mrp.routing.workcenter</field>-->
+<!--        <field name="inherit_id" ref="mrp.mrp_routing_workcenter_bom_tree_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//field[@name='name']" position="before">-->
+<!--                <field name="miclen_work_id"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+</odoo>

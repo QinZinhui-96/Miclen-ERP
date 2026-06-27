@@ -1,0 +1,364 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* praetorx_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-12 16:10+0000\n"
+"PO-Revision-Date: 2025-12-12 16:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_form
+msgid "Are you sure you want to cancel this job?"
+msgstr "Möchten Sie diesen Auftrag wirklich abbrechen?"
+
+#. module: praetorx_base
+#: model:ir.model,name:praetorx_base.model_praetorx_batch_mixin
+msgid "Batch Processing Mixin for Parent-Child Patterns"
+msgstr "Stapelverarbeitungs-Mixin für Eltern-Kind-Muster"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_batch_mixin__can_cancel
+msgid "Can Cancel"
+msgstr "Kann storniert werden"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_batch_mixin__can_post
+msgid "Can Post"
+msgstr "Kann gebucht werden"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_batch_mixin__can_reset
+msgid "Can Reset to Draft"
+msgstr "Kann auf Entwurf zurückgesetzt werden"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_batch_mixin__can_validate
+msgid "Can Validate"
+msgstr "Kann validiert werden"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_form
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_batch_mixin__state__cancelled
+msgid "Cancelled"
+msgstr "Storniert"
+
+#. module: praetorx_base
+#: model:ir.model,name:praetorx_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_res_config_settings__praetorx_report_display_mode
+msgid ""
+"Controls how PDF reports are displayed:\n"
+"- Download: Save file to disk (default Odoo behavior)\n"
+"- Open in Browser: Display PDF in new browser tab"
+msgstr ""
+"Steuert, wie PDF-Berichte angezeigt werden:\n"
+"- Herunterladen: Datei auf Festplatte speichern (Standard-Odoo-Verhalten)\n"
+"- Im Browser öffnen: PDF in neuem Browser-Tab anzeigen"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.res_config_settings_view_form_praetorx
+msgid "Controls how PDF reports are shown when printed"
+msgstr "Steuert, wie PDF-Berichte beim Drucken angezeigt werden"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__create_uid
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Created By"
+msgstr "Erstellt von"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__create_date
+msgid "Created On"
+msgstr "Erstellt am"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Creation Date"
+msgstr "Erstellungsdatum"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_batch_mixin__state
+msgid "Current state of the document in the workflow"
+msgstr "Aktueller Status des Dokuments im Workflow"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__state
+msgid "Current state of the job"
+msgstr "Aktueller Status des Auftrags"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__name
+msgid "Descriptive name for this job"
+msgstr "Beschreibender Name für diesen Auftrag"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_batch_mixin__display_name
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__display_name
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_validation_mixin__display_name
+#: model:ir.model.fields,field_description:praetorx_base.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_queue_job__state__done
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Done"
+msgstr "Erledigt"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__res_config_settings__praetorx_report_display_mode__download
+msgid "Download PDF"
+msgstr "PDF herunterladen"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_batch_mixin__state__draft
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__error_message
+msgid "Error Message"
+msgstr "Fehlermeldung"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__error_message
+msgid "Error details if job failed"
+msgstr "Fehlerdetails, wenn Auftrag fehlgeschlagen ist"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_queue_job__state__failed
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__finished_at
+msgid "Finished At"
+msgstr "Beendet um"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_batch_mixin__id
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__id
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_validation_mixin__id
+#: model:ir.model.fields,field_description:praetorx_base.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__record_ids
+msgid "JSON list of record IDs to process"
+msgstr "JSON-Liste der zu verarbeitenden Datensatz-IDs"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__name
+msgid "Job Name"
+msgstr "Auftragsname"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__method_name
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Method"
+msgstr "Methode"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__model_name
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Model"
+msgstr "Modell"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "My Jobs"
+msgstr "Meine Aufträge"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__method_name
+msgid "Name of the method to call on the records"
+msgstr "Name der Methode, die auf den Datensätzen aufgerufen werden soll"
+
+#. module: praetorx_base
+#. odoo-javascript
+#: code:addons/praetorx_base/static/src/xml/split_view.xml:0
+msgid "No items"
+msgstr "Keine Einträge"
+
+#. module: praetorx_base
+#: model_terms:ir.actions.act_window,help:praetorx_base.action_queue_job
+msgid "No queue jobs yet"
+msgstr "Noch keine Hintergrundaufträge vorhanden"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__res_config_settings__praetorx_report_display_mode__inline
+msgid "Open in Browser Tab"
+msgstr "Im Browser-Tab öffnen"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.res_config_settings_view_form_praetorx
+msgid "PDF Display Mode"
+msgstr "PDF-Anzeigemodus"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_res_config_settings__praetorx_report_display_mode
+msgid "PDF Report Display"
+msgstr "PDF-Berichtsanzeige"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.res_config_settings_view_form_praetorx
+msgid "PDF Reports"
+msgstr "PDF-Berichte"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_queue_job__state__pending
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Pending"
+msgstr "Ausstehend"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_batch_mixin__state__posted
+msgid "Posted"
+msgstr "Gebucht"
+
+#. module: praetorx_base
+#: model:ir.ui.menu,name:praetorx_base.menu_praetorx_base_root
+#: model_terms:ir.ui.view,arch_db:praetorx_base.res_config_settings_view_form_praetorx
+msgid "Praetorx"
+msgstr "Praetorx"
+
+#. module: praetorx_base
+#: model:ir.actions.server,name:praetorx_base.ir_cron_process_queue_jobs_ir_actions_server
+msgid "Praetorx: Process Queue Jobs"
+msgstr "Praetorx: Hintergrundaufträge verarbeiten"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_queue_job__state__processing
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Processing"
+msgstr "In Bearbeitung"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_form
+msgid "Queue Job"
+msgstr "Hintergrundauftrag"
+
+#. module: praetorx_base
+#: model:ir.model,name:praetorx_base.model_praetorx_queue_job
+msgid "Queue Job for Background Processing"
+msgstr "Hintergrundauftrag für asynchrone Verarbeitung"
+
+#. module: praetorx_base
+#: model:ir.actions.act_window,name:praetorx_base.action_queue_job
+#: model:ir.ui.menu,name:praetorx_base.menu_queue_job
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_tree
+msgid "Queue Jobs"
+msgstr "Hintergrundaufträge"
+
+#. module: praetorx_base
+#: model_terms:ir.actions.act_window,help:praetorx_base.action_queue_job
+msgid ""
+"Queue jobs allow you to process records in the background\n"
+"                without blocking the user interface. Jobs are processed\n"
+"                automatically by a cron task."
+msgstr ""
+"Hintergrundaufträge ermöglichen die Verarbeitung von Datensätzen im Hintergrund,\n"
+"ohne die Benutzeroberfläche zu blockieren. Aufträge werden\n"
+"automatisch durch einen Cron-Task verarbeitet."
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__record_ids
+msgid "Record IDs"
+msgstr "Datensatz-IDs"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_form
+msgid "Retry"
+msgstr "Wiederholen"
+
+#. module: praetorx_base
+#. odoo-javascript
+#: code:addons/praetorx_base/static/src/xml/split_view.xml:0
+msgid "Select an item to view details"
+msgstr "Wählen Sie einen Eintrag aus, um Details anzuzeigen"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__started_at
+msgid "Started At"
+msgstr "Gestartet um"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_queue_job__state
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "State"
+msgstr "Status"
+
+#. module: praetorx_base
+#: model:ir.model.fields,field_description:praetorx_base.field_praetorx_batch_mixin__state
+msgid "Status"
+msgstr "Status"
+
+#. module: praetorx_base
+#: model:ir.ui.menu,name:praetorx_base.menu_praetorx_base_technical
+msgid "Technical"
+msgstr "Technisch"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__model_name
+msgid "Technical name of the model (e.g., 'account.move')"
+msgstr "Technischer Name des Modells (z.B. 'account.move')"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "This Week"
+msgstr "Diese Woche"
+
+#. module: praetorx_base
+#: model_terms:ir.ui.view,arch_db:praetorx_base.view_queue_job_search
+msgid "Today"
+msgstr "Heute"
+
+#. module: praetorx_base
+#: model:ir.model.fields.selection,name:praetorx_base.selection__praetorx_batch_mixin__state__validated
+msgid "Validated"
+msgstr "Validiert"
+
+#. module: praetorx_base
+#: model:ir.model,name:praetorx_base.model_praetorx_validation_mixin
+msgid "Validation Mixin with HTML Summary"
+msgstr "Validierungs-Mixin mit HTML-Zusammenfassung"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__finished_at
+msgid "When the job finished (successfully or with error)"
+msgstr "Wann der Auftrag beendet wurde (erfolgreich oder mit Fehler)"
+
+#. module: praetorx_base
+#: model:ir.model.fields,help:praetorx_base.field_praetorx_queue_job__started_at
+msgid "When the job started processing"
+msgstr "Wann die Verarbeitung des Auftrags gestartet wurde"

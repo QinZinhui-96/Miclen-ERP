@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- ========================================== -->
+        <!-- 主表数据（中类） -->
+        <!-- ========================================== -->
+        <record id="data_category_detail_rm_1" model="miclen.category.details">
+            <field name="sequence">1</field>
+            <field name="name">PET</field>
+            <field name="note">PET卷材</field>
+        </record>
+        <record id="data_category_detail_rm_2" model="miclen.category.details">
+            <field name="sequence">2</field>
+            <field name="name">DT</field>
+            <field name="note">双面胶</field>
+        </record>
+        <record id="data_category_detail_rm_3" model="miclen.category.details">
+            <field name="sequence">3</field>
+            <field name="name">LED</field>
+            <field name="note">LED灯</field>
+        </record>
+        <record id="data_category_detail_rm_4" model="miclen.category.details">
+            <field name="sequence">4</field>
+            <field name="name">BOM</field>
+            <field name="note">弹片</field>
+        </record>
+        <record id="data_category_detail_rm_5" model="miclen.category.details">
+            <field name="sequence">4</field>
+            <field name="name">AL</field>
+            <field name="note">原材铝板</field>
+        </record>
+
+
+        <record id="data_category_detail_pt_1" model="miclen.category.details">
+            <field name="sequence">1</field>
+            <field name="name">L1</field>
+            <field name="note">L1 - Graphic Overlay（丝印面板层）</field>
+        </record>
+        <record id="data_category_detail_pt_2" model="miclen.category.details">
+            <field name="sequence">2</field>
+            <field name="name">L2</field>
+            <field name="note">L2 - Overlay Adhesive（面胶层）</field>
+        </record>
+        <record id="data_category_detail_pt_3" model="miclen.category.details">
+            <field name="sequence">3</field>
+            <field name="note">L3 - Dome Retainer（锅仔片固定层）</field>
+            <field name="name">L3</field>
+        </record>
+        <record id="data_category_detail_pt_4" model="miclen.category.details">
+            <field name="sequence">4</field>
+            <field name="note">L4 - Metal Dome Spacer（隔离层/垫片层）</field>
+            <field name="name">L4</field>
+        </record>
+        <record id="data_category_detail_pt_5" model="miclen.category.details">
+            <field name="sequence">5</field>
+            <field name="note">L5 - Switch Circuit（上电路层/开关电路）</field>
+            <field name="name">L5</field>
+        </record>
+        <record id="data_category_detail_pt_6" model="miclen.category.details">
+            <field name="sequence">6</field>
+            <field name="note">L6 - Circuit Spacer（电路隔离层）</field>
+            <field name="name">L6</field>
+        </record>
+        <record id="data_category_detail_pt_7" model="miclen.category.details">
+            <field name="sequence">7</field>
+            <field name="note">L7 - LED Circuit（下电路层/LED走线层）</field>
+            <field name="name">L7</field>
+        </record>
+        <record id="data_category_detail_pt_8" model="miclen.category.details">
+            <field name="sequence">8</field>
+            <field name="note">L8 - Rear Adhesive（背胶层）</field>
+            <field name="name">L8</field>
+        </record>
+
+        <record id="data_category_detail_asm_1" model="miclen.category.details">
+            <field name="sequence">1</field>
+            <field name="note">薄膜开关纯电路压合体</field>
+            <field name="name">MS</field>
+        </record>
+        <record id="data_category_detail_asm_2" model="miclen.category.details">
+            <field name="sequence">2</field>
+            <field name="note">压铆铝衬板组件</field>
+            <field name="name">BP</field>
+        </record>
+
+
+        <record id="data_category_detail_assy_1" model="miclen.category.details">
+            <field name="sequence">1</field>
+            <field name="note">AP318HT面板总成</field>
+            <field name="name">AP318HT</field>
+        </record>
+        <record id="data_category_detail_assy_2" model="miclen.category.details">
+            <field name="sequence">2</field>
+            <field name="note">APCC3面板总成</field>
+            <field name="name">APCC3</field>
+        </record>
+
+
+        <record id="data_category_detail_bo_1" model="miclen.category.details">
+            <field name="sequence">1</field>
+            <field name="note">外购液晶屏(LCD)</field>
+            <field name="name">LCD</field>
+        </record>
+        <record id="data_category_detail_bo_2" model="miclen.category.details">
+            <field name="sequence">2</field>
+            <field name="note">触摸屏(Touch Panel)</field>
+            <field name="name">TP</field>
+        </record>
+        <record id="data_category_detail_bo_3" model="miclen.category.details">
+            <field name="sequence">3</field>
+            <field name="note">标准线束</field>
+            <field name="name">BZ</field>
+        </record>
+
+
+    </data>
+</odoo>

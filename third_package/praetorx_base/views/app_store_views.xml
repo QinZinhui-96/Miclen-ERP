@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Client Action -->
+    <record id="action_praetorx_appstore" model="ir.actions.client">
+        <field name="name">PraetorX Module</field>
+        <field name="tag">praetorx_appstore</field>
+    </record>
+
+    <!-- Menu Item under Apps > Apps (alongside "Main Apps") -->
+    <menuitem id="menu_praetorx_appstore"
+              name="PraetorX Module"
+              parent="base.menu_apps"
+              action="action_praetorx_appstore"
+              sequence="5"
+              groups="base.group_system"/>
+
+</odoo>

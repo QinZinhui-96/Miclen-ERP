@@ -1,0 +1,8 @@
+This module's icon (icon.svg / icon.png) contains path data derived from
+Lucide Icons (https://lucide.dev), licensed under the ISC License.
+
+Original Lucide ISC License: see /LICENSES/ISC-Lucide.txt at repo root.
+
+The Odoo brand purple (#714b67) used as the icon stroke colour is a
+colour value and is not subject to copyright. No Odoo trademark logo
+is used.

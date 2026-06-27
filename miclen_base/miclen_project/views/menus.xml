@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="menu_action_miclen_product_category"
+              name="产品大类编码"
+              parent="stock.menu_product_in_config_stock"
+              sequence="200"
+              action="action_miclen_product_category"/>
+
+    <menuitem id="menu_action_miclen_category_details"
+              name="产品中类编码"
+              parent="stock.menu_product_in_config_stock"
+              sequence="210"
+              action="action_miclen_category_details"/>
+
+    <menuitem id="menu_action_miclen_category_subcategory"
+              name="产品小类编码"
+              parent="stock.menu_product_in_config_stock"
+              sequence="220"
+              action="action_miclen_category_subcategory"/>
+
+    <menuitem id="menu_action_miclen_mrp_workcenter"
+              name="工序配置"
+              parent="mrp.menu_mrp_configuration"
+              sequence="200"
+              action="action_miclen_mrp_workcenter"/>
+
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Split View Template - Master-Detail Pattern -->
+    <t t-name="praetorx_base.SplitView">
+        <div class="praetorx-split-view d-flex h-100 w-100">
+
+            <!-- Master Panel (Left) -->
+            <div class="praetorx-split-master overflow-auto bg-view"
+                 t-att-class="borderClass"
+                 t-att-style="masterStyle">
+                <div class="list-group list-group-flush">
+                    <t t-foreach="props.masterItems || []" t-as="item" t-key="item.id">
+                        <a href="#"
+                           class="list-group-item list-group-item-action"
+                           t-att-class="{'active': isSelected(item)}"
+                           t-on-click.prevent="() => this.onItemClick(item)">
+                            <t t-if="props.slots?.master">
+                                <t t-slot="master" item="item"/>
+                            </t>
+                            <t t-else="">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1" t-esc="item.name || item.display_name"/>
+                                </div>
+                                <small t-if="item.subtitle" t-esc="item.subtitle"/>
+                            </t>
+                        </a>
+                    </t>
+
+                    <!-- Empty state -->
+                    <t t-if="!props.masterItems?.length">
+                        <div class="p-4 text-center text-muted">
+                            <i class="fa fa-inbox fa-3x mb-3 opacity-25" title="Empty"/>
+                            <p class="mb-0">No items</p>
+                        </div>
+                    </t>
+                </div>
+            </div>
+
+            <!-- Detail Panel (Right) -->
+            <div class="praetorx-split-detail overflow-auto p-3"
+                 t-att-style="detailStyle">
+                <t t-if="selectedItem">
+                    <t t-if="props.slots?.detail">
+                        <t t-slot="detail" selected="selectedItem"/>
+                    </t>
+                    <t t-else="">
+                        <h4 t-esc="selectedItem.name || selectedItem.display_name"/>
+                        <hr/>
+                        <div t-if="selectedItem.description" t-esc="selectedItem.description"/>
+                        <pre t-else="" class="text-muted" t-esc="JSON.stringify(selectedItem, null, 2)"/>
+                    </t>
+                </t>
+                <t t-else="">
+                    <div class="d-flex h-100 align-items-center justify-content-center text-muted">
+                        <div class="text-center">
+                            <i class="fa fa-hand-pointer-o fa-4x mb-3 opacity-25" title="Select"/>
+                            <p class="mb-0">Select an item to view details</p>
+                        </div>
+                    </div>
+                </t>
+            </div>
+
+        </div>
+    </t>
+
+</templates>

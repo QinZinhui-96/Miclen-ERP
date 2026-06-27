@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit login_layout to inject animation container.
+         Zero-invasion: no Odoo elements removed or renamed. -->
+    <template id="login_animation_layout" inherit_id="web.login_layout"
+              name="Login Animation Layout">
+
+        <!-- Add sc_login_animated class + data attributes to .container -->
+        <xpath expr="//div[hasclass('container')]" position="attributes">
+            <attribute name="class" add="sc_login_animated" separator=" "/>
+            <attribute name="t-att-data-sc-enabled"
+                       >request.env['ir.config_parameter'].sudo().get_param('sc_login_animation.enabled', 'True')</attribute>
+            <attribute name="t-att-data-sc-theme"
+                       >request.env['ir.config_parameter'].sudo().get_param('sc_login_animation.theme', 'playful')</attribute>
+            <attribute name="t-att-data-sc-primary"
+                       >request.env['ir.config_parameter'].sudo().get_param('sc_login_animation.primary_color', '')</attribute>
+            <attribute name="t-att-data-sc-bg"
+                       >request.env['ir.config_parameter'].sudo().get_param('sc_login_animation.bg_color', '')</attribute>
+        </xpath>
+
+        <!-- Insert character container as first child of .container
+             (before the card, which uses t-attf-class so hasclass('card') won't match) -->
+        <xpath expr="//div[hasclass('container')]" position="inside">
+            <div class="sc_login_characters" id="sc_login_characters"
+                 style="order: -1;">
+                <!-- JS dynamically renders characters based on data-sc-theme -->
+            </div>
+        </xpath>
+
+    </template>
+</odoo>

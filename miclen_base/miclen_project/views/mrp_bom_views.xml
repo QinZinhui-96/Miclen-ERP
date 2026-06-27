@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    物料清单下面的作业page,给作业page的列表list替换了，不让点击添加的时候跳转，直接可以在当前明细行增加  -->
+    <record id="mrp_bom_form_view_inherit_operation_bottom" model="ir.ui.view">
+        <field name="name">mrp.bom.form.inherit.operation.bottom</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='operations']/field[@name='operation_ids']" position="replace">
+                <field name="operation_ids" context="{'default_bom_id': id}">
+                    <list editable="bottom">
+                        <field name="sequence" widget="handle"/>
+                        <field name="miclen_work_id" required="1"/>
+                        <field name="name"/>
+                        <field name="workcenter_id" options="{'no_create': True, 'no_open': True}"/>
+                        <field name="equipment_domain" column_invisible="1"/>
+                        <field name="equipment_ids" domain="equipment_domain" widget="many2many_tags" options="{'no_create': True, 'no_open': True}"/>
+                        <field name="printing_plate"/>
+                        <field name="die_mold"/>
+                        <field name="time_cycle_manual"/>
+                    </list>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

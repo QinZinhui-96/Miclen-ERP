@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- 在作业类型表单中添加负责人字段 -->
+    <record id="view_quality_alert_team_view_form_inherit" model="ir.ui.view">
+        <field name="name">quality.alert.team.view.form</field>
+        <field name="model">quality.alert.team</field>
+        <field name="inherit_id" ref="quality_control.quality_alert_team_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='alias_contact']" position="after">
+                <field name="manager_users" widget="many2many_tags"
+                       options="{'no_create': True, 'no_open': True}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_quality_alert_team_view_tree_inherit" model="ir.ui.view">
+        <field name="name">quality.alert.team.view.list</field>
+        <field name="model">quality.alert.team</field>
+        <field name="inherit_id" ref="quality_control.quality_alert_team_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="manager_users" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

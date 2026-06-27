@@ -1,0 +1,82 @@
+// PraetorX App Store
+
+.praetorx-appstore {
+    background-color: var(--o-view-background-color, #f8f9fa);
+    min-height: 100%;
+
+    .o_content {
+        scrollbar-width: auto;
+    }
+}
+
+.praetorx-appstore-header {
+    border-bottom: 1px solid var(--o-border-color, #dee2e6);
+    background: var(--o-component-bg, #fff);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.praetorx-appstore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.praetorx-appstore-card {
+    background: var(--o-component-bg, #fff);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.15s, transform 0.15s;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        transform: translateY(-1px);
+    }
+}
+
+.praetorx-appstore-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: #f8f9fa;
+}
+
+.praetorx-appstore-summary {
+    font-size: 0.8125rem;
+    color: var(--o-text-muted, #6c757d);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.praetorx-appstore-actions {
+    border-top: 1px solid var(--o-border-color, #eee);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.praetorx-appstore-deps {
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 0.8125rem;
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+    .praetorx-appstore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .praetorx-appstore-header {
+        .d-flex.gap-1 {
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- PraetorX Root Menu -->
+    <menuitem id="menu_praetorx_root"
+              name="PraetorX"
+              sequence="100"
+              groups="group_praetorx_user"
+              web_icon="praetorx_base,static/description/icon.png"/>
+
+    <!-- Configuration Sub-Menu -->
+    <menuitem id="menu_praetorx_configuration"
+              name="Konfiguration"
+              parent="menu_praetorx_root"
+              sequence="100"
+              groups="group_praetorx_manager"/>
+
+</odoo>

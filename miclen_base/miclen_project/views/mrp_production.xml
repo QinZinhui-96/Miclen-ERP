@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--    <record id="mrp_production_form_inherit_miclen" model="ir.ui.view">-->
+<!--        <field name="name">mrp.production.form.inherit.miclen</field>-->
+<!--        <field name="model">mrp.production</field>-->
+<!--        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//page[@name='operations']//field[@name='workorder_ids']" position="attributes">-->
+<!--                <attribute name="context">-->
+<!--                    {-->
+<!--                        'list_view_ref':'miclen_project.miclen_inherit_mrp_workorder_tree_custom',-->
+<!--                        'from_manufacturing_order':True-->
+<!--                    }-->
+<!--                </attribute>-->
+<!--            </xpath>-->
+
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_login_animation" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.sc_login_animation</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <!-- Insert at bottom of General Settings -->
+            <xpath expr="//form" position="inside">
+                <app data-string="Login Animation" string="Login Animation" name="sc_login_animation" groups="base.group_system">
+                    <block title="Login Page Animation">
+                        <setting id="login_animation_setting" string="Enable Login Animation"
+                                 help="Show animated cartoon characters on the login page">
+                            <field name="login_animation_enabled"/>
+                            <div invisible="not login_animation_enabled" class="mt16">
+                                <div class="row mb8">
+                                    <label for="login_animation_theme"
+                                           class="col-3 o_light_label"/>
+                                    <field name="login_animation_theme" class="col-4"/>
+                                </div>
+                                <div class="row mb8">
+                                    <label for="login_animation_primary_color"
+                                           class="col-3 o_light_label"/>
+                                    <field name="login_animation_primary_color"
+                                           widget="color" class="col-4"/>
+                                </div>
+                                <div class="row mb8">
+                                    <label for="login_animation_bg_color"
+                                           class="col-3 o_light_label"/>
+                                    <field name="login_animation_bg_color"
+                                           widget="color" class="col-4"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

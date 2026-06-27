@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- ========================================== -->
+        <!-- 主表数据（小类） -->
+        <!-- ========================================== -->
+        <record id="data_category_subcategory1" model="miclen.category.subcategory">
+            <field name="sequence">1</field>
+            <field name="name">S10</field>
+<!--            <field name="note">S10</field>-->
+        </record>
+        <record id="data_category_subcategory2" model="miclen.category.subcategory">
+            <field name="sequence">2</field>
+            <field name="name">F200</field>
+<!--            <field name="note">F200</field>-->
+        </record>
+        <record id="data_category_subcategory3" model="miclen.category.subcategory">
+            <field name="sequence">3</field>
+            <field name="name">FKK</field>
+<!--            <field name="note">FKK</field>-->
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,419 @@
+<!-- PraetorX Base — App Store Listing v4.1 -->
+<!-- Bootstrap 5 components (loaded by Odoo App Store) -->
+
+<section class="container" style="font-size: 16px;">
+
+    <!-- Hero -->
+    <div class="row mt16 mb16">
+        <div class="col-12 text-center">
+            <h1 style="color: #00896B; font-size: 32px; margin-bottom: 4px;">PraetorX Base</h1>
+            <p style="color: #666; font-size: 18px; margin-bottom: 12px;">Queue Jobs, Batch Processing &amp; Validation Framework for Odoo 19</p>
+            <div class="mb8">
+                <span class="badge" style="background-color: #28a745; color: #fff;">v19.0.1.1.0</span>
+                <span class="badge" style="background-color: #00896B; color: #fff;"><i class="fa fa-check"></i> Community</span>
+                <span class="badge" style="background-color: #00896B; color: #fff;"><i class="fa fa-check"></i> Enterprise</span>
+                <span class="badge" style="background-color: #00896B; color: #fff;"><i class="fa fa-check"></i> Odoo.sh</span>
+                <span class="badge" style="background-color: #006B54; color: #fff;">Developer Library</span>
+                <span class="badge" style="background-color: #28a745; color: #fff;">Free</span>
+            </div>
+            <p style="color: #555; font-size: 15px; max-width: 700px; margin: 8px auto 0; line-height: 1.6;">
+                Reusable technical patterns for building robust Odoo modules. Background job queue with
+                cron processing, a validation mixin with HTML summaries, a state-machine batch processing
+                mixin, and an OWL split-view component &mdash; all ready to inherit in your own models.
+            </p>
+            <p style="margin: 10px 0 0; font-size: 14px;">
+                <a href="https://praetorx.net" target="_blank" style="color: #00896B; text-decoration: none; font-weight: 600;"><i class="fa fa-globe"></i> praetorx.net</a>
+                <span style="color: #ccc; margin: 0 8px;">|</span>
+                <a href="https://syntaxandsabotage.io" target="_blank" style="color: #00896B; text-decoration: none; font-weight: 600;"><i class="fa fa-building"></i> Syntax &amp; Sabotage</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="row">
+        <div class="col-12">
+            <ul role="tablist" class="nav nav-tabs mb16 mt16 justify-content-center" data-tabs="tabs">
+                <li class="nav-item mb4" style="background-color: #00896B; border-top-left-radius: 6px; border-top-right-radius: 6px; margin-right: 3px; padding-bottom: 3px; min-width: 110px;">
+                    <a href="#pxFeatures" data-bs-toggle="tab" class="nav-link active" aria-expanded="true" style="color: #fff !important; background-color: transparent !important; border: none !important; border-top-left-radius: 6px; border-top-right-radius: 6px; text-align: center; font-weight: 600;">Features</a>
+                </li>
+                <li class="nav-item mb4" style="background-color: #00896B; border-top-left-radius: 6px; border-top-right-radius: 6px; margin-right: 3px; padding-bottom: 3px; min-width: 110px;">
+                    <a href="#pxSetup" data-bs-toggle="tab" class="nav-link" aria-expanded="false" style="color: #fff !important; background-color: transparent !important; border: none !important; border-top-left-radius: 6px; border-top-right-radius: 6px; text-align: center; font-weight: 600;">Setup</a>
+                </li>
+                <li class="nav-item mb4" style="background-color: #00896B; border-top-left-radius: 6px; border-top-right-radius: 6px; margin-right: 3px; padding-bottom: 3px; min-width: 110px;">
+                    <a href="#pxFaq" data-bs-toggle="tab" class="nav-link" aria-expanded="false" style="color: #fff !important; background-color: transparent !important; border: none !important; border-top-left-radius: 6px; border-top-right-radius: 6px; text-align: center; font-weight: 600;">FAQ</a>
+                </li>
+                <li class="nav-item mb4" style="background-color: #00896B; border-top-left-radius: 6px; border-top-right-radius: 6px; margin-right: 3px; padding-bottom: 3px; min-width: 110px;">
+                    <a href="#pxReleases" data-bs-toggle="tab" class="nav-link" aria-expanded="false" style="color: #fff !important; background-color: transparent !important; border: none !important; border-top-left-radius: 6px; border-top-right-radius: 6px; text-align: center; font-weight: 600;">Releases</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="row">
+        <div class="tab-content w-100">
+
+            <!-- ═══ TAB: Features ═══ -->
+            <div id="pxFeatures" class="tab-pane active">
+                <h3 style="color: #00896B; font-size: 22px; margin-bottom: 16px;">Core Patterns</h3>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-cogs" style="color: #00896B;"></i> Queue Job System</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0; line-height: 1.5;">Background job processing via cron. Create jobs with model name, method, and record IDs. Processed in FIFO order, up to 100 per minute. Retry failed jobs or cancel pending ones.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-check-circle" style="color: #00896B;"></i> Validation Mixin</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0; line-height: 1.5;">Structured validation returning errors and warnings with HTML-formatted summaries. Inherit <code>praetorx.validation.mixin</code> and override <code>validate_all()</code> in your model.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-exchange" style="color: #00896B;"></i> Batch Processing Mixin</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0; line-height: 1.5;">State machine for parent-child workflows: Draft &rarr; Validated &rarr; Posted (and Cancel/Reset). Inherit <code>praetorx.batch.mixin</code> &mdash; includes validation hooks, deletion guards, and button visibility.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-columns" style="color: #00896B;"></i> Split View Component</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0; line-height: 1.5;">OWL component for master-detail UI patterns. Configurable panel widths, item selection callback, scoped template slots for master and detail panels.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-shield" style="color: #00896B;"></i> Shared Security Groups</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0; line-height: 1.5;">Three-tier hierarchy: User &rarr; Manager &rarr; Administrator. Used by all PraetorX modules for consistent access control. Admin assigned to <code>base.user_admin</code> by default.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-file-pdf-o" style="color: #00896B;"></i> PDF Display Mode</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0; line-height: 1.5;">Configurable report behavior: download PDF to disk or open in a new browser tab. Set once in Settings, applies to all PraetorX report actions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Reference -->
+                <h3 style="color: #00896B; font-size: 22px; margin: 24px 0 12px;">Technical Reference</h3>
+                <table class="table table-sm table-bordered" style="font-size: 14px;">
+                    <thead style="background: #00896B; color: #fff;">
+                        <tr><th>Component</th><th>Details</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="font-weight: 600;">praetorx.queue.job</td><td>Concrete model &mdash; name, model_name, method_name, record_ids (JSON), state (pending/processing/done/failed), timestamps, error message. Retry and cancel actions.</td></tr>
+                        <tr><td style="font-weight: 600;">praetorx.validation.mixin</td><td>Abstract model &mdash; <code>validate_all()</code> returns list of dicts with level/message/field/code. HTML summary with Bootstrap alert classes. Batch validation support.</td></tr>
+                        <tr><td style="font-weight: 600;">praetorx.batch.mixin</td><td>Abstract model &mdash; state field (draft/validated/posted/cancelled), 4 workflow actions, 7 validation and processing hooks, computed button visibility, deletion guards.</td></tr>
+                        <tr><td style="font-weight: 600;">SplitView</td><td>OWL component &mdash; master-detail layout with configurable widths (default 35%/65%), item selection, scoped slots for master and detail panels.</td></tr>
+                        <tr><td style="font-weight: 600;">res.config.settings</td><td>Extended &mdash; <code>praetorx_report_display_mode</code> selection field (download / inline). Stored as system parameter.</td></tr>
+                        <tr><td style="font-weight: 600;">Cron</td><td>Processes pending queue jobs every 1 minute in FIFO order, batch size 100.</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Queue Job Details -->
+                <h3 style="color: #00896B; font-size: 22px; margin: 24px 0 12px;">Queue Job Lifecycle</h3>
+                <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px; margin-bottom: 12px;">
+                    <p style="color: #333; font-size: 14px; font-family: monospace; margin: 0; line-height: 1.8;">
+                        Pending &rarr; Processing &rarr; Done<br>
+                        Pending &rarr; Processing &rarr; Failed &rarr; (Retry) &rarr; Pending<br>
+                        Pending / Processing &rarr; (Cancel) &rarr; Failed
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 14px;"><i class="fa fa-clock-o" style="color: #00896B;"></i> FIFO processing</strong>
+                            <p style="color: #555; font-size: 13px; margin: 4px 0 0; line-height: 1.5;">Oldest pending jobs processed first. Cron runs every minute.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 14px;"><i class="fa fa-repeat" style="color: #00896B;"></i> Retry failed jobs</strong>
+                            <p style="color: #555; font-size: 13px; margin: 4px 0 0; line-height: 1.5;">One-click retry resets failed jobs to pending. Error message preserved for debugging.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 14px;"><i class="fa fa-list-alt" style="color: #00896B;"></i> Full job views</strong>
+                            <p style="color: #555; font-size: 13px; margin: 4px 0 0; line-height: 1.5;">List view with state badges, form view with JSON editor for record IDs, search with filters and group-by.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batch Processing Details -->
+                <h3 style="color: #00896B; font-size: 22px; margin: 24px 0 12px;">Batch Processing Workflow</h3>
+                <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px; margin-bottom: 12px;">
+                    <p style="color: #333; font-size: 14px; font-family: monospace; margin: 0; line-height: 1.8;">
+                        Draft &rarr; Validated &rarr; Posted (terminal)<br>
+                        Draft / Validated &rarr; Cancelled &rarr; Draft (reset)
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 14px;"><i class="fa fa-code" style="color: #00896B;"></i> Validation hooks</strong>
+                            <p style="color: #555; font-size: 13px; margin: 4px 0 0; line-height: 1.5;">Override <code>_validate_before_validate()</code>, <code>_validate_before_post()</code>, <code>_validate_before_cancel()</code>, <code>_validate_before_reset()</code> to add custom checks.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 14px;"><i class="fa fa-code" style="color: #00896B;"></i> Processing hooks</strong>
+                            <p style="color: #555; font-size: 13px; margin: 4px 0 0; line-height: 1.5;">Override <code>_post_processing()</code>, <code>_cancel_processing()</code>, <code>_reset_processing()</code> for custom logic after state transitions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Cases -->
+                <h3 style="color: #00896B; font-size: 22px; margin: 24px 0 12px;">Use Cases</h3>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-database" style="color: #00896B;"></i> Large Dataset Processing</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0;">Offload heavy operations (mass invoice posting, document classification, data import) to the queue. Users don&rsquo;t wait &mdash; the cron handles it.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-check-square-o" style="color: #00896B;"></i> Multi-Step Validation</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0;">Run multiple validation checks and display the results as a single HTML summary. Errors block, warnings inform.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-sitemap" style="color: #00896B;"></i> Document Workflows</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0;">Draft &rarr; Validated &rarr; Posted lifecycle for invoices, purchase orders, quality checks. Deletion guards prevent accidental loss of posted records.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb8">
+                        <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                            <strong style="color: #333; font-size: 15px;"><i class="fa fa-columns" style="color: #00896B;"></i> Master-Detail UIs</strong>
+                            <p style="color: #555; font-size: 14px; margin: 4px 0 0;">Use the SplitView OWL component for email-client-style layouts. Left panel shows a list, right panel shows details. Scoped slots for full template control.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ TAB: Setup ═══ -->
+            <div id="pxSetup" class="tab-pane">
+                <h3 style="color: #00896B; font-size: 22px; margin-bottom: 16px;">Setup Guide</h3>
+
+                <div class="panel-group mb0 mt0" role="tablist" id="pxSetupAcc">
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxSetupAcc" data-bs-target="#pxSetup1" aria-expanded="false" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Prerequisites <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxSetup1" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">
+                                <ul>
+                                    <li>Odoo 19.0 (Community or Enterprise)</li>
+                                    <li>Python 3.10+</li>
+                                    <li>Required modules: <code>base</code>, <code>mail</code>, <code>web</code></li>
+                                    <li>No external Python dependencies</li>
+                                    <li>No external services or API keys</li>
+                                </ul>
+                                <p><strong style="color: #28a745;"><i class="fa fa-check"></i> No Enterprise dependency.</strong> Works on Community, Enterprise, and Odoo.sh.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxSetupAcc" data-bs-target="#pxSetup2" aria-expanded="false" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Installation <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxSetup2" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">
+                                <p>Install from the Odoo Apps menu. Search for &ldquo;PraetorX Base&rdquo; or &ldquo;Queue Job&rdquo;.</p>
+                                <p>PraetorX Base is typically installed automatically as a dependency of other PraetorX modules (Roles, Shell, Cockpit, etc.).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxSetupAcc" data-bs-target="#pxSetup3" aria-expanded="false" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Queue Jobs <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxSetup3" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">
+                                <p>Queue jobs are processed automatically by a cron that runs every minute.</p>
+                                <p>View and manage jobs at <strong>PraetorX &rarr; Technical &rarr; Queue Jobs</strong>. By default the list shows pending jobs.</p>
+                                <p>Failed jobs show an error message. Click <strong>Retry</strong> to re-queue, or <strong>Cancel</strong> to dismiss.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxSetupAcc" data-bs-target="#pxSetup4" aria-expanded="false" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">PDF Display Mode <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxSetup4" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">
+                                <ol>
+                                    <li>Navigate to <strong>Settings &rarr; PraetorX</strong></li>
+                                    <li>Under <strong>PDF Reports</strong>, choose <strong>Download PDF</strong> or <strong>Open in Browser Tab</strong></li>
+                                    <li>Click <strong>Save</strong></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxSetupAcc" data-bs-target="#pxSetup5" aria-expanded="false" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Security Groups <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxSetup5" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">
+                                <p><strong>PraetorX / User:</strong> Access PraetorX features (subject to module-specific rules). Read-only access to queue jobs.</p>
+                                <p><strong>PraetorX / Manager:</strong> Configure PraetorX settings. Implies User.</p>
+                                <p><strong>PraetorX / Administrator:</strong> Full control over all PraetorX modules. Implies Manager. Assigned to admin by default.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxSetupAcc" data-bs-target="#pxSetup6" aria-expanded="false" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Using the Mixins in Your Module <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxSetup6" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">
+                                <p>Add <code>praetorx_base</code> to your module&rsquo;s <code>depends</code> list, then inherit:</p>
+                                <pre style="background: #f5f5f5; padding: 10px; border-radius: 4px; font-size: 13px; overflow-x: auto;">class MyModel(models.Model):
+    _name = "my.model"
+    _inherit = ["praetorx.batch.mixin", "praetorx.validation.mixin"]</pre>
+                                <p>Override <code>validate_all()</code> for validation rules and use the batch mixin&rsquo;s workflow actions (<code>action_validate</code>, <code>action_post</code>, etc.) in your form view buttons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ TAB: FAQ ═══ -->
+            <div id="pxFaq" class="tab-pane">
+                <h3 style="color: #00896B; font-size: 22px; margin-bottom: 16px;">FAQ</h3>
+
+                <div class="panel-group mb0 mt0" role="tablist" id="pxFaqAcc">
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxFaqAcc" data-bs-target="#pxFaq1" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Does this require Odoo Enterprise? <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxFaq1" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">No. Depends on <code>base</code>, <code>mail</code>, and <code>web</code> only &mdash; all included in Odoo Community. Works on Community, Enterprise, and Odoo.sh.</div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxFaqAcc" data-bs-target="#pxFaq2" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">How is this different from OCA queue_job? <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxFaq2" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">PraetorX Base&rsquo;s queue is simpler and self-contained &mdash; it uses a standard Odoo cron (1-minute interval), no external worker processes, no Redis, no additional infrastructure. It&rsquo;s designed for moderate workloads. OCA queue_job is better for high-throughput scenarios that need dedicated workers.</div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxFaqAcc" data-bs-target="#pxFaq3" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Can I use the mixins without the queue job system? <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxFaq3" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">Yes. The validation mixin, batch processing mixin, and SplitView component are fully independent. Inherit only what you need. The queue job model and cron exist but don&rsquo;t interfere if unused.</div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxFaqAcc" data-bs-target="#pxFaq4" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">What happens if a queue job fails? <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxFaq4" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">The job state is set to &ldquo;failed&rdquo; and the error message is stored. Failed jobs remain visible in the list view (highlighted in red). Click <strong>Retry</strong> to re-queue the job, or <strong>Cancel</strong> to dismiss it.</div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxFaqAcc" data-bs-target="#pxFaq5" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Can I delete posted records when using the batch mixin? <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxFaq5" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">No. The batch mixin blocks deletion of validated and posted records. Only draft and cancelled records can be deleted. This prevents accidental loss of confirmed data.</div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxFaqAcc" data-bs-target="#pxFaq6" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Does the cron job run even if there are no pending jobs? <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxFaq6" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">Yes, the cron triggers every minute, but if there are no pending jobs it returns immediately with no processing. The overhead is negligible &mdash; a single database query.</div>
+                        </div>
+                    </div>
+                    <div class="mb8" style="border: 1px solid #eee; border-radius: 6px;">
+                        <div class="panel-heading collapsed" role="tab" data-bs-toggle="collapse" data-bs-parent="#pxFaqAcc" data-bs-target="#pxFaq7" style="padding: 12px 16px; cursor: pointer;">
+                            <strong style="font-size: 15px;">Is there a performance impact from the cron? <i class="fa fa-angle-down" style="float: right;"></i></strong>
+                        </div>
+                        <div class="panel-collapse collapse" id="pxFaq7" style="padding: 0 16px;">
+                            <div class="panel-body" style="padding: 8px 0 16px; font-size: 14px; color: #555;">No. The cron processes up to 100 jobs per execution in a single batch. Each empty check is one lightweight query. The 1-minute interval is standard Odoo cron behavior.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ TAB: Releases ═══ -->
+            <div id="pxReleases" class="tab-pane">
+                <h3 style="color: #00896B; font-size: 22px; margin-bottom: 16px;">Release History</h3>
+                <div style="border-left: 3px solid #00896B; padding-left: 16px; margin-bottom: 20px;">
+                    <h4 style="color: #00896B; font-size: 16px; margin: 0 0 6px;">v19.0.1.1.0 &mdash; April 2026</h4>
+                    <p style="color: #555; font-size: 13px; font-weight: 600; margin: 0 0 8px;"><i class="fa fa-star" style="color: #28a745;"></i> Current Release</p>
+                    <ul style="font-size: 14px; color: #555; line-height: 1.6;">
+                        <li>Added shared module categories (PRAETORX / Core) for privilege-based access</li>
+                        <li>Shared security groups moved here from praetorx_security</li>
+                        <li>Shared PraetorX root menu and Configuration submenu</li>
+                    </ul>
+                </div>
+                <div style="border-left: 3px solid #00896B; padding-left: 16px;">
+                    <h4 style="color: #00896B; font-size: 16px; margin: 0 0 6px;">v19.0.1.0.0 &mdash; Initial Release</h4>
+                    <p style="color: #555; font-size: 13px; font-weight: 600; margin: 0 0 8px;">Initial Release</p>
+                    <ul style="font-size: 14px; color: #555; line-height: 1.6;">
+                        <li>Queue Job System &mdash; background processing via cron with state management</li>
+                        <li>Validation Mixin &mdash; structured validation with HTML summaries</li>
+                        <li>Batch Processing Mixin &mdash; state machine for document workflows</li>
+                        <li>SplitView OWL component &mdash; master-detail UI pattern</li>
+                        <li>PDF Display Mode setting (download vs. inline)</li>
+                        <li>German translations (de.po)</li>
+                        <li>73 automated tests</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Companion Modules (always visible) -->
+    <h3 style="color: #00896B; font-size: 22px; margin: 24px 0 12px;">Modules That Depend on PraetorX Base</h3>
+    <div class="row mb16">
+        <div class="col-lg-6 col-md-6 mb8">
+            <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                <a href="https://apps.odoo.com/apps/modules/19.0/praetorx_roles/" target="_blank" style="color: #00896B; font-size: 15px; font-weight: 700; text-decoration: none;">PraetorX Roles <i class="fa fa-external-link" style="font-size: 11px;"></i></a>
+                <p style="color: #555; font-size: 13px; margin: 4px 0 6px; line-height: 1.5;">Role-based user group management with date-gated assignments and additive sync.</p>
+                <span style="color: #00896B; font-size: 13px; font-weight: 700;">39 EUR</span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 mb8">
+            <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                <a href="https://apps.odoo.com/apps/modules/19.0/praetorx_shell/" target="_blank" style="color: #00896B; font-size: 15px; font-weight: 700; text-decoration: none;">PraetorX Shell <i class="fa fa-external-link" style="font-size: 11px;"></i></a>
+                <p style="color: #555; font-size: 13px; margin: 4px 0 6px; line-height: 1.5;">Branded backend theme with sidebar, home tiles, activity dashboard, and role-based color theming.</p>
+                <span style="color: #28a745; font-size: 13px; font-weight: 700;">Free</span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 mb8">
+            <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                <a href="https://apps.odoo.com/apps/modules/19.0/sharepoint_sync/" target="_blank" style="color: #00896B; font-size: 15px; font-weight: 700; text-decoration: none;">SharePoint Sync <i class="fa fa-external-link" style="font-size: 11px;"></i></a>
+                <p style="color: #555; font-size: 13px; margin: 4px 0 6px; line-height: 1.5;">Enterprise-grade bidirectional sync between Odoo Documents and SharePoint Online.</p>
+                <span style="color: #00896B; font-size: 13px; font-weight: 700;">349 EUR</span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 mb8">
+            <div style="background: #f8faf9; border: 1px solid #e0ebe6; border-left: 3px solid #00896B; border-radius: 6px; padding: 14px;">
+                <a href="https://apps.odoo.com/apps/modules/19.0/praetorx_nextcloud_sync/" target="_blank" style="color: #00896B; font-size: 15px; font-weight: 700; text-decoration: none;">Nextcloud Sync <i class="fa fa-external-link" style="font-size: 11px;"></i></a>
+                <p style="color: #555; font-size: 13px; margin: 4px 0 6px; line-height: 1.5;">Bidirectional sync between Odoo Documents and Nextcloud/WebDAV.</p>
+                <span style="color: #00896B; font-size: 13px; font-weight: 700;">149 EUR</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<div class="text-center mt16" style="padding: 20px; background: #f5f5f5;">
+    <p style="color: #555; font-size: 14px; margin: 0;">Made with <span style="color: #00896B;">&#9829;</span> by <a href="https://syntaxandsabotage.io" target="_blank" style="color: #333; font-weight: 700; text-decoration: none;">Syntax &amp; Sabotage</a></p>
+    <p style="color: #666; font-size: 12px; margin: 8px 0 0;">&copy; 2026 Syntax &amp; Sabotage, Lars Weiler. All rights reserved. LGPL-3.</p>
+    <p style="color: #666; font-size: 12px; margin: 4px 0 0;"><a href="https://syntaxandsabotage.io/impressum" target="_blank" style="color: #666;">Impressum</a> &middot; support@syntaxandsabotage.io</p>
+</div>

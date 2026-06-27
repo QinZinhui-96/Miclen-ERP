@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_miclen_product_category,miclen.product.category,model_miclen_product_category,,1,1,1,1
+access_miclen_category_details,miclen.category.details,model_miclen_category_details,,1,1,1,1
+access_miclen_category_subcategory,miclen.category.subcategory,model_miclen_category_subcategory,,1,1,1,1
+access_miclen_mrp_workcenter,miclen.mrp.workcenter,model_miclen_mrp_workcenter,,1,1,1,1

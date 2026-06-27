@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- ========================================== -->
+        <!-- 主表数据（大类） -->
+        <!-- ========================================== -->
+        <record id="data_category_rm" model="miclen.product.category">
+            <field name="sequence">1</field>
+            <field name="note">原始未加工材料，通常需经丝印、CNC、冲压或模切</field>
+            <field name="name">RM</field>
+        </record>
+        <record id="data_category_pt" model="miclen.product.category">
+            <field name="sequence">2</field>
+            <field name="note">经单一或多道工序加工、不可再拆分的自制单件</field>
+            <field name="name">PT</field>
+        </record>
+        <record id="data_category_asm" model="miclen.product.category">
+            <field name="sequence">3</field>
+            <field name="note">由多个零件(PT)或原材料组装而成的自制半成品</field>
+            <field name="name">ASM</field>
+        </record>
+        <record id="data_category_assy" model="miclen.product.category">
+            <field name="sequence">4</field>
+            <field name="note">Miclen最终交付成品。集成开关、衬板、触屏及外壳的总成</field>
+            <field name="name">ASSY</field>
+        </record>
+        <record id="data_category_bo" model="miclen.product.category">
+            <field name="sequence">5</field>
+            <field name="note">无需任何加工、直接用于总成装配的外购成品件</field>
+            <field name="name">BO</field>
+        </record>
+
+    </data>
+</odoo>

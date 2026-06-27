@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- PraetorX User: Base access to PraetorX features -->
+        <record id="group_praetorx_user" model="res.groups">
+            <field name="name">PraetorX / User</field>
+            <field name="comment">Can access PraetorX features (subject to module-specific rules)</field>
+        </record>
+
+        <!-- PraetorX Manager: Can configure PraetorX settings -->
+        <record id="group_praetorx_manager" model="res.groups">
+            <field name="name">PraetorX / Manager</field>
+            <field name="implied_ids" eval="[Command.link(ref('group_praetorx_user'))]"/>
+            <field name="comment">Can configure PraetorX settings and manage features</field>
+        </record>
+
+        <!-- PraetorX Admin: Full control -->
+        <record id="group_praetorx_admin" model="res.groups">
+            <field name="name">PraetorX / Administrator</field>
+            <field name="implied_ids" eval="[Command.link(ref('group_praetorx_manager'))]"/>
+            <field name="user_ids" eval="[Command.link(ref('base.user_admin'))]"/>
+            <field name="comment">Full control over all PraetorX modules</field>
+        </record>
+
+    </data>
+</odoo>

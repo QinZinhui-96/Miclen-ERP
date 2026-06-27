@@ -1,0 +1,375 @@
+<!-- Addon AppStore Index &mdash; SC Login Animation
+     Template: ks_dashboard_ninja-style 2-tab (Overview + FAQs).
+     Simplified variant (2026-05-14): feature deep-dives reduced to a
+     text feature list. Only two real screenshots are kept &mdash; the login
+     page hero (hero-banner.png) and the backend settings
+     (feature-settings.png). All other features are described in text. -->
+
+
+<div class="oe_styling_v8">
+
+  <!-- =========================================================
+       BRAND BAR + 2-TAB NAVIGATION
+       ========================================================= -->
+  <section>
+    <div class="container shadow px-0" style="border-radius:8px;">
+      <div class="px-md-5 p-2" style="border-radius:20px;">
+
+        <!-- Mobile: brand left + Email CTA right -->
+        <div class="d-lg-none d-flex align-items-center justify-content-between">
+          <img src="sc-logo-en-light.svg" alt="Shachain" height="36"/>
+          <div class="d-flex gap-2" data-bar-wrap-done>
+            <a class="d-flex align-items-center justify-content-center px-3 py-2 text-decoration-none"
+               href="mailto:business@shachain.dev"
+             style="background-color:#18181B; border-radius:8px; font-weight:600; font-size:13px; color:#FFFFFF;">
+            <img src="icons/mail-white.svg" width="14" height="14" alt="" style="vertical-align:-2px; margin-right:6px;"/>Email Us
+          </a>
+            <div class="d-flex align-items-center justify-content-center px-3 py-2 text-decoration-none" style="background-color:#25D366; border-radius:8px; font-weight:600; font-size:13px; color:#FFFFFF; cursor:default;"><img src="icons/whatsapp-qr.png" width="36" height="36" alt="WhatsApp QR" style="background:#FFFFFF; padding:2px; border-radius:3px; vertical-align:-3px; margin-right:6px;"/>WhatsApp</div>
+          </div>
+        </div>
+
+        <!-- Desktop: brand left + tab nav center + Email CTA right -->
+        <div class="pt-4 d-flex justify-content-lg-between justify-content-center align-items-center pb-1">
+          <img class="d-lg-block d-none" src="sc-logo-en-light.svg" alt="Shachain" height="36"/>
+          <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#overview" role="tab"
+                 style="font-weight:400; font-size:14px; color:#18181B; border-bottom:1px solid transparent; text-decoration:none;">
+                <img src="icons/home.svg" width="16" height="16" alt="" style="vertical-align:-2px; margin-right:6px;"/>Overview
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#faq" role="tab"
+                 style="font-weight:400; font-size:14px; color:#18181B; border-bottom:1px solid transparent; text-decoration:none;">
+                <img src="icons/help-circle.svg" width="16" height="16" alt="" style="vertical-align:-2px; margin-right:6px;"/>FAQs
+              </a>
+            </li>
+          </ul>
+          <div class="d-lg-flex d-none gap-2" data-bar-wrap-done>
+            <a class="d-flex align-items-center justify-content-center px-3 py-2 text-decoration-none"
+               href="mailto:business@shachain.dev"
+             style="background-color:#18181B; border-radius:8px; font-weight:600; font-size:14px; color:#FFFFFF;">
+            <img src="icons/mail-white.svg" width="14" height="14" alt="" style="vertical-align:-2px; margin-right:6px;"/>Email Us
+          </a>
+            <div class="d-flex align-items-center justify-content-center px-3 py-2 text-decoration-none" style="background-color:#25D366; border-radius:8px; font-weight:600; font-size:14px; color:#FFFFFF; cursor:default;"><img src="icons/whatsapp-qr.png" width="36" height="36" alt="WhatsApp QR" style="background:#FFFFFF; padding:2px; border-radius:3px; vertical-align:-3px; margin-right:6px;"/>WhatsApp</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ====================================================
+           ALL TAB PANES
+           ==================================================== -->
+      <div class="mb-4" style="border-radius:20px;">
+        <div class="tab-content py-2" id="myTabContent">
+
+
+          <!-- ============ TAB 1: OVERVIEW ============ -->
+          <div class="tab-pane fade active show" id="overview" role="tabpanel">
+
+            <!-- §2 PRODUCT HERO -->
+            <div class="row justify-content-center mx-2 mb-3">
+              <h1 class="mb-2 col-12 text-center" style="font-weight:700; font-size:50px; line-height:60px; color:#09090B;">
+                <span style="color:#18181B;">Delightful Login Page Animations</span>
+              </h1>
+              <p class="mb-4 col-lg-7 col-12 text-center" style="font-weight:400; font-size:16px; line-height:25px; color:#52525B;">
+                Animated cartoon characters that follow the cursor and react to the login form &mdash; a memorable first impression, with zero impact on authentication.
+              </p>
+              <div class="d-flex flex-column align-items-center col-12 mb-3">
+                <div class="d-flex align-items-center justify-content-center px-4 py-3 text-decoration-none" style="background-color:#18181B; border-radius:8px; font-weight:500; font-size:16px; color:#FFFFFF; cursor:default;"><img src="icons/play-white.svg" width="16" height="16" alt="" style="vertical-align:-2px; margin-right:6px;"/>
+                  Live Preview <code style="background:rgba(255,255,255,0.18); padding:1px 6px; border-radius:3px; font-size:0.85em; margin-left:6px;">demo.shachain.dev</code></div>
+              </div>
+            </div>
+
+            <!-- §6 MAIN HERO IMAGE -->
+            <div class="position-relative d-flex justify-content-center align-items-center mt-lg-3">
+              <img class="img-fluid" src="images/hero-banner.png" alt="Odoo login page with animated cartoon characters"
+                   style="border:3.6px solid #18181B; border-radius:16px;"/>
+            </div>
+
+            <!-- §2 ABOUT &mdash; short elevator pitch (between hero image and feature deep-dives) -->
+            <div class="row mx-auto my-lg-4 px-md-5 px-2 my-3 py-4" style="background-color:#FAFAFA; border-radius:20px;">
+              <div class="col-lg-10 mx-auto text-center">
+                <h2 style="color:#09090B; font-size:24px; font-weight:600; line-height:34px; margin-bottom:12px;">
+                  What it does
+                </h2>
+                <p style="color:#52525B; font-size:16px; line-height:1.7; margin-bottom:0;">
+                  SC Login Animation adds configurable cartoon character animations
+                  to the Odoo login page. Characters follow the mouse, react to typing,
+                  and respond to the password toggle &mdash; implemented in pure CSS/JS
+                  with no React dependency.
+                </p>
+              </div>
+            </div>
+
+            <!-- §8 FEATURES -->
+            <div class="bg-white py-1">
+              <div class="d-flex flex-column justify-content-center align-items-center"
+                   style="border-radius:30px; height:200px; background-color:#FAFAFA;">
+                <h5 class="position-relative text-center" style="font-weight:600; font-size:36px; line-height:45px; color:#09090B;">
+                  <span style="color:#18181B;">SC Login Animation</span> Features
+                </h5>
+                <p class="text-center px-md-5 p-2 mb-0" style="font-weight:500; font-size:18px; line-height:155%; color:#52525B;">
+                  Everything the addon does &mdash; in pure CSS/JS, with zero impact on the authentication flow.
+                </p>
+              </div>
+
+              <!-- Text feature list -->
+              <div class="row mx-auto px-md-5 p-2 mt-lg-4 mt-3">
+                <div class="col-lg-6 text-start mb-4">
+                  <h3 style="color:#09090B; font-size:22px; font-weight:600; line-height:30px;"><img src="icons/flame.svg" width="22" height="22" alt="" style="vertical-align:-3px; margin-right:8px;"/>Eye-Tracking Characters</h3>
+                  <p class="mb-0" style="color:#52525B; font-size:15px; line-height:1.65;">
+                    Cartoon characters on the login page follow the mouse cursor with
+                    their eyes, creating a lively, memorable first impression.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-start mb-4">
+                  <h3 style="color:#09090B; font-size:22px; font-weight:600; line-height:30px;"><img src="icons/hand-grab.svg" width="22" height="22" alt="" style="vertical-align:-3px; margin-right:8px;"/>Form Interaction Reactions</h3>
+                  <p class="mb-0" style="color:#52525B; font-size:15px; line-height:1.65;">
+                    Characters react to typing in the username and password fields,
+                    and respond to the password visibility toggle with a covering gesture.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-start mb-4">
+                  <h3 style="color:#09090B; font-size:22px; font-weight:600; line-height:30px;"><img src="icons/layout-grid.svg" width="22" height="22" alt="" style="vertical-align:-3px; margin-right:8px;"/>Three Theme Presets</h3>
+                  <p class="mb-0" style="color:#52525B; font-size:15px; line-height:1.65;">
+                    Playful (4 characters), Professional (2), and Minimal (1) &mdash;
+                    each preset matches a different brand personality.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-start mb-4">
+                  <h3 style="color:#09090B; font-size:22px; font-weight:600; line-height:30px;"><img src="icons/flag.svg" width="22" height="22" alt="" style="vertical-align:-3px; margin-right:8px;"/>Zero-Impact Pure CSS</h3>
+                  <p class="mb-0" style="color:#52525B; font-size:15px; line-height:1.65;">
+                    Implemented with pure CSS and JavaScript &mdash; no React dependency,
+                    no impact on login form logic, the authentication flow, or page load.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Backend control &mdash; settings screenshot -->
+              <div class="row mx-auto my-lg-4 px-md-5 px-2 my-3 py-4" style="background-color:#FAFAFA;">
+                <div class="col-12 text-start">
+                  <h2 style="color:#09090B; font-size:32px; font-weight:600; line-height:42px;"><img src="icons/settings.svg" width="28" height="28" alt="" style="vertical-align:-4px; margin-right:10px;"/>Backend Control</h2>
+                  <p style="color:#52525B; font-size:16px;">
+                    Turn the animation on or off and pick a theme preset from
+                    Settings &rarr; General Settings &rarr; Login Animation &mdash;
+                    no developer mode, no code.
+                  </p>
+                </div>
+                <div class="col-12">
+                  <img class="img-fluid w-100" loading="lazy" src="images/feature-settings.png"
+                       alt="Login Animation settings in Odoo General Settings"
+                       style="border:3.6px solid #18181B; border-radius:16px;"/>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- §7 BUILT ON &mdash; one-line credibility signal -->
+            <div class="my-4 px-md-5 px-3 py-4 text-center" style="background-color:#FAFAFA; border-radius:20px;">
+              <h3 class="mb-2" style="font-weight:600; font-size:30px; color:#09090B;">
+                <span style="color:#18181B;">Built on</span>
+              </h3>
+              <p class="mb-0 mx-auto" style="font-size:16px; font-weight:400; color:#52525B; line-height:1.7; max-width:780px;">
+                Pure <strong style="color:#09090B;">CSS</strong> and
+                <strong style="color:#09090B;">JavaScript</strong> &mdash; no framework
+                dependency. Runs on <strong style="color:#09090B;">Odoo</strong>.
+              </p>
+            </div>
+
+          </div>
+          <!-- ============ END TAB 1: OVERVIEW ============ -->
+
+
+          <!-- ============ TAB 2: FAQs ============ -->
+          <div class="tab-pane fade" id="faq" role="tabpanel">
+
+            <div class="d-flex flex-column justify-content-center align-items-center"
+                 style="border-radius:30px; height:240px; background-color:#FAFAFA;">
+              <h5 class="text-center" style="font-weight:600; font-size:36px; line-height:45px; color:#09090B;">
+                Frequently Asked Questions
+              </h5>
+              <p class="text-center" style="font-weight:500; font-size:18px; line-height:155%; color:#52525B;">
+                Sometimes you need a quick answer to your question. You can get it right away here.
+              </p>
+            </div>
+
+            <div class="row px-md-5 p-2 mt-3">
+              <div class="col-12">
+                <div class="d-flex align-items-start justify-content-start flex-column">
+                  <ul class="nav nav-pills mb-4" id="faqTab" role="tablist">
+                    <li class="nav-item bg-white">
+                      <a class="nav-link bg-white active" data-bs-toggle="pill" href="#faq-general" role="tab"
+                         style="padding:14px 15px; font-size:14px; font-weight:500; color:#09090B; border-radius:11px; text-decoration:none;">
+                        <img src="icons/info-circle.svg" width="18" height="18" alt="" style="vertical-align:-3px; margin-right:6px;"/>General
+                      </a>
+                    </li>
+                    <li class="nav-item bg-white">
+                      <a class="nav-link bg-white" data-bs-toggle="pill" href="#faq-setup" role="tab"
+                         style="padding:14px 15px; font-size:14px; font-weight:500; color:#09090B; border-radius:11px; text-decoration:none;">
+                        <img src="icons/settings.svg" width="18" height="18" alt="" style="vertical-align:-3px; margin-right:6px;"/>Setup
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content w-100 mb-3">
+
+                    <!-- General FAQ -->
+                    <div class="tab-pane fade active show" id="faq-general" role="tabpanel"
+                         style="padding:34px 39px; border:1px solid #E4E4E7; background-color:#FAFAFA; border-radius:22px;">
+                      <h4 class="mb-3 pb-2" style="font-size:30px; font-weight:500; line-height:42px; color:#09090B;">General</h4>
+
+                      <div class="card-header" data-bs-toggle="collapse" href="#faq-g1" style="background-color:transparent; border:none; border-top:1px solid #E4E4E7; padding:14px 4px;">
+                        <a class="card-title text-decoration-none d-flex justify-content-between align-items-center mb-0 cursor-pointer" style="font-size:15px; line-height:24px; font-weight:500; color:#09090B;">
+                          Does this affect login security or the authentication flow?
+                          <img class="ms-2" src="icons/chevron-down.svg" width="16" height="16" alt="" style="opacity:0.6; flex-shrink:0;"/>
+                        </a>
+                      </div>
+                      <div id="faq-g1" class="collapse">
+                        <div style="font-size:14px; font-weight:400; line-height:22px; color:#52525B; padding:8px 4px 16px 4px;">
+                          No. The animation is a pure visual layer rendered above the login form.
+                          It never touches form fields, submission, or the authentication flow.
+                        </div>
+                      </div>
+
+                      <div class="card-header" data-bs-toggle="collapse" href="#faq-g2" style="background-color:transparent; border:none; border-top:1px solid #E4E4E7; padding:14px 4px;">
+                        <a class="card-title text-decoration-none d-flex justify-content-between align-items-center mb-0 cursor-pointer" style="font-size:15px; line-height:24px; font-weight:500; color:#09090B;">
+                          Does it work on mobile?
+                          <img class="ms-2" src="icons/chevron-down.svg" width="16" height="16" alt="" style="opacity:0.6; flex-shrink:0;"/>
+                        </a>
+                      </div>
+                      <div id="faq-g2" class="collapse">
+                        <div style="font-size:14px; font-weight:400; line-height:22px; color:#52525B; padding:8px 4px 16px 4px;">
+                          Yes &mdash; the animation is responsive and scales down on small screens.
+                          On very narrow viewports it gracefully reduces motion.
+                        </div>
+                      </div>
+                      <div class="card-header" data-bs-toggle="collapse" href="#faq-g4" style="background-color:transparent; border:none; border-top:1px solid #E4E4E7; padding:14px 4px;">
+                        <a class="card-title text-decoration-none d-flex justify-content-between align-items-center mb-0 cursor-pointer" style="font-size:15px; line-height:24px; font-weight:500; color:#09090B;">
+                          Is it translated?
+                          <img class="ms-2" src="icons/chevron-down.svg" width="16" height="16" alt="" style="opacity:0.6; flex-shrink:0;"/>
+                        </a>
+                      </div>
+                      <div id="faq-g4" class="collapse">
+                        <div style="font-size:14px; font-weight:400; line-height:22px; color:#52525B; padding:8px 4px 16px 4px;">
+                          The configuration UI follows Odoo&#39;s standard locale switching;
+                          built-in translations include Simplified Chinese, French, Spanish,
+                          German, Italian, and Portuguese (Brazil).
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Setup FAQ -->
+                    <div class="tab-pane fade" id="faq-setup" role="tabpanel"
+                         style="padding:34px 39px; border:1px solid #E4E4E7; background-color:#FAFAFA; border-radius:22px;">
+                      <h4 class="mb-3 pb-2" style="font-size:30px; font-weight:500; line-height:42px; color:#09090B;">Setup &amp; Install</h4>
+
+                      <div class="card-header" data-bs-toggle="collapse" href="#faq-s1" style="background-color:transparent; border:none; border-top:1px solid #E4E4E7; padding:14px 4px;">
+                        <a class="card-title text-decoration-none d-flex justify-content-between align-items-center mb-0 cursor-pointer" style="font-size:15px; line-height:24px; font-weight:500; color:#09090B;">
+                          Step 1 &mdash; Download the addon
+                          <img class="ms-2" src="icons/chevron-down.svg" width="16" height="16" alt="" style="opacity:0.6; flex-shrink:0;"/>
+                        </a>
+                      </div>
+                      <div id="faq-s1" class="collapse">
+                        <div style="font-size:14px; font-weight:400; line-height:22px; color:#52525B; padding:8px 4px 16px 4px;">
+                          Download the addon zip from this App Store listing to your local machine.
+                        </div>
+                      </div>
+
+                      <div class="card-header" data-bs-toggle="collapse" href="#faq-s2" style="background-color:transparent; border:none; border-top:1px solid #E4E4E7; padding:14px 4px;">
+                        <a class="card-title text-decoration-none d-flex justify-content-between align-items-center mb-0 cursor-pointer" style="font-size:15px; line-height:24px; font-weight:500; color:#09090B;">
+                          Step 2 &mdash; Extract into your addons path
+                          <img class="ms-2" src="icons/chevron-down.svg" width="16" height="16" alt="" style="opacity:0.6; flex-shrink:0;"/>
+                        </a>
+                      </div>
+                      <div id="faq-s2" class="collapse">
+                        <div style="font-size:14px; font-weight:400; line-height:22px; color:#52525B; padding:8px 4px 16px 4px;">
+                          Unzip the package and place the addon folder inside one of the directories listed in your
+                          Odoo <code>addons_path</code> (configured in <code>odoo.conf</code>).
+                        </div>
+                      </div>
+
+                      <div class="card-header" data-bs-toggle="collapse" href="#faq-s3" style="background-color:transparent; border:none; border-top:1px solid #E4E4E7; padding:14px 4px;">
+                        <a class="card-title text-decoration-none d-flex justify-content-between align-items-center mb-0 cursor-pointer" style="font-size:15px; line-height:24px; font-weight:500; color:#09090B;">
+                          Step 3 &mdash; Update Apps List
+                          <img class="ms-2" src="icons/chevron-down.svg" width="16" height="16" alt="" style="opacity:0.6; flex-shrink:0;"/>
+                        </a>
+                      </div>
+                      <div id="faq-s3" class="collapse">
+                        <div style="font-size:14px; font-weight:400; line-height:22px; color:#52525B; padding:8px 4px 16px 4px;">
+                          In Odoo, enable developer mode, open <strong>Apps</strong>, and click
+                          <strong>Update Apps List</strong> so Odoo picks up the newly placed addon.
+                        </div>
+                      </div>
+
+                      <div class="card-header" data-bs-toggle="collapse" href="#faq-s4" style="background-color:transparent; border:none; border-top:1px solid #E4E4E7; padding:14px 4px;">
+                        <a class="card-title text-decoration-none d-flex justify-content-between align-items-center mb-0 cursor-pointer" style="font-size:15px; line-height:24px; font-weight:500; color:#09090B;">
+                          Step 4 &mdash; Install
+                          <img class="ms-2" src="icons/chevron-down.svg" width="16" height="16" alt="" style="opacity:0.6; flex-shrink:0;"/>
+                        </a>
+                      </div>
+                      <div id="faq-s4" class="collapse">
+                        <div style="font-size:14px; font-weight:400; line-height:22px; color:#52525B; padding:8px 4px 16px 4px;">
+                          Search for the addon by name in <strong>Apps</strong> and click <strong>Install</strong>.
+                          This module depends only on the standard <code>web</code> module &mdash; no extra dependencies.
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ============ END TAB 2: FAQs ============ -->
+
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+<!-- ========================================================
+     END oe_styling_v8 wrapper
+     ======================================================== -->
+
+
+<!-- ========================================================
+     BOTTOM RED CTA BANNER (contact section absorbed &mdash; Email Us button below)
+     ======================================================== -->
+<section>
+  <div id="final_cta" style="border-radius:20px; padding:41px 0;">
+    <div class="row d-flex align-items-center justify-content-center mx-0">
+      <div class="col-12 px-0 position-relative overflow-hidden"
+           style="border-radius:20px; background-color:#18181B; height:400px;">
+        <div class="row h-100 position-relative pt-lg-3 px-lg-5 pb-lg-3 p-md-4 p-3 mx-auto d-flex align-items-center"
+             style="color:#FAFAFA; font-weight:500; font-size:16px; width:100%;">
+          <div class="col text-center mt-4">
+            <h4 style="color:#FFFFFF; font-weight:700; font-size:42px; line-height:55px;">
+              Add a little delight to your login page
+            </h4>
+            <p class="mt-3" style="color:#A1A1AA; font-size:16px;">
+              Eye-tracking &middot; 3 theme presets &middot; Pure CSS &middot; Zero auth impact
+            </p>
+            <div class="d-flex justify-content-center mt-4 pt-2">
+              <div class="d-flex align-items-center me-3 text-center text-decoration-none px-4 py-3" style="background-color:#FFFFFF; border-radius:8px; font-weight:600; font-size:16px; color:#18181B; cursor:default;"><img src="icons/play.svg" width="16" height="16" alt="" style="vertical-align:-2px; margin-right:6px;"/>Live Preview <code style="background:rgba(255,255,255,0.18); padding:1px 6px; border-radius:3px; font-size:0.85em; margin-left:6px;">demo.shachain.dev</code></div>
+              <div class="d-flex gap-2" data-bar-wrap-done>
+                <a class="d-flex align-items-center text-center text-decoration-none px-4 py-3"
+                   href="mailto:business@shachain.dev"
+                 style="background-color:transparent; border:2px solid #FFFFFF; border-radius:8px; font-weight:600; font-size:14px; color:#FFFFFF;">
+                <img src="icons/mail-white.svg" width="16" height="16" alt="" style="vertical-align:-2px; margin-right:6px;"/>Email Us
+              </a>
+                <div class="d-flex align-items-center text-center text-decoration-none px-4 py-3" style="background-color:transparent; border:2px solid #25D366; border-radius:8px; font-weight:600; font-size:14px; color:#25D366; cursor:default;"><img src="icons/whatsapp-qr.png" width="38" height="38" alt="WhatsApp QR" style="background:#FFFFFF; padding:2px; border-radius:3px; vertical-align:-3px; margin-right:6px;"/>WhatsApp</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
