@@ -148,28 +148,28 @@ class ProductTemplate(models.Model):
                 group_stock_manager, group_mrp_manager, group_quality_manager,
                 group_equipment_manager, group_account_manager
             ],
-            'sh01@126.com': [group_system, group_stock_user],
-            'sh02@126.com': [group_system, group_stock_user],
-            'mq01@126.com': [group_system, group_mrp_user],
-            'worker@126.com': [group_system, group_mrp_user],
-            'pm@126.com': [group_system, group_mrp_manager],
-            'mj01@126.com': [group_system, group_mrp_user],
-            'zh01@126.com': [group_system, group_mrp_user],
-            'quality@126.com': [group_system, group_quality_manager],
-            'th01@126.com': [group_system, group_mrp_user],
-            'buyer@126.com': [group_system, group_purchase_manager, group_stock_manager],
-            'sale@126.com': [group_system, group_sale_manager],
+            'sh01@126.com': [group_user, group_stock_user],
+            'sh02@126.com': [group_user, group_stock_user],
+            'mq01@126.com': [group_user, group_mrp_user],
+            'worker@126.com': [group_user, group_mrp_user],
+            'pm@126.com': [group_user, group_mrp_manager],
+            'mj01@126.com': [group_user, group_mrp_user],
+            'zh01@126.com': [group_user, group_mrp_user],
+            'quality@126.com': [group_user, group_quality_manager],
+            'th01@126.com': [group_user, group_mrp_user],
+            'buyer@126.com': [group_user, group_purchase_manager, group_stock_manager],
+            'sale@126.com': [group_user, group_sale_manager],
         }
 
         # 批量用户权限
         zz_users = ['zz01@126.com', 'zz02@126.com', 'zz03@126.com', 'zz04@126.com',
                     'zz05@126.com', 'zz06@126.com', 'zz07@126.com', 'zz08@126.com']
         for zz_user in zz_users:
-            user_permissions[zz_user] = [group_system, group_mrp_user]
+            user_permissions[zz_user] = [group_user, group_mrp_user]
 
         zj_users = ['zj01@126.com', 'zj02@126.com']
         for zj_user in zj_users:
-            user_permissions[zj_user] = [group_system, group_quality_user]
+            user_permissions[zj_user] = [group_user, group_quality_user]
 
         # 执行赋值
         for user in user_ids:
