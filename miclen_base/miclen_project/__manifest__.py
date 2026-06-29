@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Miclen Project Manager',
-    'version': '1.0',
+    'version': '19.0.1.0',
     'category': 'Miclen',
     "website": "https://erp.miclen.com",
     'summary': '限制用户只能查看被分配的作业类型',
