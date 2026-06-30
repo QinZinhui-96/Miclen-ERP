@@ -40,7 +40,7 @@
         'views/miclen_category_subcategory.xml',
         'views/product_template_views.xml',
         'views/miclen_mrp_workcenter.xml',
-        # 'views/mrp_routing_views.xml',
+        'views/mrp_routing_views.xml',
         'views/mrp_bom_views.xml',
         'views/mrp_production.xml',
         'views/mrp_workorder.xml',
@@ -52,6 +52,12 @@
         'views/actions.xml',
         'views/menus.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'miclen_project/static/src/mrp_display_record_ext/xml/mrp_display_record.xml',
+            'miclen_project/static/src/mrp_display_record_ext/js/mrp_display_record.js',
+        ],
+    },
     'installable': True,
     'application': False,
     'auto_install': False,

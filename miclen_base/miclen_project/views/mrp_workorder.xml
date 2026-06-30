@@ -15,4 +15,33 @@
         </field>
     </record>
 
+     <record id="miclen_inherit_workcenter_line_kanban_view" model="ir.ui.view">
+        <field name="name">mrp.production.work.order.kanban.custom</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.workcenter_line_kanban"/>
+        <field name="arch" type="xml">
+            <!-- 在kanban视图的顶部添加字段声明 -->
+            <xpath expr="//kanban" position="inside">
+                <field name="miclen_work_id"/>
+                <field name="equipment_ids" widget="many2many_tags"/>
+                <field name="printing_plate"/>
+                <field name="die_mold"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="miclen_inherit_mrp_workorder_search_view" model="ir.ui.view">
+        <field name="name">mrp.workorder.search.custom</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.view_mrp_production_work_order_search"/>
+        <field name="arch" type="xml">
+            <!-- 在搜索视图的顶部添加字段声明，强制加载 -->
+            <xpath expr="//search" position="inside">
+                <field name="miclen_work_id"/>
+                <field name="printing_plate"/>
+                <field name="die_mold"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>

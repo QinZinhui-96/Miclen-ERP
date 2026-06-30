@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<!--    <record id="miclen_inherit_mrp_routing_workcenter_bom_tree_view" model="ir.ui.view">-->
-<!--        <field name="name">miclen.mrp.routing.workcenter.bom.list</field>-->
-<!--        <field name="model">mrp.routing.workcenter</field>-->
-<!--        <field name="inherit_id" ref="mrp.mrp_routing_workcenter_bom_tree_view"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <xpath expr="//field[@name='name']" position="before">-->
-<!--                <field name="miclen_work_id"/>-->
-<!--            </xpath>-->
-<!--        </field>-->
-<!--    </record>-->
+    <!-- 1. 继承列表视图，添加自定义字段 -->
+    <record id="miclen_mrp_routing_workcenter_tree" model="ir.ui.view">
+        <field name="name">mrp.routing.workcenter.list.custom</field>
+        <field name="model">mrp.routing.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_routing_workcenter_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="miclen_work_id" optional="show"/>
+                <!-- 多对多字段使用 many2many_tags 控件 -->
+                <field name="equipment_ids" optional="show" widget="many2many_tags"/>
+                <field name="printing_plate" optional="show"/>
+                <field name="die_mold" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- 2. 继承表单视图，添加自定义字段 -->
+    <record id="miclen_mrp_routing_workcenter_form" model="ir.ui.view">
+        <field name="name">mrp.routing.workcenter.form.custom</field>
+        <field name="model">mrp.routing.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_routing_workcenter_form_view"/>
+        <field name="arch" type="xml">
+            <field name="workcenter_id" position="after">
+                <field name="miclen_work_id"/>
+                <!-- 多对多字段使用 many2many_tags 控件 -->
+                <field name="equipment_ids" widget="many2many_tags"/>
+                <field name="printing_plate"/>
+                <field name="die_mold"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- 3. 继承搜索视图，强制加载自定义字段 -->
+    <record id="miclen_mrp_routing_workcenter_search" model="ir.ui.view">
+        <field name="name">mrp.routing.workcenter.search.custom</field>
+        <field name="model">mrp.routing.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_routing_workcenter_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="miclen_work_id" invisible="1"/>
+                <!-- 多对多字段在搜索中隐藏 -->
+                <field name="equipment_ids" invisible="1"/>
+                <field name="printing_plate" invisible="1"/>
+                <field name="die_mold" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
 </odoo>

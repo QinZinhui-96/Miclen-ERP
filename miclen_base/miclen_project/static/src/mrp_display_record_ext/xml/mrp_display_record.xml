@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-inherit="mrp_workorder.MrpDisplayRecord" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('o_mrp_display_record')]" position="inside">
+            <!-- 直接在 HTML 元素中嵌入数据 -->
+            <div t-if="props.record.resModel === 'mrp.workorder'"
+                 class="card-footer bg-light p-2 border-top"
+                 id="mrp-card-{props.record.data.id}">
+
+                <!-- 用隐藏的 input 元素存储数据 -->
+                <input type="hidden" class="mrp-workorder-id" t-att-value="props.record.data.id"/>
+                <input type="hidden" class="mrp-operation-id" t-att-value="props.record.data.operation_id.id"/>
+
+                <!-- 工序信息标题 -->
+                <div class="d-flex align-items-center mb-1">
+                    <i class="fa fa-check-square text-secondary me-1" role="img" style="font-size: 18px;"/>
+                    <span class="fw-bold text-secondary" style="font-size: 18px;">工序信息</span>
+                    <!-- 工序ID -->
+                    <span class="text-muted ms-2" style="font-size: 16px;">
+                        (ID: <t t-esc="props.record.data.operation_id.id"/>)
+                    </span>
+                </div>
+
+
+                <!-- 工序名称 -->
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <!-- 工序名称 -->
+                    <span class="badge rounded-pill px-3 py-2" style="font-size: 17px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333;">
+                        <i class="fa fa-pencil me-1" role="img" style="font-size: 14px;"/>
+                        <t t-esc="props.record.data.operation_id.display_name or props.record.data.operation_id.id"/>
+                    </span>
+
+                    <!-- 网版 -->
+                    <span class="badge rounded-pill px-3 py-2" style="font-size: 17px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333;">
+                        <i class="fa fa-table me-1" role="img" style="font-size: 14px;"/>
+                        网版: <span class="mrp-printing-plate fw-normal">加载中...</span>
+                    </span>
+
+                    <!-- 刀模 -->
+                    <span class="badge rounded-pill px-3 py-2" style="font-size: 17px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333;">
+                        <i class="fa fa-scissors me-1" role="img" style="font-size: 14px;"/>
+                        刀模: <span class="mrp-die-mold fw-normal">加载中...</span>
+                    </span>
+
+                    <!-- 设备 -->
+                    <span class="badge rounded-pill px-3 py-2" style="font-size: 17px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; white-space: normal; word-break: break-word; max-width: 100%;">
+                        <i class="fa fa-wrench me-1" role="img" style="font-size: 14px;"/>
+                        设备和工具: <span class="mrp-equipment fw-normal">加载中...</span>
+                    </span>
+                </div>
+
+            </div>
+        </xpath>
+    </t>
+</templates>
