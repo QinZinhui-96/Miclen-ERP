@@ -110,66 +110,66 @@ class ProductTemplate(models.Model):
         user_ids = self.env['res.users'].sudo().search([])
 
         # 获取权限组
-        group_user = self.env.ref('base.group_user')
-        group_system = self.env.ref('base.group_system')
+        group_user = self.env.ref('base.group_user')            # 角色用户
+        group_system = self.env.ref('base.group_system')        # 角色管理员
 
-        group_sale_salesman = self.env.ref('sales_team.group_sale_salesman')
-        group_sale_salesman_all_leads = self.env.ref('sales_team.group_sale_salesman_all_leads')
-        group_sale_manager = self.env.ref('sales_team.group_sale_manager')
+        group_sale_salesman = self.env.ref('sales_team.group_sale_salesman')                        # 用户：仅自己的单据
+        group_sale_salesman_all_leads = self.env.ref('sales_team.group_sale_salesman_all_leads')    # 用户：所有单据
+        group_sale_manager = self.env.ref('sales_team.group_sale_manager')                          # 销售 管理员
 
-        group_purchase_user = self.env.ref('purchase.group_purchase_user')
-        group_purchase_manager = self.env.ref('purchase.group_purchase_manager')
+        group_purchase_user = self.env.ref('purchase.group_purchase_user')          # 采购 用户
+        group_purchase_manager = self.env.ref('purchase.group_purchase_manager')    # 采购 管理员
 
-        group_stock_user = self.env.ref('stock.group_stock_user')
-        group_stock_manager = self.env.ref('stock.group_stock_manager')
+        group_stock_user = self.env.ref('stock.group_stock_user')                   # 库存 用户
+        group_stock_manager = self.env.ref('stock.group_stock_manager')             # 库存 管理员
 
-        group_mrp_user = self.env.ref('mrp.group_mrp_user')
-        group_mrp_manager = self.env.ref('mrp.group_mrp_manager')
+        group_mrp_user = self.env.ref('mrp.group_mrp_user')                         # 制造 用户
+        group_mrp_manager = self.env.ref('mrp.group_mrp_manager')                   # 制造 管理员
 
-        group_quality_user = self.env.ref('quality.group_quality_user')
-        group_quality_manager = self.env.ref('quality.group_quality_manager')
+        group_quality_user = self.env.ref('quality.group_quality_user')             # 质量 用户
+        group_quality_manager = self.env.ref('quality.group_quality_manager')       # 质量 管理员
 
-        group_equipment_manager = self.env.ref('maintenance.group_equipment_manager')
+        group_equipment_manager = self.env.ref('maintenance.group_equipment_manager')   # 维护管理 管理员
 
-        group_account_manager = self.env.ref('account.group_account_manager')
+        group_account_manager = self.env.ref('account.group_account_manager')           # 会计 管理员
 
         # 定义用户权限映射
         user_permissions = {
-            'cnc01@126.com': [group_user, group_mrp_user],
-            'smt01@126.com': [group_user, group_mrp_user],
-            'jh01@126.com': [group_user, group_stock_user],
-            'wh@126.com': [group_user, group_stock_manager],
-            'ck01@126.com': [group_user, group_mrp_user],
-            'ck02@126.com': [group_user, group_mrp_user],
-            'account@126.com': [group_user, group_account_manager],
-            'ys01@126.com': [group_user, group_stock_user],
+            'cnc01@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'smt01@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'jh01@126.com': [group_user, group_stock_user, group_equipment_manager],
+            'wh@126.com': [group_user, group_stock_manager, group_equipment_manager],
+            'ck01@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'ck02@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'account@126.com': [group_user, group_account_manager, group_equipment_manager],
+            'ys01@126.com': [group_user, group_stock_user, group_equipment_manager],
             'admin@126.com': [
                 group_system, group_sale_manager, group_purchase_manager,
                 group_stock_manager, group_mrp_manager, group_quality_manager,
                 group_equipment_manager, group_account_manager
             ],
-            'sh01@126.com': [group_user, group_stock_user],
-            'sh02@126.com': [group_user, group_stock_user],
-            'mq01@126.com': [group_user, group_mrp_user],
-            'worker@126.com': [group_user, group_mrp_user],
-            'pm@126.com': [group_user, group_mrp_manager],
-            'mj01@126.com': [group_user, group_mrp_user],
-            'zh01@126.com': [group_user, group_mrp_user],
-            'quality@126.com': [group_user, group_quality_manager],
-            'th01@126.com': [group_user, group_mrp_user],
-            'buyer@126.com': [group_user, group_purchase_manager, group_stock_manager],
-            'sale@126.com': [group_user, group_sale_manager],
+            'sh01@126.com': [group_user, group_stock_user, group_equipment_manager],
+            'sh02@126.com': [group_user, group_stock_user, group_equipment_manager],
+            'mq01@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'worker@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'pm@126.com': [group_user, group_mrp_manager, group_equipment_manager],
+            'mj01@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'zh01@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'quality@126.com': [group_user, group_quality_manager, group_equipment_manager],
+            'th01@126.com': [group_user, group_mrp_user, group_equipment_manager],
+            'buyer@126.com': [group_user, group_purchase_manager, group_stock_manager, group_equipment_manager],
+            'sale@126.com': [group_user, group_sale_manager, group_equipment_manager],
         }
 
         # 批量用户权限
         zz_users = ['zz01@126.com', 'zz02@126.com', 'zz03@126.com', 'zz04@126.com',
                     'zz05@126.com', 'zz06@126.com', 'zz07@126.com', 'zz08@126.com']
         for zz_user in zz_users:
-            user_permissions[zz_user] = [group_user, group_mrp_user]
+            user_permissions[zz_user] = [group_user, group_mrp_user, group_equipment_manager]
 
         zj_users = ['zj01@126.com', 'zj02@126.com']
         for zj_user in zj_users:
-            user_permissions[zj_user] = [group_user, group_quality_user]
+            user_permissions[zj_user] = [group_user, group_quality_user, group_equipment_manager]
 
         # 执行赋值
         for user in user_ids:
