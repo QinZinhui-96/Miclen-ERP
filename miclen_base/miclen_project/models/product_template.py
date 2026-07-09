@@ -182,4 +182,51 @@ class ProductTemplate(models.Model):
                 })
                 _logger.info(f"✅ 已设置: {user.login} - {[group.name for group in groups]}")
             else:
-                _logger.info(f"⚠️ 跳过未配置的用户: {user.login}")
+                _logger.info(f"⚠跳过未配置的用户: {user.login}")
+
+    def set_user_access_rights(self):
+        """一键赋值权限"""
+        user_ids = self.env['res.users'].sudo().search([])
+        for user in user_ids:
+            if user.login == 'sale@126.com':
+                self.set_access_rights('销售', user)
+            elif user.login == 'buyer@126.com':
+                self.set_access_rights('采购', user)
+            elif user.login in ['th01@126.com', 'zh01@126.com', 'zz08@126.com', 'zz07@126.com', 'zz06@126.com',
+                                'zz05@126.com', 'zz04@126.com', 'zz03@126.com', 'zz02@126.com', 'zz01@126.com',
+                                'mj01@126.com', 'mq01@126.com', 'ym01@126.com', 'ys01@126.com', 'smt01@126.com',
+                                'cnc01@126.com']:
+                self.set_access_rights('工序', user)
+            elif user.login in ['quality@126.com', 'zj01@126.com', 'zj02@126.com']:
+                self.set_access_rights('质量', user)
+            elif user.login in ['pm@126.com', 'worker@126.com']:
+                self.set_access_rights('生产', user)
+            elif user.login in ['sh02@126.com', 'sh01@126.com']:
+                self.set_access_rights('收货', user)
+            elif user.login in ['wh@126.com', 'ck01@126.com', 'ck02@126.com']:
+                self.set_access_rights('仓库', user)
+            elif user.login in ['jh01@126.com']:
+                self.set_access_rights('交货', user)
+
+    def clear_user_access_rights(self):
+        """一键清空权限"""
+        user_ids = self.env['res.users'].sudo().search([])
+        for user in user_ids:
+            user.write({'access_role_id': None})
+
+    def set_access_rights(self, name, user):
+        role_management = self.env['role.management'].sudo()
+        access_role = self.env['access.role'].sudo()
+        menu_ids = self.env['ir.ui.menu'].sudo()
+        management_id = role_management.search([('name', '=', name)], limit=1)
+        access_id = access_role.search([('name', '=', name)], limit=1)
+        menus_to_add = self.env['ir.ui.menu']
+        if management_id:
+            hide_app = ['Discuss', 'Dashboards', 'Maintenance', 'Barcode', 'Apps']
+            for hide in hide_app:
+                is_menu = menu_ids.search([('name', '=', hide)])
+                if is_menu:
+                    menus_to_add |= is_menu
+            # 使用 (6, 0, ids) 方式
+            management_id.write({'menu_ids': [(4, menu.id, 0) for menu in menus_to_add]})
+            user.write({'access_role_id': access_id.id})

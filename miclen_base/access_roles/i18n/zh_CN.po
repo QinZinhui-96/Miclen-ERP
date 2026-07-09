@@ -1,0 +1,795 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	- access_roles
+#
+# Translators:
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-06 08:35+0000\n"
+"PO-Revision-Date: 2026-07-06 08:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_access_role__accesses_count
+msgid "# Access Rights"
+msgstr "访问权限数"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_access_role__groups_count
+msgid "# Groups"
+msgstr "用户组数"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_access_role__rules_count
+msgid "# Record Rules"
+msgstr "记录规则数"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_access_role
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+#: model:ir.ui.menu,name:access_roles.access_role_menu_root
+#: model:res.groups.privilege,name:access_roles.access_roles_privilege_category
+msgid "Access Role"
+msgstr "访问角色"
+
+#. module: access_roles
+#: model:res.groups,name:access_roles.access_role_group_user
+msgid "Access Role User"
+msgstr "访问角色用户"
+
+#. module: access_roles
+#: model:ir.actions.act_window,name:access_roles.action_access_role
+msgid "Access Roles"
+msgstr "访问角色"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.access_role_view_form
+#: code:addons/access_roles/models/access_role.py:0
+msgid "Access Rights"
+msgstr "访问权限"
+
+#. module: access_roles
+#: model_terms:res.groups,comment:access_roles.access_role_group_user
+msgid "Access to access roles"
+msgstr "可访问访问角色功能"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_button_registry__action_name
+msgid "Action/Method Name"
+msgstr "动作/方法名称"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_role_management
+#: model:ir.actions.act_window,name:access_roles.action_role_management
+#: model_terms:ir.ui.menu,name:access_roles.access_role_menu
+msgid "Role Management"
+msgstr "角色管理"
+
+#. module: access_roles
+#: model:res.groups,name:access_roles.access_role_group_administrator
+msgid "Administrator"
+msgstr "管理员"
+
+#. module: access_roles
+#: model_terms:res.groups,comment:access_roles.access_role_group_administrator
+msgid "Administrator access to access roles"
+msgstr "访问角色的管理员权限"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_button_registry__name
+msgid "Button Name"
+msgstr "按钮名称"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_button_registry
+msgid "Button Registry"
+msgstr "按钮注册表"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_groupby_registry__context
+msgid "Context"
+msgstr "上下文"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_role_management__is_chatter
+msgid "Disable chatter"
+msgstr "禁用消息区"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_role_management__is_debug
+msgid "Disable Debug Mode"
+msgstr "禁用调试模式"
+
+#. module: access_roles
+#: model:ir.model.fields,help:access_roles.field_role_management__is_chatter
+msgid "Disable chatter for the role"
+msgstr "禁用该角色的消息区"
+
+#. module: access_roles
+#: model:ir.model.fields,help:access_roles.field_role_management__is_debug
+msgid "Disable the option to enable debug mode for the user"
+msgstr "禁用用户启用调试模式的选项"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_filter_registry__string
+#: model:ir.model.fields,field_description:access_roles.field_groupby_registry__string
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_domain_model__name
+#: model:ir.model.fields,field_description:access_roles.field_filter_registry__domain
+msgid "Domain"
+msgstr "域"
+
+#. module: access_roles
+#: code:addons/access_roles/models/role_management.py:0
+msgid "Domain Configuration"
+msgstr "域配置"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.domain_model_view_list
+msgid "Domains"
+msgstr "域"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.role_management_view_form
+msgid "Edit Domain Access"
+msgstr "编辑域访问权限"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.role_management_view_form
+msgid "Edit Fields Access"
+msgstr "编辑字段访问权限"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.role_management_view_form
+msgid "Edit Model Access"
+msgstr "编辑模型访问权限"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.access_role_view_form
+msgid "e.g. Staff"
+msgstr "例如：员工"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.role_management_view_form
+msgid "Fields"
+msgstr "字段"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_filter_registry__name
+msgid "Filter Name"
+msgstr "筛选名称"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_filter_registry
+msgid "Filter Registry"
+msgstr "筛选注册表"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__filter_ids
+msgid "Filters"
+msgstr "筛选"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__group_ids
+msgid "GroupBy"
+msgstr "分组"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_groupby_registry__name
+msgid "GroupBy Name"
+msgstr "分组名称"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_groupby_registry
+msgid "GroupBy Registry"
+msgstr "分组注册表"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_access_role__groups_ids
+#: model_terms:ir.ui.view,arch_db:access_roles.access_role_view_form
+msgid "Groups"
+msgstr "用户组"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.role_management_view_form
+msgid "Hide Any Button or Tab"
+msgstr "隐藏任意按钮或标签页"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.role_management_view_form
+msgid "Hide Any Filter or GroupBy"
+msgstr "隐藏任意筛选或分组"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_hide_archive
+msgid "Hide Archive/UnArchive"
+msgstr "隐藏归档/取消归档"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_hide_create
+msgid "Hide Create"
+msgstr "隐藏创建"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_hide_delete
+msgid "Hide Delete"
+msgstr "隐藏删除"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_hide_duplicate
+msgid "Hide Duplicate"
+msgstr "隐藏复制"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_hide_export
+msgid "Hide Export"
+msgstr "隐藏导出"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.role_management_view_form
+msgid "Hide Menu"
+msgstr "隐藏菜单"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_field_invisible
+msgid "Invisible"
+msgstr "不可见"
+
+#. module: access_roles
+#: code:addons/access_roles/models/access_role.py:0
+msgid "Internal User"
+msgstr "内部用户"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_role_management__is_readonly
+msgid "Make System ReadOnly"
+msgstr "将系统设为只读"
+
+#. module: access_roles
+#: model:ir.model.fields,help:access_roles.field_role_management__is_readonly
+msgid "Make system readonly"
+msgstr "将系统设为只读"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_button_registry__model_id
+#: model:ir.model.fields,field_description:access_roles.field_domain_model__domain_model_id
+#: model:ir.model.fields,field_description:access_roles.field_domain_model__domain_model_name
+#: model:ir.model.fields,field_description:access_roles.field_filter_registry__model_id
+#: model:ir.model.fields,field_description:access_roles.field_groupby_registry__model_id
+#: model:ir.model.fields,field_description:access_roles.field_tab_registry__model_id
+msgid "Model"
+msgstr "模型"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__button_ids
+msgid "Model Button"
+msgstr "模型按钮"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_domain_model
+msgid "Model Domain"
+msgstr "模型域"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_access_role__name
+#: model:ir.model.fields,field_description:access_roles.field_role_management__name
+msgid "Name"
+msgstr "名称"
+
+#. module: access_roles
+#: code:addons/access_roles/models/access_role.py:0
+msgid "Other"
+msgstr "其他"
+
+#. module: access_roles
+#: code:addons/access_roles/models/res_users.py:0
+msgid "Please save the user before assigning an Access Role."
+msgstr "请在分配访问角色之前先保存该用户。"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_field_readonly
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_model_readonly
+msgid "Readonly"
+msgstr "只读"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.access_role_view_form
+#: code:addons/access_roles/models/access_role.py:0
+msgid "Record Rules"
+msgstr "记录规则"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_remove_link
+msgid "Remove External link"
+msgstr "移除外部链接"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__is_field_required
+msgid "Required"
+msgstr "必填"
+
+#. module: access_roles
+#: model_terms:ir.ui.view,arch_db:access_roles.access_role_view_form
+msgid "Role"
+msgstr "角色"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_role_management__role_ids
+#: model_terms:ir.ui.view,arch_db:access_roles.access_role_view_list
+msgid "Roles"
+msgstr "角色"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_field_access__tab_ids
+msgid "Tab"
+msgstr "标签页"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_tab_registry__name
+msgid "Tab Name"
+msgstr "标签页名称"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_tab_registry
+msgid "Tab Registry"
+msgstr "标签页注册表"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_button_registry__view_ids
+#: model:ir.model.fields,field_description:access_roles.field_filter_registry__view_ids
+#: model:ir.model.fields,field_description:access_roles.field_groupby_registry__view_ids
+#: model:ir.model.fields,field_description:access_roles.field_tab_registry__view_ids
+msgid "View"
+msgstr "视图"
+
+#. module: access_roles
+#: code:addons/access_roles/models/res_users.py:0
+msgid "Warning"
+msgstr "警告"
+
+#. module: access_roles
+#: code:addons/access_roles/static/src/js/debug.js:0
+msgid ""
+"You are not allowed to enter debug mode. Please contact Administration."
+msgstr "您无权进入调试模式，请联系管理员。"
+
+#. module: access_roles
+#: model:ir.model.fields,help:access_roles.field_res_users__access_role_id
+msgid "Select the role of the user"
+msgstr "选择用户的角色"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_field_access
+msgid "field.access"
+msgstr "字段访问"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_ir_module_category
+msgid "ir.module.category"
+msgstr "ir.module.category"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_ir_rule
+msgid "ir.rule"
+msgstr "ir.rule"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_ir_ui_menu
+msgid "ir.ui.menu"
+msgstr "ir.ui.menu"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_ir_ui_view
+msgid "ir.ui.view"
+msgstr "ir.ui.view"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_res_groups
+msgid "res.groups"
+msgstr "res.groups"
+
+#. module: access_roles
+#: model:ir.model,name:access_roles.model_res_users
+msgid "res.users"
+msgstr "res.users"
+
+#. module: access_roles
+msgid "Inventory / User"
+msgstr "库存 / 用户"
+
+#. module: access_roles
+msgid "Inventory / Administrator"
+msgstr "库存 / 管理员"
+
+#. module: access_roles
+msgid "Purchase / User"
+msgstr "采购 / 用户"
+
+#. module: access_roles
+msgid "Purchase / Administrator"
+msgstr "采购 / 管理员"
+
+#. module: access_roles
+msgid "Sales / User: Own Documents Only"
+msgstr "销售 / 用户：仅自己的单据"
+
+#. module: access_roles
+msgid "Sales / User: All Documents"
+msgstr "销售 / 用户：所有单据"
+
+#. module: access_roles
+msgid "Sales / Administrator"
+msgstr "销售 / 管理员"
+
+#. module: access_roles
+msgid "MRP / User"
+msgstr "生产 / 用户"
+
+#. module: access_roles
+msgid "MRP / Administrator"
+msgstr "生产 / 管理员"
+
+#. module: access_roles
+msgid "Accounting / Billing"
+msgstr "会计 / 开票"
+
+#. module: access_roles
+msgid "Accounting / Accountant"
+msgstr "会计 / 会计师"
+
+#. module: access_roles
+msgid "Accounting / Billing Administrator"
+msgstr "会计 / 开票管理员"
+
+#. module: access_roles
+msgid "Accounting / Advisor"
+msgstr "会计 / 顾问"
+
+#. module: access_roles
+msgid "Project / User"
+msgstr "项目 / 用户"
+
+#. module: access_roles
+msgid "Project / Administrator"
+msgstr "项目 / 管理员"
+
+#. module: access_roles
+msgid "CRM / User"
+msgstr "CRM / 用户"
+
+#. module: access_roles
+msgid "CRM / Administrator"
+msgstr "CRM / 管理员"
+
+#. module: access_roles
+msgid "Contacts / User"
+msgstr "联系人 / 用户"
+
+#. module: access_roles
+msgid "Employees / Officer"
+msgstr "员工 / 专员"
+
+#. module: access_roles
+msgid "Employees / Administrator"
+msgstr "员工 / 管理员"
+
+#. module: access_roles
+msgid "Website / Editor"
+msgstr "网站 / 编辑"
+
+#. module: access_roles
+msgid "Website / Restricted Editor"
+msgstr "网站 / 受限编辑"
+
+#. module: access_roles
+msgid "Website / Designer"
+msgstr "网站 / 设计师"
+
+#. module: access_roles
+msgid "Discuss / User"
+msgstr "讨论 / 用户"
+
+#. module: access_roles
+msgid "Inventory / Equipment Administrator"
+msgstr "库存 / 设备管理员"
+
+#. module: access_roles
+msgid "Accounting / Validate Bank Account"
+msgstr "会计 / 验证银行账户"
+
+#. module: access_roles
+msgid "Accounting / Basic"
+msgstr "会计 / 基础"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Sales"
+msgstr "销售"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Services"
+msgstr "服务"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Productivity"
+msgstr "生产力"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Marketing"
+msgstr "营销"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Human Resources"
+msgstr "人力资源"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Master Data"
+msgstr "主数据"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Accounting"
+msgstr "会计"
+
+#. module: access_roles
+#: model:ir.model.fields,field_description:access_roles.field_res_users__access_role_id
+msgid "Supply Chain"
+msgstr "角色权限组"
+
+#. module: access_roles
+msgid "Create"
+msgstr "创建"
+
+#. module: access_roles
+msgid "Creation"
+msgstr "创建"
+
+#. module: access_roles
+msgid "Allowed"
+msgstr "允许"
+
+#. module: access_roles
+msgid "Invoicing"
+msgstr "开票"
+
+#. module: access_roles
+msgid "Validate bank account"
+msgstr "验证银行账户"
+
+#. module: access_roles
+msgid "User"
+msgstr "用户"
+
+#. module: access_roles
+msgid "Equipment Manager"
+msgstr "设备经理"
+
+#. module: access_roles
+msgid "A warning can be set on a partner (Stock)"
+msgstr "可以在合作伙伴上设置警告（库存）"
+
+#. module: access_roles
+msgid "A warning can be set on a product or a customer (Sale)"
+msgstr "可以在产品或客户上设置警告（销售）"
+
+#. module: access_roles
+msgid "Allow the cash rounding management"
+msgstr "允许现金舍入管理"
+
+#. module: access_roles
+msgid "Analytic Accounting"
+msgstr "分析会计"
+
+#. module: access_roles
+msgid "Bypass HTML Field Sanitize"
+msgstr "绕过HTML字段清理"
+
+#. module: access_roles
+msgid "Delivery Address"
+msgstr "送货地址"
+
+#. module: access_roles
+msgid "Display Serial & Lot Number in Delivery Slips"
+msgstr "在送货单中显示序列号和批次号"
+
+#. module: access_roles
+msgid "Include expiration dates on delivery slip"
+msgstr "在送货单中包含到期日期"
+
+#. module: access_roles
+msgid "Mail Template Editor"
+msgstr "邮件模板编辑器"
+
+#. module: access_roles
+msgid "Manage Lots / Serial Numbers"
+msgstr "管理批次/序列号"
+
+#. module: access_roles
+msgid "Manage Multiple Units of Measure"
+msgstr "管理多个计量单位"
+
+#. module: access_roles
+msgid "Manage Packages"
+msgstr "管理包裹"
+
+#. module: access_roles
+msgid "Manage Push and Pull inventory flows"
+msgstr "管理推式和拉式库存流"
+
+#. module: access_roles
+msgid "Manage Work Order timer on Shop Floor"
+msgstr "在车间管理工作订单计时器"
+
+#. module: access_roles
+msgid "Multi Companies"
+msgstr "多公司"
+
+#. module: access_roles
+msgid "Partial Purchase Deductibility"
+msgstr "部分采购可抵扣性"
+
+#. module: access_roles
+msgid "Pro-forma Invoices"
+msgstr "形式发票"
+
+#. module: access_roles
+msgid "Quotation Templates"
+msgstr "报价模板"
+
+#. module: access_roles
+msgid "Require a signature on your delivery orders"
+msgstr "要求在送货单上签名"
+
+#. module: access_roles
+msgid "Role / Portal"
+msgstr "角色 / 门户"
+
+#. module: access_roles
+msgid "Role / User"
+msgstr "角色 / 用户"
+
+#. module: access_roles
+msgid "Show Accounting Features - Readonly"
+msgstr "显示会计功能 - 只读"
+
+#. module: access_roles
+msgid "Show Inalterability Features"
+msgstr "显示不可变性功能"
+
+#. module: access_roles
+msgid "Use Milestones"
+msgstr "使用里程碑"
+
+#. module: access_roles
+msgid "Use Reception Report"
+msgstr "使用收货报告"
+
+#. module: access_roles
+msgid "Use Recurring Tasks"
+msgstr "使用重复任务"
+
+#. module: access_roles
+msgid "Use Task Dependencies"
+msgstr "使用任务依赖"
+
+#. module: access_roles
+msgid "A warning can be set on a product or a customer (Purchase)"
+msgstr "可以在产品或客户上设置警告（采购）"
+
+#. module: access_roles
+msgid "Allow to define fiscal years of more or less than a year"
+msgstr "允许定义超过或少于一年的会计年度"
+
+#. module: access_roles
+msgid "Basic Pricelists"
+msgstr "基本价格表"
+
+#. module: access_roles
+msgid "Default access for new users"
+msgstr "新用户的默认访问权限"
+
+#. module: access_roles
+msgid "Discount on lines"
+msgstr "行折扣"
+
+#. module: access_roles
+msgid "Display Serial & Lot Number on Invoices"
+msgstr "在发票上显示序列号和批次号"
+
+#. module: access_roles
+msgid "Lock Confirmed Sales"
+msgstr "锁定已确认的销售"
+
+#. module: access_roles
+msgid "Manage Different Stock Owners"
+msgstr "管理不同的库存所有者"
+
+#. module: access_roles
+msgid "Manage Multiple Stock Locations"
+msgstr "管理多个库存位置"
+
+#. module: access_roles
+msgid "Manage Multiple Warehouses"
+msgstr "管理多个仓库"
+
+#. module: access_roles
+msgid "Manage Product Variants"
+msgstr "管理产品变体"
+
+#. module: access_roles
+msgid "Manage Work Order Operations"
+msgstr "管理工作订单操作"
+
+#. module: access_roles
+msgid "Manage your manufacturing orders from the shop floor display app"
+msgstr "从车间显示应用程序管理您的制造订单"
+
+#. module: access_roles
+msgid "Multi Currencies"
+msgstr "多货币"
+
+#. module: access_roles
+msgid "Print GS1 Barcodes for Lot & Serial Numbers"
+msgstr "打印批次和序列号的GS1条形码"
+
+#. module: access_roles
+msgid "Produce residual products"
+msgstr "生产剩余产品"
+
+#. module: access_roles
+msgid "Receive notifications in Odoo"
+msgstr "在Odoo中接收通知"
+
+#. module: access_roles
+msgid "Role / Administrator"
+msgstr "角色 / 管理员"
+
+#. module: access_roles
+msgid "Role / Public"
+msgstr "角色 / 公众"
+
+#. module: access_roles
+msgid "Send an automatic reminder email to confirm delivery"
+msgstr "发送自动提醒邮件以确认交货"
+
+#. module: access_roles
+msgid "Show Full Accounting Features"
+msgstr "显示完整会计功能"
+
+#. module: access_roles
+msgid "Technical Documentation"
+msgstr "技术文档"
+
+#. module: access_roles
+msgid "Unlocked by default"
+msgstr "默认解锁"
+
+#. module: access_roles
+msgid "Use Operation Dependencies"
+msgstr "使用操作依赖"
+
+#. module: access_roles
+msgid "Use Reception Report with Manufacturing Orders"
+msgstr "在制造订单中使用收货报告"
+
+#. module: access_roles
+msgid "Use Stages on Project"
+msgstr "在项目中使用阶段"
+
