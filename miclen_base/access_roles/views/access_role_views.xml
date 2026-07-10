@@ -36,8 +36,37 @@
                                 </h1>
                             </div>
                         </group>
+                        <group>
+                            <field name="user_ids" widget="many2many_tags"  options="{'no_create': True, 'no_open': True}"/>
+                        </group>
                     </group>
                     <notebook colspan="4">
+                        <page name="supply_chain" string="Supply Chain 快捷权限">
+                            <div class="text-muted mb-3">
+                                在此选择供应链（Supply Chain）下各模块的访问权限，保存后将自动勾选 Access Rights 中对应的 User/Administrator 组。
+                            </div>
+                            <group>
+                                <group string="Manufacturing（制造）">
+                                    <field name="manufacturing_access"
+                                           placeholder="未设置"/>
+                                </group>
+                                <group string="PLM（产品生命周期）">
+                                    <field name="plm_access" placeholder="未设置"/>
+                                </group>
+                                <group string="Quality（质量）">
+                                    <field name="quality_access" placeholder="未设置"/>
+                                </group>
+                                <group string="Purchase（采购）">
+                                    <field name="purchase_access" placeholder="未设置"/>
+                                </group>
+                                <group string="Inventory（库存）">
+                                    <field name="inventory_access" placeholder="未设置"/>
+                                </group>
+                                <group string="Maintenance（维护保养）">
+                                    <field name="maintenance_access"/>
+                                </group>
+                            </group>
+                        </page>
                         <page name="access_rights" string="Access Rights">
                             <field name="groups_ids"/>
                         </page>
@@ -57,11 +86,17 @@
         </field>
     </record>
     <record id="access_role_view_list" model="ir.ui.view">
+        <field name="name">access.role.view.list</field>
         <field name="model">access.role</field>
         <field name="arch" type="xml">
             <list string="Roles">
                 <field name="name"/>
-                <field name="user_ids" widget="many2many_tags"/>
+                <field name="user_ids" widget="many2many_tags"
+                       options="{'no_create': True, 'no_open': True}"/>
+                <field name="groups_count"/>
+                <field name="accesses_count"/>
+                <field name="rules_count"/>
+                <field name="role_management_id" optional="hide"/>
             </list>
         </field>
     </record>

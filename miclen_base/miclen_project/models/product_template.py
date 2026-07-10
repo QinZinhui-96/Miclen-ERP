@@ -208,11 +208,23 @@ class ProductTemplate(models.Model):
             elif user.login in ['jh01@126.com']:
                 self.set_access_rights('交货', user)
 
-    def clear_user_access_rights(self):
+    def clear_user_access_rights(self, role_name):
         """一键清空权限"""
-        user_ids = self.env['res.users'].sudo().search([])
-        for user in user_ids:
-            user.write({'access_role_id': None})
+        # access_role = self.env['access.role'].sudo()
+        if role_name:
+            user_ids = self.env['res.users'].sudo().search([
+                ('access_role_id.name', '=', role_name)
+            ])
+        else:
+            user_ids = self.env['res.users'].sudo().search([])
+        if user_ids:
+            user_ids.write({'access_role_id': None})
+        # if access_role:
+        #     access_roles = access_role.search([
+        #         ('name', '=', access_role)
+        #     ])
+        #     if access_roles:
+        #         access_roles.write({'user_ids': None})
 
     def set_access_rights(self, name, user):
         role_management = self.env['role.management'].sudo()

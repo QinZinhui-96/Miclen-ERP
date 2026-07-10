@@ -56,6 +56,8 @@
         'web.assets_backend': [
             'miclen_project/static/src/mrp_display_record_ext/xml/mrp_display_record.xml',
             'miclen_project/static/src/mrp_display_record_ext/js/mrp_display_record.js',
+            'miclen_project/static/src/mrp_display_ext/js/mrp_display_auto_refresh.js',
+            'miclen_project/static/src/mrp_display_ext/xml/mrp_display_auto_refresh.xml',
         ],
     },
     'installable': True,

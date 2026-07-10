@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- 质检向导主表单：增加需求数量、通过数量、失败数量 -->
+    <record id="view_quality_check_wizard_inherit_miclen" model="ir.ui.view">
+        <field name="name">view_quality_check_wizard.inherit.miclen</field>
+        <field name="model">quality.check.wizard</field>
+        <field name="inherit_id" ref="quality_control.view_quality_check_wizard"/>
+        <field name="arch" type="xml">
+            <!-- 在 footer 之前插入质检数量组 -->
+            <xpath expr="//footer" position="before">
+                <group string="质检数量" invisible="demand_qty == 0">
+                    <group>
+                        <field name="demand_qty" string="需求数量" readonly="1"/>
+                        <field name="passed_qty" string="通过数量" readonly="quality_state != 'none'"/>
+                    </group>
+                    <group>
+                        <field name="failed_qty" string="失败数量" readonly="quality_state != 'none'"/>
+                        <field name="uom_id" string="单位" readonly="1" groups="uom.group_uom"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 质检向导失败确认表单：增加数量参考字段 -->
+    <record id="quality_check_wizard_form_failure_inherit_miclen" model="ir.ui.view">
+        <field name="name">quality.check.wizard.form.failure.inherit.miclen</field>
+        <field name="model">quality.check.wizard</field>
+        <field name="inherit_id" ref="quality_control.quality_check_wizard_form_failure"/>
+        <field name="arch" type="xml">
+            <!-- 在 footer 之前插入数量参考 -->
+            <xpath expr="//footer" position="before">
+                <group string="质检数量" invisible="demand_qty == 0">
+                    <group>
+                        <field name="demand_qty" string="需求数量" readonly="1"/>
+                        <field name="passed_qty" string="通过数量" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="failed_qty" string="失败数量" readonly="1"/>
+                        <field name="uom_id" string="单位" readonly="1" groups="uom.group_uom"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

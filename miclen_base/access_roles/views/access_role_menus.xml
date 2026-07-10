@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <menuitem id="access_role_menu_root" name="Access Role" groups="access_roles.access_role_group_administrator"/>
-    <menuitem id="access_role_menu" name="Role Management"
+    <menuitem id="access_role_menu_root" name="Access Role"
+              web_icon="access_roles,static/description/icon.png"
+              groups="access_roles.access_role_group_administrator"/>
+    <menuitem id="access_role_menu" name="角色管理"
               parent="access_role_menu_root"/>
-    <menuitem id="access_role_menu_roles" action="action_access_role"
+    <menuitem id="access_role_menu_roles" action="action_access_role" name="角色权限"
               parent="access_role_menu"/>
-    <menuitem id="access_role_menu_management" action="action_role_management"
+    <menuitem id="access_role_menu_management" action="action_role_management" name="角色菜单权限"
               parent="access_role_menu"/>
 </odoo>

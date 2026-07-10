@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- 质检表单视图：增加需求数量、通过数量、失败数量 -->
+    <record id="quality_check_view_form_inherit_miclen" model="ir.ui.view">
+        <field name="name">quality.check.view.form.inherit.miclen</field>
+        <field name="model">quality.check</field>
+        <field name="inherit_id" ref="quality_control.quality_check_view_form"/>
+        <field name="arch" type="xml">
+            <!-- 在图片字段所在组之前插入质检数量组 -->
+            <xpath expr="//field[@name='picture']/.." position="before">
+                <group string="质检数量">
+                    <group>
+                        <field name="demand_qty" string="需求数量" readonly="quality_state != 'none'"/>
+                        <field name="passed_qty" string="通过数量" readonly="quality_state != 'none'"/>
+                        <field name="failed_qty" string="失败数量" readonly="quality_state != 'none'"/>
+                    </group>
+                    <group>
+                        <field name="uom_id" string="单位" readonly="1" groups="uom.group_uom"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 质检列表视图：增加需求数量、通过数量、失败数量列 -->
+    <record id="quality_check_view_tree_inherit_miclen" model="ir.ui.view">
+        <field name="name">quality.check.view.list.inherit.miclen</field>
+        <field name="model">quality.check</field>
+        <field name="inherit_id" ref="quality_control.quality_check_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='quality_state']" position="before">
+                <field name="demand_qty" optional="hide" string="需求数量"/>
+                <field name="passed_qty" optional="hide" string="通过数量"/>
+                <field name="failed_qty" optional="hide" string="失败数量"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

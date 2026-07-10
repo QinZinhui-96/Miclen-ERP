@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- 在 BurgerMenu 下拉菜单的"Reload Data"按钮之后添加自动刷新开关 -->
+    <t t-inherit="mrp_workorder.MrpDisplay.BurgerMenu" t-inherit-mode="extension" owl="1">
+        <xpath expr="//button[hasclass('dropdown-item')][1]" position="after">
+            <li>
+                <hr class="dropdown-divider"/>
+            </li>
+            <li>
+                <button class="dropdown-item py-2 d-flex align-items-center justify-content-between"
+                        t-on-click="toggleAutoRefresh"
+                        type="button">
+                    <span>
+                        <i class="fa fa-clock-o me-2" role="img"/>
+                        自动刷新
+                    </span>
+                    <span class="badge rounded-pill"
+                          t-att-class="autoRefresh.enabled ? 'text-bg-success' : 'text-bg-secondary'">
+                        <t t-esc="autoRefresh.enabled ? '开' : '关'"/>
+                    </span>
+                </button>
+            </li>
+        </xpath>
+    </t>
+
+    <!-- 在顶部工具栏右侧显示倒计时和"立即刷新"按钮 -->
+    <t t-inherit="mrp_workorder.MrpDisplay" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('bg-view')][1]/div[hasclass('justify-content-end')][last()]" position="inside">
+            <div t-if="showAutoRefreshCountdown"
+                 class="d-flex align-items-center gap-1 ms-2 px-2 py-1 border rounded"
+                 title="自动刷新倒计时（点击立即刷新）"
+                 t-on-click="refreshNow"
+                 style="cursor: pointer; user-select: none;">
+                <i class="fa fa-refresh text-info" role="img"
+                   t-att-class="autoRefresh.remaining &lt; 5000 ? 'fa-spin text-warning' : 'text-info'"/>
+                <span class="font-monospace" style="font-size: 13px;">
+                    <t t-esc="autoRefreshCountdown"/>
+                </span>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

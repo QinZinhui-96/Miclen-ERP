@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+
+    <record id="role_management_view_list" model="ir.ui.view">
+        <field name="name">role.management.view.list</field>
+        <field name="model">role.management</field>
+        <field name="arch" type="xml">
+            <list string="Role Management">
+                <field name="name"/>
+                <field name="role_ids" widget="many2many_tags"
+                       options="{'no_create': True, 'no_open': True}"/>
+                <field name="is_debug" optional="show"/>
+                <field name="is_chatter" optional="show"/>
+                <field name="is_readonly" optional="show"/>
+                <field name="menu_ids" widget="many2many_tags"  options="{'no_create': True, 'no_open': True}"/>
+            </list>
+        </field>
+    </record>
+
     <record id="role_management_view_form" model="ir.ui.view">
         <field name="name">role.management.view.form</field>
         <field name="model">role.management</field>

@@ -12,4 +12,18 @@
             </xpath>
         </field>
     </record>
+
+    <record id="view_users_list" model="ir.ui.view">
+        <field name="name">res.users.view.list.inherit.access.role</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='login']" position="after">
+                <field name="email"/>
+                <field name="access_role_id" optional="show"/>
+                <field name="create_date" optional="hide" string="创建时间"/>
+                <field name="write_date" optional="hide" string="修改时间"/>
+            </xpath>
+        </field>
+    </record>
 </odoo>
