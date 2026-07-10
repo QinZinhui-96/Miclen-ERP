@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- 质检向导主表单：增加需求数量、通过数量、失败数量 -->
+    <!-- ============ 质检向导主表单：增加质检数量、通过率、备注 ============ -->
     <record id="view_quality_check_wizard_inherit_miclen" model="ir.ui.view">
         <field name="name">view_quality_check_wizard.inherit.miclen</field>
         <field name="model">quality.check.wizard</field>
         <field name="inherit_id" ref="quality_control.view_quality_check_wizard"/>
         <field name="arch" type="xml">
+            <!-- 有失败数量时隐藏所有通过/测量按钮 -->
+            <xpath expr="//button[@name='do_pass' and hasclass('btn-primary')]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or test_type not in ('picture', 'instructions') or failed_qty > 0</attribute>
+            </xpath>
+            <xpath expr="//button[@name='do_pass' and hasclass('btn-success')]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or test_type != 'passfail' or failed_qty > 0</attribute>
+            </xpath>
+            <xpath expr="//button[@name='do_measure' and hasclass('btn-primary')]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or test_type != 'measure' or failed_qty > 0</attribute>
+            </xpath>
+            <!-- 有失败数量时，所有类型都显示失败按钮；需求数量=通过数量时隐藏 -->
+            <xpath expr="//button[@name='do_fail' and hasclass('btn-danger')]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or (test_type != 'passfail' and failed_qty &lt;= 0) or (demand_qty > 0 and passed_qty == demand_qty)</attribute>
+            </xpath>
             <!-- 在 footer 之前插入质检数量组 -->
             <xpath expr="//footer" position="before">
                 <group string="质检数量" invisible="demand_qty == 0">
                     <group>
                         <field name="demand_qty" string="需求数量" readonly="1"/>
                         <field name="passed_qty" string="通过数量" readonly="quality_state != 'none'"/>
+                        <field name="failed_qty" string="失败数量" readonly="quality_state != 'none'"/>
                     </group>
                     <group>
-                        <field name="failed_qty" string="失败数量" readonly="quality_state != 'none'"/>
+                        <field name="remaining_qty" string="剩余数量" readonly="1"/>
                         <field name="uom_id" string="单位" readonly="1" groups="uom.group_uom"/>
+                        <field name="pass_rate" string="通过率" widget="progressbar" readonly="1"/>
+                        <field name="quality_remark" string="质检备注"
+                               placeholder="记录质检过程中的观察和备注..."/>
                     </group>
                 </group>
             </xpath>
         </field>
     </record>
 
-    <!-- 质检向导失败确认表单：增加数量参考字段 -->
+    <!-- ============ 质检向导失败确认表单：增加失败原因、备注 ============ -->
     <record id="quality_check_wizard_form_failure_inherit_miclen" model="ir.ui.view">
         <field name="name">quality.check.wizard.form.failure.inherit.miclen</field>
         <field name="model">quality.check.wizard</field>
@@ -35,10 +53,14 @@
                     <group>
                         <field name="demand_qty" string="需求数量" readonly="1"/>
                         <field name="passed_qty" string="通过数量" readonly="1"/>
+                        <field name="failed_qty" string="失败数量" readonly="1"/>
+                        <field name="remaining_qty" string="剩余数量" readonly="1"/>
                     </group>
                     <group>
-                        <field name="failed_qty" string="失败数量" readonly="1"/>
                         <field name="uom_id" string="单位" readonly="1" groups="uom.group_uom"/>
+                        <field name="failure_reason_id" string="失败原因"
+                               readonly="0" options="{'no_create': True}"/>
+                        <field name="quality_remark" string="质检备注" readonly="0"/>
                     </group>
                 </group>
             </xpath>

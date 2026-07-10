@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- 质检表单视图：增加需求数量、通过数量、失败数量 -->
+    <!-- ============ 质检表单视图：增加质检数量、通过率、失败原因、备注 ============ -->
     <record id="quality_check_view_form_inherit_miclen" model="ir.ui.view">
         <field name="name">quality.check.view.form.inherit.miclen</field>
         <field name="model">quality.check</field>
         <field name="inherit_id" ref="quality_control.quality_check_view_form"/>
         <field name="arch" type="xml">
+            <!-- 有失败数量时隐藏通过按钮 -->
+            <xpath expr="(//button[@name='do_pass'])[1]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or failed_qty > 0</attribute>
+            </xpath>
+            <!-- 通过数量=需求数量时隐藏失败按钮 -->
+            <xpath expr="//button[@name='do_fail' and hasclass('btn-primary')]" position="attributes">
+                <attribute name="invisible">quality_state != 'none' or (demand_qty > 0 and passed_qty == demand_qty)</attribute>
+            </xpath>
             <!-- 在图片字段所在组之前插入质检数量组 -->
             <xpath expr="//field[@name='picture']/.." position="before">
                 <group string="质检数量">
@@ -14,16 +22,23 @@
                         <field name="demand_qty" string="需求数量" readonly="quality_state != 'none'"/>
                         <field name="passed_qty" string="通过数量" readonly="quality_state != 'none'"/>
                         <field name="failed_qty" string="失败数量" readonly="quality_state != 'none'"/>
+                        <field name="remaining_qty" string="剩余数量" readonly="1"/>
                     </group>
                     <group>
                         <field name="uom_id" string="单位" readonly="1" groups="uom.group_uom"/>
+                        <field name="pass_rate" string="通过率" widget="progressbar" readonly="1"/>
+                        <field name="failure_reason_id" string="失败原因"
+                               invisible="quality_state == 'pass'"
+                               options="{'no_create': True}"/>
+                        <field name="quality_remark" string="质检备注"
+                               placeholder="记录质检过程中的观察和备注..."/>
                     </group>
                 </group>
             </xpath>
         </field>
     </record>
 
-    <!-- 质检列表视图：增加需求数量、通过数量、失败数量列 -->
+    <!-- ============ 质检列表视图：增加需求数量、通过数量、失败数量、剩余数量列 ============ -->
     <record id="quality_check_view_tree_inherit_miclen" model="ir.ui.view">
         <field name="name">quality.check.view.list.inherit.miclen</field>
         <field name="model">quality.check</field>
@@ -31,10 +46,43 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='quality_state']" position="before">
                 <field name="demand_qty" optional="hide" string="需求数量"/>
-                <field name="passed_qty" optional="hide" string="通过数量"/>
-                <field name="failed_qty" optional="hide" string="失败数量"/>
+                <field name="passed_qty" optional="show" string="通过数量"/>
+                <field name="failed_qty" optional="show" string="失败数量"/>
+                <field name="remaining_qty" optional="hide" string="剩余数量"/>
+                <field name="failure_reason_id" optional="hide" string="失败原因"/>
             </xpath>
         </field>
+    </record>
+
+    <!-- ============ 质检搜索视图：增加过滤器和分组 ============ -->
+    <record id="quality_check_view_search_inherit_miclen" model="ir.ui.view">
+        <field name="name">quality.check.view.search.inherit.miclen</field>
+        <field name="model">quality.check</field>
+        <field name="inherit_id" ref="quality_control.quality_check_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <separator/>
+                <filter name="filter_has_failures" string="有失败数量"
+                        domain="[('failed_qty', '>', 0)]"/>
+                <filter name="filter_fully_passed" string="全部通过"
+                        domain="[('quality_state', '=', 'pass'), ('failed_qty', '=', 0)]"/>
+                <filter name="filter_has_remaining" string="有待检数量"
+                        domain="[('remaining_qty', '>', 0)]"/>
+                <separator/>
+                <filter name="group_failure_reason" string="失败原因"
+                        context="{'group_by': 'failure_reason_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ============ 批量通过服务器动作 ============ -->
+    <record id="action_batch_pass_quality_check" model="ir.actions.server">
+        <field name="name">批量通过</field>
+        <field name="model_id" ref="quality.model_quality_check"/>
+        <field name="binding_model_id" ref="quality.model_quality_check"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_batch_pass()</field>
     </record>
 
 </odoo>

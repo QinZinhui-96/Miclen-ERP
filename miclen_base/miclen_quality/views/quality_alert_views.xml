@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- 继承 quality.alert 表单视图 -->
+    <record id="quality_alert_view_form_miclen" model="ir.ui.view">
+        <field name="name">quality.alert.view.form.miclen</field>
+        <field name="model">quality.alert</field>
+        <field name="inherit_id" ref="quality_control.quality_alert_view_form"/>
+        <field name="arch" type="xml">
+
+            <!-- 在 header 中添加"退回供应商"按钮 -->
+            <xpath expr="//header/field[@name='stage_id']" position="before">
+                <button name="action_return_to_supplier" type="object"
+                        string="Return to Supplier"
+                        class="btn-warning"
+                        invisible="not check_id or failed_qty &lt;= 0 or return_picking_id"
+                        data-hotkey="r"/>
+            </xpath>
+
+            <!-- 在 button_box 中添加退回调拨单的统计按钮 -->
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_open_return_picking" type="object"
+                        invisible="not return_picking_id"
+                        class="oe_stat_button" icon="fa-truck">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value"><field name="return_picking_id" readonly="1"/></span>
+                        <span class="o_stat_text">Return Picking</span>
+                    </div>
+                </button>
+            </xpath>
+
+            <!-- 在左侧 picking_id 字段后添加质检数量字段 -->
+            <xpath expr="//field[@name='picking_id']" position="after">
+                <field name="demand_qty" readonly="1"/>
+                <field name="passed_qty" readonly="1"/>
+                <field name="failed_qty" readonly="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- 继承 quality.alert 列表视图 -->
+    <record id="quality_alert_view_tree_miclen" model="ir.ui.view">
+        <field name="name">quality.alert.view.tree.miclen</field>
+        <field name="model">quality.alert</field>
+        <field name="inherit_id" ref="quality_control.quality_alert_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="demand_qty" optional="show"/>
+                <field name="passed_qty" optional="show"/>
+                <field name="failed_qty" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

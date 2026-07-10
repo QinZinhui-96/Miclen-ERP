@@ -22,6 +22,56 @@ class QualityCheckWizard(models.TransientModel):
         related='current_check_id.failed_qty',
         readonly=False,
     )
+    remaining_qty = fields.Float(
+        string='Remaining Quantity',
+        related='current_check_id.remaining_qty',
+        readonly=True,
+    )
+    pass_rate = fields.Float(
+        string='Pass Rate',
+        related='current_check_id.pass_rate',
+        readonly=True,
+    )
+    failure_reason_id = fields.Many2one(
+        'quality.reason',
+        string='Failure Reason',
+        related='current_check_id.failure_reason_id',
+        readonly=False,
+    )
+    quality_remark = fields.Text(
+        string='Quality Remark',
+        related='current_check_id.quality_remark',
+        readonly=False,
+    )
+
+    @api.model
+    def default_get(self, fields_list):
+        """向导打开时，自动将通过数量设为需求数量（默认全部通过）"""
+        res = super().default_get(fields_list)
+        check_id = self.env.context.get('default_current_check_id')
+        if check_id:
+            check = self.env['quality.check'].browse(check_id)
+            if check.exists() and check.quality_state == 'none' \
+                    and check.demand_qty > 0 \
+                    and not check.passed_qty and not check.failed_qty:
+                check.passed_qty = check.demand_qty
+        return res
+
+    @api.onchange('passed_qty')
+    def _onchange_wizard_passed_qty(self):
+        """向导中通过数量变更时自动计算失败数量 = 需求数量 - 通过数量"""
+        if self.demand_qty > 0:
+            expected_failed = self.demand_qty - self.passed_qty
+            if expected_failed >= 0:
+                self.failed_qty = expected_failed
+
+    @api.onchange('failed_qty')
+    def _onchange_wizard_failed_qty(self):
+        """向导中失败数量变更时自动计算通过数量 = 需求数量 - 失败数量"""
+        if self.demand_qty > 0:
+            expected_passed = self.demand_qty - self.failed_qty
+            if expected_passed >= 0:
+                self.passed_qty = expected_passed
 
     def _validate_passed_qty(self):
         """校验通过数量：有需求数量时必须大于0"""
@@ -56,34 +106,41 @@ class QualityCheckWizard(models.TransientModel):
             ))
 
     def do_pass(self):
-        """通过质检前校验通过数量"""
+        """通过质检前校验：有失败数量时禁止通过"""
+        if self.demand_qty > 0 and self.failed_qty > 0:
+            raise UserError(_(
+                '当前质检有失败数量 %(failed)s，不能通过质检。请点击"失败"按钮完成质检，'
+                '系统将自动创建质量警报。',
+                failed=self.failed_qty,
+            ))
+        if self.demand_qty > 0 and self.passed_qty <= 0:
+            self.passed_qty = self.demand_qty - self.failed_qty
         self._validate_passed_qty()
         return super().do_pass()
 
     def do_fail(self):
-        """失败质检前校验失败数量"""
+        """失败质检前自动填充失败数量并校验"""
+        if self.demand_qty > 0 and self.failed_qty <= 0:
+            self.failed_qty = self.demand_qty - self.passed_qty
         self._validate_failed_qty()
         return super().do_fail()
+
+    def do_measure(self):
+        """测量质检：有失败数量时直接走失败流程"""
+        if self.demand_qty > 0 and self.failed_qty > 0:
+            return self.do_fail()
+        return super().do_measure()
 
     def confirm_fail(self):
         """确认失败前再次校验失败数量"""
         self._validate_failed_qty()
         return super().confirm_fail()
 
-    def do_measure(self):
-        """测量质检时自动填充对应数量再进入通过/失败流程"""
-        if self.current_check_id._measure_passes():
-            if self.demand_qty > 0 and self.passed_qty <= 0:
-                self.passed_qty = self.demand_qty - self.failed_qty
-            return self.do_pass()
-        else:
-            if self.demand_qty > 0 and self.failed_qty <= 0:
-                self.failed_qty = self.demand_qty - self.passed_qty
-            return self.do_fail()
-
     def confirm_measure(self):
-        """确认测量前校验对应数量"""
-        if self.current_check_id._measure_passes():
+        """确认测量前校验对应数量：有失败数量时走失败校验"""
+        if self.demand_qty > 0 and self.failed_qty > 0:
+            self._validate_failed_qty()
+        elif self.current_check_id._measure_passes():
             self._validate_passed_qty()
         else:
             self._validate_failed_qty()
