@@ -8,21 +8,21 @@ class QualityAlert(models.Model):
     _inherit = "quality.alert"
 
     demand_qty = fields.Float(
-        string='Demand Quantity',
+        string='需求数量',
         digits='Product Unit',
         related='check_id.demand_qty',
         readonly=True,
         help='质检的需求数量',
     )
     passed_qty = fields.Float(
-        string='Passed Quantity',
+        string='合格数量',
         digits='Product Unit',
         related='check_id.passed_qty',
         readonly=True,
         help='质检的通过数量',
     )
     failed_qty = fields.Float(
-        string='Failed Quantity',
+        string='不合格数量',
         digits='Product Unit',
         related='check_id.failed_qty',
         readonly=True,
@@ -30,7 +30,7 @@ class QualityAlert(models.Model):
     )
     return_picking_id = fields.Many2one(
         'stock.picking',
-        string='Return Picking',
+        string='质检退货',
         readonly=True,
         copy=False,
         help='退回供应商的调拨单',

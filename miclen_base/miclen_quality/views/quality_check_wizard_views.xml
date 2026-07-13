@@ -32,7 +32,7 @@
                     <group>
                         <field name="remaining_qty" string="剩余数量" readonly="1"/>
                         <field name="uom_id" string="单位" readonly="1" groups="uom.group_uom"/>
-                        <field name="pass_rate" string="通过率" widget="progressbar" readonly="1"/>
+                        <field name="pass_rate" string="通过率(%)" readonly="1" digits="[16, 2]"/>
                         <field name="quality_remark" string="质检备注"
                                placeholder="记录质检过程中的观察和备注..."/>
                     </group>

@@ -11,7 +11,7 @@
             <!-- 在 header 中添加"退回供应商"按钮 -->
             <xpath expr="//header/field[@name='stage_id']" position="before">
                 <button name="action_return_to_supplier" type="object"
-                        string="Return to Supplier"
+                        string="退回供应商"
                         class="btn-warning"
                         invisible="not check_id or failed_qty &lt;= 0 or return_picking_id"
                         data-hotkey="r"/>
@@ -24,7 +24,7 @@
                         class="oe_stat_button" icon="fa-truck">
                     <div class="o_field_widget o_stat_info">
                         <span class="o_stat_value"><field name="return_picking_id" readonly="1"/></span>
-                        <span class="o_stat_text">Return Picking</span>
+                        <span class="o_stat_text">质检退货</span>
                     </div>
                 </button>
             </xpath>

@@ -8,38 +8,47 @@ class QualityCheckWizard(models.TransientModel):
     _inherit = 'quality.check.wizard'
 
     demand_qty = fields.Float(
-        string='Demand Quantity',
+        string='需求数量',
         related='current_check_id.demand_qty',
         readonly=True,
     )
     passed_qty = fields.Float(
-        string='Passed Quantity',
+        string='合格数量',
         related='current_check_id.passed_qty',
         readonly=False,
     )
     failed_qty = fields.Float(
-        string='Failed Quantity',
+        string='不合格数量',
         related='current_check_id.failed_qty',
         readonly=False,
     )
     remaining_qty = fields.Float(
-        string='Remaining Quantity',
+        string='剩余数量',
         related='current_check_id.remaining_qty',
         readonly=True,
     )
     pass_rate = fields.Float(
-        string='Pass Rate',
-        related='current_check_id.pass_rate',
-        readonly=True,
+        string='通过率',
+        compute='_compute_wizard_pass_rate',
+        help='通过率(%) = 通过数量 / 需求数量 * 100',
     )
+
+    @api.depends('demand_qty', 'passed_qty', 'failed_qty')
+    def _compute_wizard_pass_rate(self):
+        """向导中实时计算通过率，不依赖 quality.check 的 store=True 计算字段"""
+        for wizard in self:
+            if wizard.demand_qty > 0:
+                wizard.pass_rate = (wizard.passed_qty / wizard.demand_qty) * 100
+            else:
+                wizard.pass_rate = 0.0
     failure_reason_id = fields.Many2one(
         'quality.reason',
-        string='Failure Reason',
+        string='不通过原因',
         related='current_check_id.failure_reason_id',
         readonly=False,
     )
     quality_remark = fields.Text(
-        string='Quality Remark',
+        string='质量备注',
         related='current_check_id.quality_remark',
         readonly=False,
     )

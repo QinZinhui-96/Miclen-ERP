@@ -8,7 +8,7 @@ class QualityCheck(models.Model):
     _inherit = "quality.check"
 
     demand_qty = fields.Float(
-        string='Demand Quantity',
+        string='需求数量',
         digits='Product Unit',
         compute='_compute_demand_qty',
         store=True,
@@ -17,38 +17,38 @@ class QualityCheck(models.Model):
         help='调拨单的需求数量，质检时自动从调拨单获取，可手动修改',
     )
     passed_qty = fields.Float(
-        string='Passed Quantity',
+        string='合格数量',
         digits='Product Unit',
         tracking=True,
         help='质检通过的数量',
     )
     failed_qty = fields.Float(
-        string='Failed Quantity',
+        string='不合格数量',
         digits='Product Unit',
         tracking=True,
         help='质检失败的数量',
     )
     remaining_qty = fields.Float(
-        string='Remaining Quantity',
+        string='剩余数量',
         digits='Product Unit',
         compute='_compute_remaining_qty',
         store=True,
         help='剩余待检数量 = 需求数量 - 通过数量 - 失败数量',
     )
     pass_rate = fields.Float(
-        string='Pass Rate',
+        string='通过率',
         compute='_compute_pass_rate',
         store=True,
         help='通过率(%) = 通过数量 / 需求数量 * 100',
     )
     failure_reason_id = fields.Many2one(
         'quality.reason',
-        string='Failure Reason',
+        string='不合格原因',
         tracking=True,
         help='质检失败的原因分类',
     )
     quality_remark = fields.Text(
-        string='Quality Remark',
+        string='质量备注',
         tracking=True,
         help='质检备注 / 观察记录',
     )
@@ -79,7 +79,7 @@ class QualityCheck(models.Model):
         for check in self:
             check.remaining_qty = check.demand_qty - check.passed_qty - check.failed_qty
 
-    @api.depends('demand_qty', 'passed_qty')
+    @api.depends('demand_qty', 'passed_qty', 'failed_qty')
     def _compute_pass_rate(self):
         """计算通过率"""
         for check in self:
