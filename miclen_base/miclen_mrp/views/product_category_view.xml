@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 继承产品类别表单视图 -->
+    <record id="miclen_product_category_form_view_inherit" model="ir.ui.view">
+        <field name="name">product.category.form.inherit</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <group name="first" position="inside">
+                <field name="cate_code" placeholder="e.g. CAT001"/>
+            </group>
+        </field>
+    </record>
+
+    <!-- 继承产品类别列表视图 -->
+<!--    <record id="miclen_product_category_list_view_inherit" model="ir.ui.view">-->
+<!--        <field name="name">product.category.list.inherit</field>-->
+<!--        <field name="model">product.category</field>-->
+<!--        <field name="inherit_id" ref="product.product_category_list_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <list string="Product Categories" position="inside">-->
+<!--                <field name="cate_code" string="编码"/>-->
+<!--            </list>-->
+<!--        </field>-->
+<!--    </record>-->
+</odoo>

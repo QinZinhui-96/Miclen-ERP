@@ -31,4 +31,18 @@
               sequence="20"
               action="stock.action_replenishment"/>
 
+<!--    制造模块-->
+    <menuitem id="menu_action_miclen_product_coil"
+              name="卷料选料"
+              parent="mrp.menu_mrp_bom"
+              sequence="20"
+              action="action_miclen_product_coil"/>
+
+<!--    库存模块-->
+    <menuitem id="menu_action_miclen_product_coil_stock"
+              name="卷料选料"
+              parent="stock.menu_stock_inventory_control"
+              sequence="20"
+              action="action_miclen_product_coil"/>
+
 </odoo>

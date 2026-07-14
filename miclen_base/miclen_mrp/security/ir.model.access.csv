@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_template_roll_material,product.template.roll.material,model_product_template,base.group_user,1,1,1,1
+access_roll_material_config,roll.material.config,model_roll_material_config,mrp.group_mrp_user,1,1,1,1
+access_roll_material_config_line,roll.material.config.line,model_roll_material_config_line,mrp.group_mrp_user,1,1,1,1
+access_roll_material_selection_wizard,roll.material.selection.wizard,model_roll_material_selection_wizard,mrp.group_mrp_user,1,1,1,1
+access_roll_material_selection_wizard_line,roll.material.selection.wizard.line,model_roll_material_selection_wizard_line,mrp.group_mrp_user,1,1,1,1

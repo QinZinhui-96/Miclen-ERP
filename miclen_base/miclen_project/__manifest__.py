@@ -44,6 +44,7 @@
         'views/mrp_bom_views.xml',
         'views/mrp_production.xml',
         'views/mrp_workorder.xml',
+        'views/miclen_product_coil.xml',
 
         'data/miclen_product_category_data.xml',
         # 'data/miclen_category_details_data.xml',

@@ -12,3 +12,4 @@ from . import miclen_mrp_workcenter
 from . import mrp_routing
 from . import mrp_production
 from . import mrp_workorder
+from . import miclen_product_coil

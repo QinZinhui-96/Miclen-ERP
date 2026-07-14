@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="miclen_product_coil_list_view">
+        <field name="name">miclen.product.coil.list</field>
+        <field name="model">miclen.product.coil</field>
+        <field name="arch" type="xml">
+            <list string="卷料选料配置">
+                <field name="sequence" widget="handle"/>
+                <field name="product_id" required="1"/>
+                <field name="coil_x"/>
+                <field name="coil_y"/>
+                <field name="consume_way"/>
+                <field name="gap"/>
+                <field name="line_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="miclen_product_coil_form_view">
+        <field name="name">miclen.product.coil.form</field>
+        <field name="model">miclen.product.coil</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_consume_way" type="object" string="智能选料" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="product_id" required="1"/>
+                            <field name="product_tmpl_id" invisible="1"/>
+                            <field name="gap"/>
+                        </group>
+                        <group>
+                            <field name="coil_x"/>
+                            <field name="coil_y"/>
+                            <field name="consume_way" required="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="卷料优先级" name="lines">
+                            <field name="line_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="product_id"/>
+                                    <field name="miclen_width_len" readonly="1" force_save="1"/>
+                                    <field name="available_qty"/>
+                                    <field name="uom_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
