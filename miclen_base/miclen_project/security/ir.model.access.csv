@@ -5,3 +5,5 @@ access_miclen_category_subcategory,miclen.category.subcategory,model_miclen_cate
 access_miclen_mrp_workcenter,miclen.mrp.workcenter,model_miclen_mrp_workcenter,,1,1,1,1
 access_miclen_product_coil,miclen.product.coil,model_miclen_product_coil,,1,1,1,1
 access_miclen_product_coil_line,miclen.product.coil.line,model_miclen_product_coil_line,,1,1,1,1
+access_miclen_mrp_product_coil_wizard,miclen.mrp.product.coil.wizard,model_miclen_mrp_product_coil_wizard,,1,1,1,1
+access_miclen_mrp_product_coil_wizard_line,miclen.mrp.product.coil.wizard.line,model_miclen_mrp_product_coil_wizard_line,,1,1,1,1

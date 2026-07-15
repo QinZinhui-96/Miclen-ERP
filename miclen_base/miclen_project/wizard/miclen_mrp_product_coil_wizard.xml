@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="miclen_mrp_product_coil_wizard_form" model="ir.ui.view">
+        <field name="name">miclen.mrp.product.coil.wizard.form</field>
+        <field name="model">miclen.mrp.product.coil.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>卷料选料预览</h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="move_id" readonly="1" invisible="1" force_save="1"/>
+                            <field name="product_id" readonly="1" force_save="1"/>
+                            <field name="product_uom_qty" readonly="1" force_save="1"/>
+                            <field name="product_uom" readonly="1" invisible="1" force_save="1"/>
+                        </group>
+                        <group>
+                            <field name="coil_id" readonly="1" invisible="1" force_save="1"/>
+                            <field name="coil_x" readonly="1" force_save="1"/>
+                            <field name="coil_y" readonly="1" force_save="1"/>
+                            <field name="gap" readonly="1" force_save="1"/>
+                            <field name="consume_way" widget="radio" />
+                        </group>
+                    </group>
+                    <group string="消耗汇总">
+                        <group>
+                            <field name="total_consume_units" readonly="1" force_save="1"/>
+                            <field name="total_consume_qty" readonly="1" force_save="1"/>
+                        </group>
+                        <group>
+                            <field name="total_shortage_units" readonly="1" force_save="1"
+                                   decoration-danger="total_shortage_units > 0"/>
+                            <field name="total_shortage_qty" readonly="1" force_save="1"
+                                   decoration-danger="total_shortage_qty > 0"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="卷料消耗明细">
+                            <field name="line_ids">
+                                <list create="false" delete="false" edit="false">
+                                    <field name="sequence" column_invisible="1"/>
+                                    <field name="product_id" readonly="1" force_save="1"/>
+                                    <field name="uom_id" readonly="1" column_invisible="1" force_save="1"/>
+                                    <field name="miclen_width_len" readonly="1" force_save="1"/>
+                                    <field name="available_qty" readonly="1" force_save="1"/>
+                                    <field name="max_units" readonly="1" force_save="1"/>
+                                    <field name="number_units" readonly="1" force_save="1"/>
+                                    <field name="consume_qty" readonly="1" force_save="1"/>
+                                    <field name="shortage_units" readonly="1" force_save="1"
+                                           decoration-danger="shortage_units > 0"/>
+                                    <field name="shortage_qty" readonly="1" force_save="1"
+                                           decoration-danger="shortage_qty > 0"
+                                           column_invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="action_confirm_consume"
+                            type="object"
+                            string="确认消耗"
+                            class="btn-primary"
+                            confirm="确认后将删除原始组件行，并把这些卷材消耗明细加入制造单组件。此操作不可撤销，是否继续？"/>
+                    <button string="取消"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>
