@@ -13,4 +13,3 @@ from . import mrp_routing
 from . import stock_move
 from . import mrp_production
 from . import mrp_workorder
-from . import miclen_product_coil

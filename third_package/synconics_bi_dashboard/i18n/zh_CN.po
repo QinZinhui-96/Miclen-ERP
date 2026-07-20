@@ -1,0 +1,1937 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* synconics_bi_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-18 16:00+0000\n"
+"PO-Revision-Date: 2026-07-18 16:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: synconics_bi_dashboard
+#: model:ir.module.module,summary:synconics_bi_dashboard.module_meta_information
+msgid "Synconics BI-Dashboard gives you a 360 view of your business."
+msgstr "Synconics BI 仪表盘为您提供业务360度全景视图。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.module.module,description:synconics_bi_dashboard.module_meta_information
+msgid "Build powerful dashboard charts that transform complex data into clear, actionable insights."
+msgstr "构建强大的仪表盘图表，将复杂数据转化为清晰、可操作的洞察。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.module.module,name:synconics_bi_dashboard.module_meta_information
+msgid "Synconics BI Dashboard"
+msgstr "Synconics BI 仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_bi_dashboard
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__name
+msgid "Name"
+msgstr "名称"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__chart_count
+msgid "Chart Count"
+msgstr "图表数量"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__chart_ids
+msgid "Charts"
+msgstr "图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__parent_menu_id
+msgid "Parent Menu"
+msgstr "父菜单"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__menu_id
+msgid "Menu"
+msgstr "菜单"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__action_id
+msgid "Action"
+msgstr "动作"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__sequence
+msgid "Sequence"
+msgstr "序号"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__menu_active
+msgid "Menu Active"
+msgstr "菜单激活"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__grid_stack_config
+msgid "Grid Stack Dimensions"
+msgstr "网格布局尺寸"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__auto_refresh_time__15
+msgid "15 Seconds"
+msgstr "15秒"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__auto_refresh_time__30
+msgid "30 Seconds"
+msgstr "30秒"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__auto_refresh_time__45
+msgid "45 Seconds"
+msgstr "45秒"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__auto_refresh_time__60
+msgid "1 Minute"
+msgstr "1分钟"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__auto_refresh_time__120
+msgid "2 Minutes"
+msgstr "2分钟"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__auto_refresh_time__300
+msgid "5 Minutes"
+msgstr "5分钟"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__auto_refresh_time
+msgid "Auto-Refresh Interval"
+msgstr "自动刷新间隔"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__mail_cron_job
+msgid "Mail Cron Job"
+msgstr "邮件定时任务"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__dashboard_mail_ids
+msgid "Dashboard Mail"
+msgstr "仪表盘邮件"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard__dashboard_mail_ids
+msgid "Multiple different charts can be shared on mail to multiple different users."
+msgstr "多个不同的图表可以通过邮件分享给多个不同的用户。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard__company_id
+msgid "Company related records."
+msgstr "公司相关记录。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__access_mode__groups
+msgid "Access Groups"
+msgstr "访问组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard__access_mode__users
+msgid "Users"
+msgstr "用户"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__access_mode
+msgid "Access By"
+msgstr "访问方式"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__group_ids
+msgid "Access Groups"
+msgstr "访问组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__user_ids
+msgid "Users"
+msgstr "用户"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_bi_dashboard_mail
+msgid "Dashboard Mail"
+msgstr "仪表盘邮件"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_mail__dashboard_id
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_mail__name
+msgid "Name"
+msgstr "名称"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_mail__mail_template_id
+msgid "Mail Template"
+msgstr "邮件模板"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_mail__chart_ids
+msgid "Charts"
+msgstr "图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_mail__partner_ids
+msgid "Recipients"
+msgstr "收件人"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_mail__automated_email
+msgid "Automated Email"
+msgstr "自动邮件"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_bi_dashboard_action
+msgid "To Do Actions"
+msgstr "待办操作"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_action__name
+msgid "Title"
+msgstr "标题"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_action__action_line_ids
+msgid "Set Action Line For To Do Actions."
+msgstr "为待办操作设置操作行。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_bi_dashboard_action_line
+msgid "To Do Actions Line"
+msgstr "待办操作行"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_action_line__name
+msgid "Task"
+msgstr "任务"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_action_line__active
+msgid "Active"
+msgstr "启用"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_action_line__active
+msgid "Set Action Line For To Do Actions."
+msgstr "为待办操作设置操作行。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_bi_dashboard_chart
+msgid "Dashboard Charts"
+msgstr "仪表盘图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__name
+msgid "Name"
+msgstr "名称"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__active
+msgid "Active"
+msgstr "启用"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__bi_dashboard_id
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__kpi
+msgid "KPI"
+msgstr "KPI"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__tile_view
+msgid "Tile View"
+msgstr "磁贴视图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__bar_chart
+msgid "Bar Chart"
+msgstr "条形图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__column_chart
+msgid "Column Chart"
+msgstr "柱状图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__doughnut_chart
+msgid "Doughnut Chart"
+msgstr "环形图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__area_chart
+msgid "Area Chart"
+msgstr "面积图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__funnel_chart
+msgid "Funnel Chart"
+msgstr "漏斗图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__pyramid_chart
+msgid "Pyramid Chart"
+msgstr "金字塔图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__line_chart
+msgid "Line Chart"
+msgstr "折线图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__pie_chart
+msgid "Pie Chart"
+msgstr "饼图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__radar_chart
+msgid "Radar Chart"
+msgstr "雷达图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__stacked_column
+msgid "StackedColumn"
+msgstr "堆叠柱状图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__radial_chart
+msgid "Radial Chart"
+msgstr "径向图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__scatter_chart
+msgid "Scatter Chart"
+msgstr "散点图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__map_chart
+msgid "Map Chart"
+msgstr "地图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__meter_chart
+msgid "Meter Chart"
+msgstr "仪表图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__to_do
+msgid "To Do"
+msgstr "待办"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__chart_type__list_view
+msgid "List View"
+msgstr "列表视图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__chart_type
+msgid "Type"
+msgstr "类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__model_id
+msgid "Model "
+msgstr "模型 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__model_ref
+msgid "Model Ref. "
+msgstr "模型引用 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__data_type__count
+msgid "Count"
+msgstr "计数"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__data_type__sum
+msgid "Sum"
+msgstr "求和"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__data_type__average
+msgid "Average"
+msgstr "平均"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__data_type
+msgid "Data Type "
+msgstr "数据类型 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__measure_field_id
+msgid "Measure Field "
+msgstr "度量字段 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__limit_record
+msgid "Limit Record"
+msgstr "记录限制"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__domain
+msgid "Domain "
+msgstr "过滤条件 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__date_filter
+msgid "Date Filter"
+msgstr "日期筛选"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__target
+msgid "Target"
+msgstr "目标"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__none
+msgid "None"
+msgstr "无"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__today
+msgid "Today"
+msgstr "今天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__this_week
+msgid "This Week"
+msgstr "本周"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__this_month
+msgid "This Month"
+msgstr "本月"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__this_quarter
+msgid "This Quarter"
+msgstr "本季度"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__this_year
+msgid "This Year"
+msgstr "本年"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__week_to_date
+msgid "Week To Date"
+msgstr "本周至今"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__month_to_date
+msgid "Month To Date"
+msgstr "本月至今"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__quarter_to_date
+msgid "Quarter To Date"
+msgstr "本季度至今"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__year_to_date
+msgid "Year To Date"
+msgstr "本年至今"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__next_day
+msgid "Next Day"
+msgstr "明天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__next_week
+msgid "Next Week"
+msgstr "下周"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__next_month
+msgid "Next Month"
+msgstr "下月"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__next_quarter
+msgid "Next Quarter"
+msgstr "下季度"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__next_year
+msgid "Next Year"
+msgstr "明年"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_day
+msgid "Last Day"
+msgstr "昨天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_week
+msgid "Last Week"
+msgstr "上周"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_month
+msgid "Last Month"
+msgstr "上月"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_quarter
+msgid "Last Quarter"
+msgstr "上季度"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_year
+msgid "Last Year"
+msgstr "去年"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_seven_days
+msgid "Last Seven Days"
+msgstr "最近七天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_30_days
+msgid "Last 30 Days"
+msgstr "最近30天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_ninety_days
+msgid "Last Ninety Days"
+msgstr "最近90天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__last_365_days
+msgid "Last 365 Days"
+msgstr "最近365天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__past_till_now
+msgid "Past Till Now"
+msgstr "过去至今"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__past_excluding_today
+msgid "Past Excluding Today"
+msgstr "过去（不含今天）"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__future_starting_today
+msgid "Future Starting Today"
+msgstr "未来（从今天起）"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__future_starting_now
+msgid "Future Starting Now"
+msgstr "未来（从现在起）"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__date_filter__future_starting_tomorrow
+msgid "Future Starting Tomorrow"
+msgstr "未来（从明天起）"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__date_filter_option
+msgid "Date Filter Options "
+msgstr "日期筛选选项 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__include_period
+msgid "Include Period "
+msgstr "包含周期 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__same_period_previous_years
+msgid "Same Period Previous Years "
+msgstr "往年同期 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__comparison_type__none
+msgid "None"
+msgstr "无"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__comparison_type__sum
+msgid "Sum"
+msgstr "求和"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__comparison_type__ratio
+msgid "Ratio"
+msgstr "比率"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__comparison_type__percentage
+msgid "Percentage"
+msgstr "百分比"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__comparison_type
+msgid "Comparison Type"
+msgstr "比较类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__enable_target
+msgid "Enable Target"
+msgstr "启用目标"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__target_value
+msgid "Target Value"
+msgstr "目标值"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__view_type__standard
+msgid "Standard"
+msgstr "标准"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__view_type__progress
+msgid "Progress"
+msgstr "进度"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__view_type
+msgid "View"
+msgstr "视图"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__model_name
+msgid "Model"
+msgstr "模型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__model_ref_name
+msgid "Model Ref."
+msgstr "模型引用"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__measurement_field_ids
+msgid "Measurements"
+msgstr "度量"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__list_type__standard
+msgid "Standard"
+msgstr "标准"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__list_type__grouped
+msgid "Grouped"
+msgstr "分组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__list_type
+msgid "List Type"
+msgstr "列表类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__list_type
+msgid "Select group type."
+msgstr "选择分组类型。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__list_standard_field_ids
+msgid "List Standard Fields"
+msgstr "列表标准字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__list_standard_field_ids
+msgid "Select and add column fields for the standard list view."
+msgstr "选择并添加标准列表视图的列字段。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__used_list_ids
+msgid "Used List Ids"
+msgstr "已用列表ID"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__list_measure_field_ids
+msgid "List Measure Fields"
+msgstr "列表度量字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__list_measure_field_ids
+msgid "Select and add column fields for the standard list view."
+msgstr "选择并添加标准列表视图的列字段。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__todo_layout__default
+msgid "Default"
+msgstr "默认"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__todo_layout__activity
+msgid "Activity"
+msgstr "活动"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__todo_layout
+msgid "To Do Layout"
+msgstr "待办布局"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__todo_layout
+msgid "Select To Do action."
+msgstr "选择待办操作。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__todo_action_ids
+msgid "TODO Actions"
+msgstr "待办操作"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__todo_action_ids
+msgid "Set action for information purpose."
+msgstr "设置信息用途的操作。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__image
+msgid "Image"
+msgstr "图片"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__image
+msgid "Set image for mail"
+msgstr "设置邮件图片"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__group_by
+msgid "Group By"
+msgstr "分组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__group_by_type
+msgid "Group By Type"
+msgstr "分组类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__group_by_time_range__day
+msgid "Day"
+msgstr "天"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__group_by_time_range__week
+msgid "Week"
+msgstr "周"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__group_by_time_range__month
+msgid "Month"
+msgstr "月"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__group_by_time_range__quarter
+msgid "Quarter"
+msgstr "季度"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__group_by_time_range__year
+msgid "Year"
+msgstr "年"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__group_by_time_range
+msgid "Group by Time Range"
+msgstr "按时间范围分组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__group_by_time_range
+msgid "Select time range on selected Group by Date option."
+msgstr "选择日期分组的时间范围。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__map_group_by
+msgid "Map Group by"
+msgstr "地图分组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__measure_field
+msgid "Measure Field"
+msgstr "度量字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__sub_group_by
+msgid "Sub Group By"
+msgstr "子分组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__sub_group_by_time_range
+msgid "Sub Group by Time Range"
+msgstr "子分组时间范围"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__sub_group_by_time_range
+msgid "Select time range on selected Sub-Group by Date option."
+msgstr "选择子日期分组的时间范围。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__sort_with
+msgid "Sort With"
+msgstr "排序字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__record_limit
+msgid "Record Limit"
+msgstr "记录限制"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__record_limit
+msgid "If you will change it to 0 (zero) then it will consider all records"
+msgstr "如果设为0，则查询所有记录"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__domain_2
+msgid "Domain"
+msgstr "过滤条件"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__sort_order__asc
+msgid "Ascending"
+msgstr "升序"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__sort_order__desc
+msgid "Descending"
+msgstr "降序"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__sort_order
+msgid "Sort Order"
+msgstr "排序方向"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__data_type_2
+msgid "Data Type"
+msgstr "数据类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__background_color
+msgid "Background Color"
+msgstr "背景颜色"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__enable_border
+msgid "Enable Border"
+msgstr "启用边框"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__border_type__none
+msgid "None"
+msgstr "无"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__border_type__left
+msgid "Left"
+msgstr "左"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__border_type__right
+msgid "Right"
+msgstr "右"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__border_type__top
+msgid "Top"
+msgstr "上"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__border_type__bottom
+msgid "Bottom"
+msgstr "下"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__border_type
+msgid "Border Type"
+msgstr "边框类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__border_color
+msgid "Border Color"
+msgstr "边框颜色"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__border_width
+msgid "Border Width"
+msgstr "边框宽度"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__font_color
+msgid "Font Color"
+msgstr "字体颜色"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__kpi_layout
+msgid "Layout"
+msgstr "布局"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__tile_layout
+msgid "Layout "
+msgstr "布局 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__text_align__left
+msgid "Left"
+msgstr "左"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__text_align__center
+msgid "Center"
+msgstr "居中"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__text_align__right
+msgid "Right"
+msgstr "右"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__text_align
+msgid "Text Align"
+msgstr "文本对齐"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__theme
+msgid "Theme"
+msgstr "主题"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__item_action_ids
+msgid "Item Actions"
+msgstr "项操作"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__last_item_action_id
+msgid "Last Item Action"
+msgstr "最后项操作"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__date_filter_field
+msgid "Date Filter Field"
+msgstr "日期筛选字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__date_filter_option_2
+msgid "Date Filter Options"
+msgstr "日期筛选选项"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__apply_multiplier
+msgid "Apply Multiplier"
+msgstr "应用乘数"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__chart_multiplier_ids
+msgid "Chart Multiplier"
+msgstr "图表乘数"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__include_period_2
+msgid "Include Period"
+msgstr "包含周期"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__same_period_previous_years_2
+msgid "Same Period Previous Years"
+msgstr "往年同期"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__icon_option__default
+msgid "Default"
+msgstr "默认"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__icon_option__custom
+msgid "Custom"
+msgstr "自定义"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__icon_option
+msgid "Icon Option"
+msgstr "图标选项"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__default_icon
+msgid "Default Icon"
+msgstr "默认图标"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__icon
+msgid "Icon "
+msgstr "图标 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__previous_period_comparison
+msgid "Previous Period Comparison"
+msgstr "上期对比"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__previous_period_comparison
+msgid "Activate/deactivate previous comparison in KPI layout."
+msgstr "在KPI布局中激活/停用上期对比。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__previous_period_duration
+msgid "Previous Period Duration"
+msgstr "上期时长"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__previous_period_type
+msgid "Previous Period Type"
+msgstr "上期类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__previous_period_type__percentage
+msgid "Percentage"
+msgstr "百分比"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__previous_period_type__value
+msgid "Value"
+msgstr "值"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__show_unit
+msgid "Show Unit"
+msgstr "显示单位"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__show_unit
+msgid "Set unit type on axis."
+msgstr "在轴上设置单位类型。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__unit_type__monetary
+msgid "Monetary"
+msgstr "货币"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__bi_dashboard_chart__unit_type__custom
+msgid "Custom"
+msgstr "自定义"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__unit_type
+msgid "Unit Type"
+msgstr "单位类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__unit_type
+msgid "Select unit type for axis."
+msgstr "选择轴的单位类型。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__custom_unit
+msgid "Custom Unit"
+msgstr "自定义单位"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__custom_unit
+msgid "Set custom unit type on 'Y' axis."
+msgstr "在Y轴上设置自定义单位类型。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__group_ids
+msgid "Access Groups"
+msgstr "访问组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__top_button_color
+msgid "Top Button Color"
+msgstr "顶部按钮颜色"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__font_size
+msgid "Font Size"
+msgstr "字体大小"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__font_size
+msgid "Set font size for Tile"
+msgstr "设置磁贴字体大小"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__font_weight
+msgid "Font Weight"
+msgstr "字体粗细"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_bi_dashboard_chart__font_weight
+msgid "Set font thickness for Tile"
+msgstr "设置磁贴字体粗细"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart__hide_false
+msgid "Hide False"
+msgstr "隐藏假值"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_bi_dashboard_chart_item_action
+msgid "Item View Action"
+msgstr "项视图操作"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart_item_action__chart_id
+msgid "Chart"
+msgstr "图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart_item_action__model_name
+msgid "Model"
+msgstr "模型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart_item_action__action_group_by
+msgid "Action Group By"
+msgstr "操作分组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart_item_action__sort_with
+msgid "Sort With"
+msgstr "排序字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart_item_action__sort_order
+msgid "Sort Order"
+msgstr "排序方向"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart_item_action__record_limit
+msgid "Record Limit"
+msgstr "记录限制"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard_chart_item_action__type
+msgid "Type"
+msgstr "类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_chart_multiplier
+msgid "Chart Multiplier"
+msgstr "图表乘数"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__chart_id
+msgid "Chart"
+msgstr "图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__field_id
+msgid "Multiplier field"
+msgstr "乘数字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_chart_multiplier__multiplier
+msgid "Multiplier"
+msgstr "乘数"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_list_field
+msgid "List Fields"
+msgstr "列表字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_field__field_id
+msgid "Fields"
+msgstr "字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_list_field__field_id
+msgid "add column fields for the standard list view"
+msgstr "添加标准列表视图的列字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_field__field_name
+msgid "Field "
+msgstr "字段 "
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_list_field__field_name
+msgid "add column fields for the standard list view"
+msgstr "添加标准列表视图的列字段"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__list_field__operation_type__sum
+msgid "Sum"
+msgstr "求和"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields.selection,name:synconics_bi_dashboard.selection__list_field__operation_type__average
+msgid "Average"
+msgstr "平均"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_list_field__operation_type
+msgid "Operation Type"
+msgstr "运算类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_list_field__operation_type
+msgid "Set Field Value Type"
+msgstr "设置字段值类型"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_ir_ui_menu__is_dashboard_menu
+msgid "Is Dashboard Menu"
+msgstr "是仪表盘菜单"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_ir_ui_menu__user_ids
+msgid "Users"
+msgstr "用户"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_res_users__access_control_ids
+msgid "Access Controls"
+msgstr "访问控制"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model,name:synconics_bi_dashboard.model_dashboard_access
+msgid "Dashboard Access"
+msgstr "仪表盘访问"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__access_mode
+msgid "Access By"
+msgstr "访问方式"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_access__access_mode
+msgid "Provide dashboard to individual user's or user group's"
+msgstr "为单个用户或用户组提供仪表盘访问"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__remove_access
+msgid "Remove Access?"
+msgstr "移除访问权限？"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__group_ids
+msgid "Access Groups"
+msgstr "访问组"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_access__group_ids
+msgid "Select user access group for accessing dashboard."
+msgstr "选择可访问仪表盘的用户组。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__user_ids
+msgid "Users"
+msgstr "用户"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,help:synconics_bi_dashboard.field_dashboard_access__user_ids
+msgid "Select user's for accessing dashboard."
+msgstr "选择可访问仪表盘的用户。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_dashboard_access__dashboard_id
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_mail_compose_message__bi_dashboard_id
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_mail_compose_message__bi_dashboard_mail_id
+msgid "Dashboard Mail"
+msgstr "仪表盘邮件"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_mail_compose_message__bi_dashboard_chart_ids
+msgid "Charts"
+msgstr "图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.actions.act_window,name:synconics_bi_dashboard.action_bi_dashboard
+msgid "Dashboards"
+msgstr "仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.actions.act_window,help:synconics_bi_dashboard.action_bi_dashboard
+msgid "No Dashboards or were found."
+msgstr "未找到仪表盘。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.actions.act_window,name:synconics_bi_dashboard.action_bi_dashboard_chart
+msgid "Charts"
+msgstr "图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.actions.act_window,help:synconics_bi_dashboard.action_bi_dashboard_chart
+msgid "No Charts were found."
+msgstr "未找到图表。"
+
+#. module: synconics_bi_dashboard
+#: model:ir.module.category,name:synconics_bi_dashboard.module_category_bi_dashboard
+msgid "BI Dashboard"
+msgstr "BI 仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.module.category,description:synconics_bi_dashboard.module_category_bi_dashboard
+msgid "Allows you to manage your Dashboard."
+msgstr "允许您管理仪表盘。"
+
+#. module: synconics_bi_dashboard
+#: model:res.groups,name:synconics_bi_dashboard.group_bi_dashboard_user
+msgid "Dashboard / User"
+msgstr "仪表盘 / 用户"
+
+#. module: synconics_bi_dashboard
+#: model:res.groups,name:synconics_bi_dashboard.group_bi_dashboard_manager
+msgid "Dashboard / Administrator"
+msgstr "仪表盘 / 管理员"
+
+#. module: synconics_bi_dashboard
+#: model:ir.rule,name:synconics_bi_dashboard.rule_bi_dashboard_chart_company
+msgid "Dashboard Chart"
+msgstr "仪表盘图表"
+
+#. module: synconics_bi_dashboard
+#: model:ir.rule,name:synconics_bi_dashboard.rule_bi_dashboard_chart_global_multi_company
+msgid "Dashboard Chart Global Multi Company"
+msgstr "仪表盘图表全局多公司"
+
+#. module: synconics_bi_dashboard
+#: model:ir.rule,name:synconics_bi_dashboard.rule_bi_dashboard_company
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#. module: synconics_bi_dashboard
+#: model:ir.rule,name:synconics_bi_dashboard.rule_bi_dashboard_multi_company
+msgid "Dashboard Multi Company"
+msgstr "仪表盘多公司"
+
+#. module: synconics_bi_dashboard
+#: model:ir.model.fields,field_description:synconics_bi_dashboard.field_bi_dashboard__dashboard_mail_count
+msgid "Dashboard Mail"
+msgstr "仪表盘邮件"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard.py:0
+#, python-format
+msgid "To delete selected dashboard, kindly click on Delete Menu first!"
+msgstr "要删除选定的仪表盘，请先点击删除菜单！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard.py:0
+#, python-format
+msgid "Unknown models: %s \n Unknown Fields: %s"
+msgstr "未知模型: %s\n未知字段: %s"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard.py:0
+#, python-format
+msgid "Dashboard (%s): Send mail to the users"
+msgstr "仪表盘 (%s): 发送邮件给用户"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Oops! The record limit cant be less than zero. Please enter a value of zero or higher to continue."
+msgstr "抱歉！记录限制不能小于零。请输入零或更大的值以继续。"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Please Select model!"
+msgstr "请选择模型！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Please Select measurement!"
+msgstr "请选择度量！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Please Select Model!"
+msgstr "请选择模型！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Please Select Measurements!"
+msgstr "请选择度量！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Please Select Group by!"
+msgstr "请选择分组！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Please configure fields to display!"
+msgstr "请配置要显示的字段！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "No Data found!"
+msgstr "未找到数据！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "No Data to display!"
+msgstr "暂无数据显示！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Target is not valid!"
+msgstr "目标值无效！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Such large image can not be added!"
+msgstr "图片过大，无法添加！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "The multiplier must be 1 or greater. Please enter a valid value to proceed."
+msgstr "乘数必须为1或更大。请输入有效值以继续。"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Warning"
+msgstr "警告"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/models/dashboard_chart.py:0
+#, python-format
+msgid "Set the value integer to be compared with the current period to get the previous period for the chart."
+msgstr "设置与当前周期比较的整数值，以获取图表的上一个周期。"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/js/dashboard_amcharts.js:0
+#, javascript-format
+msgid "Hold up!"
+msgstr "请注意！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/js/dashboard_amcharts.js:0
+#, javascript-format
+msgid "Invalid JSON file"
+msgstr "无效的JSON文件"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/js/dashboard_amcharts.js:0
+#, javascript-format
+msgid "We can't send this beauty without an email template.\nGive your admin a nudge to set things up first!"
+msgstr "没有邮件模板无法发送。\n请联系管理员先完成设置！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/js/dashboard_chart_wrapper.js:0
+#, javascript-format
+msgid "No data is available for downloading the CSV file at this time!"
+msgstr "当前没有可用于下载CSV文件的数据！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/js/dashboard_chart_wrapper.js:0
+#, javascript-format
+msgid "No data is available for downloading the Excel file at this time!"
+msgstr "当前没有可用于下载Excel文件的数据！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/js/dashboard_chart_wrapper.js:0
+#, javascript-format
+msgid "No data is available for downloading the Image at this time!"
+msgstr "当前没有可用于下载图片的数据！"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/dashboard_data.xml:0
+#, xml-format
+msgid "My Dashboard"
+msgstr "我的仪表盘"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Dashboard Layout Email"
+msgstr "仪表盘布局邮件"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Dashboard: {{ ctx.get('name') }}"
+msgstr "仪表盘: {{ ctx.get('name') }}"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Hello, "
+msgstr "您好，"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "You have received mail related to the dashboard."
+msgstr "您收到了一封与仪表盘相关的邮件。"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "View Dashboard"
+msgstr "查看仪表盘"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Thank you."
+msgstr "谢谢。"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Activity: "
+msgstr "活动："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Name: "
+msgstr "名称："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Rep.: "
+msgstr "代表："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/data/mail_template.xml:0
+#, xml-format
+msgid "Summary: "
+msgstr "摘要："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "View Charts"
+msgstr "查看图表"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Create/Update Menu"
+msgstr "创建/更新菜单"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Delete Menu"
+msgstr "删除菜单"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Add/Update Users"
+msgstr "添加/更新用户"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Send by Email"
+msgstr "通过邮件发送"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Auto Update"
+msgstr "自动更新"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Email"
+msgstr "邮件"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Access By"
+msgstr "访问方式"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "Configuration"
+msgstr "配置"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_view.xml:0
+#, xml-format
+msgid "BI Dashboard"
+msgstr "BI 仪表盘"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Dashboard Preview"
+msgstr "仪表盘预览"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Name ..."
+msgstr "名称 ..."
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Data"
+msgstr "数据"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "List Standard Fields"
+msgstr "列表标准字段"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "List Measure Fields"
+msgstr "列表度量字段"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Date Default Filter"
+msgstr "日期默认筛选"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Data2"
+msgstr "数据2"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Target"
+msgstr "目标"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Layout"
+msgstr "布局"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Item Actions"
+msgstr "项操作"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Advanced Configuration"
+msgstr "高级配置"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Chart"
+msgstr "图表"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Apply Multiplier"
+msgstr "应用乘数"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Archive"
+msgstr "归档"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "List Type"
+msgstr "列表类型"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "To Do Layout"
+msgstr "待办布局"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/views/dashboard_chart_view.xml:0
+#, xml-format
+msgid "Date Filter Options"
+msgstr "日期筛选选项"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/wizard/dashboard_access_view.xml:0
+#, xml-format
+msgid "Re-sequence Journal Entries"
+msgstr "用户访问"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/wizard/dashboard_access_view.xml:0
+#, xml-format
+msgid "User Access"
+msgstr "用户访问"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/wizard/dashboard_access_view.xml:0
+#, xml-format
+msgid "Confirm"
+msgstr "确认"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/wizard/dashboard_access_view.xml:0
+#, xml-format
+msgid "Cancel"
+msgstr "取消"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_amcharts.xml:0
+#, xml-format
+msgid "Print"
+msgstr "打印"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_amcharts.xml:0
+#, xml-format
+msgid "Download JSON"
+msgstr "下载JSON"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_amcharts.xml:0
+#, xml-format
+msgid "Upload JSON"
+msgstr "上传JSON"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_amcharts.xml:0
+#, xml-format
+msgid "Send by Email"
+msgstr "通过邮件发送"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_amcharts.xml:0
+#, xml-format
+msgid "Discard"
+msgstr "放弃"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_amcharts.xml:0
+#, xml-format
+msgid "Edit Layout"
+msgstr "编辑布局"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_amcharts.xml:0
+#, xml-format
+msgid "Add new Layout"
+msgstr "添加新布局"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_chart_wrapper.xml:0
+#, xml-format
+msgid "Download Chart"
+msgstr "下载图表"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_chart_wrapper.xml:0
+#, xml-format
+msgid "Excel"
+msgstr "Excel"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_chart_wrapper.xml:0
+#, xml-format
+msgid "CSV"
+msgstr "CSV"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_chart_wrapper.xml:0
+#, xml-format
+msgid "Image"
+msgstr "图片"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/dashboard_chart_wrapper.xml:0
+#, xml-format
+msgid "Edit Chart"
+msgstr "编辑图表"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "Edit"
+msgstr "编辑"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "Clear"
+msgstr "清除"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "Select FontAwesome Icon"
+msgstr "选择 FontAwesome 图标"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "Search icons or enter custom icon name (e.g. 'home' or 'fa fa-home')"
+msgstr "搜索图标或输入自定义图标名称（如 'home' 或 'fa fa-home'）"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "Add Custom"
+msgstr "添加自定义"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "For more icons, refer to "
+msgstr "更多图标请参考 "
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "No icons found matching your search. You can add a custom icon using the \"Add Custom\" button."
+msgstr "未找到匹配的图标。您可以点击\"添加自定义\"按钮来添加自定义图标。"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "Select"
+msgstr "选择"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/xml/fa_icon_widget.xml:0
+#, xml-format
+msgid "Cancel"
+msgstr "取消"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/ListView/ListView.xml:0
+#, xml-format
+msgid "Previous"
+msgstr "上一页"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/ListView/ListView.xml:0
+#, xml-format
+msgid "Next"
+msgstr "下一页"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/ListView/ListView.xml:0
+#, xml-format
+msgid "Page "
+msgstr "第 "
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/ListView/ListView.xml:0
+#, xml-format
+msgid " of "
+msgstr " 页，共 "
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/ListView/ListView.xml:0
+#, xml-format
+msgid "Showing "
+msgstr "显示 "
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/ListView/ListView.xml:0
+#, xml-format
+msgid " to "
+msgstr " 到 "
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/ListView/ListView.xml:0
+#, xml-format
+msgid " entries"
+msgstr " 条记录"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/TodoView/TodoView.xml:0
+#, xml-format
+msgid " completed"
+msgstr " 已完成"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/TodoView/TodoView.xml:0
+#, xml-format
+msgid "Activity: "
+msgstr "活动："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/TodoView/TodoView.xml:0
+#, xml-format
+msgid "Name: "
+msgstr "名称："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/TodoView/TodoView.xml:0
+#, xml-format
+msgid "Rep.: "
+msgstr "代表："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/TodoView/TodoView.xml:0
+#, xml-format
+msgid "Summary: "
+msgstr "摘要："
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/KPILayouts/KpiLayoutFive/KpiLayoutFive.xml:0
+#, xml-format
+msgid "vs Prev"
+msgstr "对比上期"
+
+#. module: synconics_bi_dashboard
+#: code:addons/synconics_bi_dashboard/static/src/components/BarChart/BarChart.js:0
+#, javascript-format
+msgid "No Data to display!"
+msgstr "暂无数据显示！"

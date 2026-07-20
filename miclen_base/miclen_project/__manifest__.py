@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Miclen Project Manager',
-    'version': '19.0.2.3',
+    'version': '19.0.3.3',
     'category': 'Miclen',
     "website": "https://erp.miclen.com",
     'summary': '限制用户只能查看被分配的作业类型',
@@ -44,7 +44,6 @@
         'views/mrp_bom_views.xml',
         'views/mrp_production.xml',
         'views/mrp_workorder.xml',
-        'views/miclen_product_coil.xml',
 
         'wizard/miclen_mrp_product_coil_wizard.xml',
 

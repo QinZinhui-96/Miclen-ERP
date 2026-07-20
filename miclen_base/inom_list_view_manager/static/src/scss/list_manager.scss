@@ -1,0 +1,350 @@
+.o_dynamic_list_manager {
+    position: relative;
+    display: inline-block;
+
+    .dynamic_btn {
+        background: #7B5EA7;
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+        padding: 4px 10px;
+
+        &:hover {
+            background: #6a4e96;
+            color: #fff;
+        }
+    }
+
+    .dynamic_dropdown {
+        position: fixed !important;
+        z-index: 99999 !important;
+        background: #fff;
+        border: 1px solid #d0d0d0;
+        border-radius: 8px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        width: 500px;   // popup wide ho jayega
+        min-height: 500px;
+        font-size: 13px;
+        padding: 0;
+        top: auto;
+        right: auto;
+    }
+}
+// ==========================================
+// Highlight Record on Hover — subtle
+// ==========================================
+
+.o_list_renderer .o_data_row {
+    transition: background-color 0.15s ease;
+}
+.o_list_renderer .o_data_row:hover td {
+    background-color: rgba(99, 102, 241, 0.03) !important;
+}
+
+// ======================================
+// Copy Field Value Effect
+// ======================================
+
+.o_list_renderer td {
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+// Copied animation (keep for copy feature, but subtle)
+.o_cell_copied {
+    background-color: rgba(135, 90, 123, 0.12) !important;
+    color: #875A7B !important;
+    transition: background-color 0.25s ease;
+}
+
+// ======================================
+// LVM Settings Premium UI
+// ======================================
+.lvm_color_container {
+
+    background: #f8f5f7;
+
+    border: 2px solid #0d8b95;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    margin-top: 20px;
+}
+
+.lvm_color_container .o_setting_box {
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+    transition: all 0.3s ease;
+}
+
+.lvm_color_container .o_setting_box:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.lvm_color_container .o_form_label {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #875A7B;
+
+    margin-bottom: 10px;
+}
+.o_list_number_th,
+.o_list_number_td {
+
+    width: 70px;
+
+    text-align: center !important;
+
+    font-weight: 600;
+}
+
+.o_list_number_td {
+
+    color: #875A7B;
+}
+.o_sr_no_header,
+.o_sr_no_cell {
+    width: 70px !important;
+    min-width: 70px !important;
+    text-align: center !important;
+    font-weight: 600;
+}
+
+.o_sr_no_header {
+    background: #875A7B !important;
+    color: #fff !important;
+}
+.o_column_search_row th {
+    overflow: visible !important;
+    white-space: normal !important;
+    min-width: 160px !important;
+    padding: 2px 4px !important;
+}
+
+.o_column_search_row th {
+    padding: 4px !important;
+}
+
+.o_column_search_input {
+    width: 100%;
+    min-width: 140px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.o_advanced_filter_row th {
+    min-width: 40px;
+    input {
+        font-size: 11px !important;
+    }
+}
+.inom-resize-handle {
+    background: transparent;
+    transition: background 0.2s ease;
+}
+
+.inom-resize-handle:hover {
+    background: #875A7B;
+}
+.o_reload_list_button {
+    margin-left: 8px;
+}
+.o_reload_list_btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.o_serial_number_header,
+.o_serial_number_cell {
+    width: 70px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
+    text-align: center !important;
+}
+.inom-lvm-header{
+    padding:10px 14px;
+    border-bottom:1px solid #eee;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor: move;
+    user-select: none;
+    background: var(--lvm-header-color) !important;
+}
+
+.inom-lvm-header-title{
+    font-weight:600;
+    font-size:13px;
+    color: var(--lvm-header-text-color) !important;
+}
+
+.inom-lvm-close{
+    color: var(--lvm-header-text-color) !important;
+    cursor:pointer;
+    font-size:16px;
+}
+/* Drag & Drop visual feedback */
+.inom-lvm-row {
+    transition: opacity 0.15s ease;
+
+    &.inom-dragging {
+        opacity: 0.4;
+        background: #f8f5ff;
+    }
+
+    &.inom-drag-over-top {
+        border-top: 2px solid #7B5EA7 !important;
+    }
+
+    &.inom-drag-over-bottom {
+        border-bottom: 2px solid #7B5EA7 !important;
+    }
+}
+// ==========================================
+// Selected Row Highlight — subtle, not flashy
+// ==========================================
+
+.o_list_renderer .o_data_row.o_data_row_selected,
+.o_list_renderer .o_data_row.o_data_row_selected > td {
+    background-color: rgba(99, 102, 241, 0.06) !important;
+}
+
+.o_list_renderer .o_data_row.o_data_row_selected > td {
+    border-top: 1px solid rgba(99, 102, 241, 0.15) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.15) !important;
+}
+
+.o_list_renderer .o_data_row.o_data_row_selected:hover,
+.o_list_renderer .o_data_row.o_data_row_selected:hover > td {
+    background-color: rgba(99, 102, 241, 0.10) !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Keep checkbox cell consistent */
+.o_list_renderer .o_data_row.o_data_row_selected > td.o_list_record_selector {
+    background-color: rgba(99, 102, 241, 0.06) !important;
+}
+
+// ==========================================
+// Back to Top Button
+// ==========================================
+
+.inom_back_to_top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 1045;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+    color: #6b7280;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+
+    > .fa {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        color: #4f46e5;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+        border-color: rgba(99, 102, 241, 0.25);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &:focus,
+    &:focus-visible {
+        outline: 2px solid rgba(99, 102, 241, 0.35);
+        outline-offset: 2px;
+    }
+}
+
+// ==========================================
+// Duplicate Selected Records Button
+// ==========================================
+
+.o_duplicate_records_btn {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 14px !important;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #4f46e5;
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    border: 1px solid #c7d2fe !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(99, 102, 241, 0.08);
+
+    i.fa-copy {
+        font-size: 13px;
+        transition: transform 0.2s ease;
+    }
+
+    .o_duplicate_records_label {
+        white-space: nowrap;
+    }
+
+    &:hover {
+        color: #4338ca;
+        background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        border-color: #a5b4fc !important;
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.18);
+
+        i.fa-copy {
+            transform: scale(1.15);
+        }
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 1px 2px rgba(99, 102, 241, 0.12);
+    }
+
+    &:focus,
+    &:focus-visible {
+        outline: 2px solid rgba(99, 102, 241, 0.35);
+        outline-offset: 1px;
+    }
+}

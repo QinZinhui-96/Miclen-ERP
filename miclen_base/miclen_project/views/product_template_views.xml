@@ -5,13 +5,24 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
+
+            <!-- 在 categ_id 后面添加字段 -->
+            <field name="categ_id" position="after">
+                <field name="miclen_is_coil"/>
+                <field name="miclen_coil_w" invisible="not miclen_is_coil"/>
+                <field name="miclen_coil_l" invisible="not miclen_is_coil"/>
+                <field name="miclen_gap" invisible="not miclen_is_coil"/>
+                <field name="miclen_condition" invisible="not miclen_is_coil"/>
+            </field>
+
+            <!-- 您原有的分类字段 -->
             <field name="product_tooltip" position="after">
                 <field name="miclen_category_id" options="{'no_create': True, 'no_open': True}"/>
                 <field name="miclen_details_id" options="{'no_create': True, 'no_open': True}"/>
                 <field name="miclen_subcategory_id" options="{'no_create': True, 'no_open': True}"/>
-                <field name="miclen_width"/>
+                <field name="miclen_width_int"/>
             </field>
+
         </field>
     </record>
-
 </odoo>

@@ -2,7 +2,6 @@
 import logging
 
 from odoo import _, api, fields, models
-from odoo.fields import Command
 
 _logger = logging.getLogger(__name__)
 
@@ -10,45 +9,32 @@ _logger = logging.getLogger(__name__)
 class StockMove(models.Model):
     _inherit = 'stock.move'
 
-    coil_id = fields.Many2one('miclen.product.coil', string='卷料选料', domain="[('product_id', '=', product_id)]",)
-    coil_x = fields.Integer(
-        string='规格x(mm)',
-        related='coil_id.coil_x',
-        store=True,  # 存储到数据库
-        readonly=True
-    )
-    coil_y = fields.Integer(
-        string='规格y(mm)',
-        related='coil_id.coil_y',
-        store=True,  # 存储到数据库
-        readonly=True
-    )
-    is_coil_expanded = fields.Boolean(
-        string='卷材展开',
-        default=False,
-        help="标记该组件行是由卷料消耗向导展开生成的",
-    )
+    miclen_is_coil = fields.Boolean('选材规格', related='product_tmpl_id.miclen_is_coil', store=True)
+    miclen_coil_w = fields.Integer(string='规格w(mm)', related='product_tmpl_id.miclen_coil_w', store=True)
+    miclen_coil_l = fields.Integer(string='规格l(mm)', related='product_tmpl_id.miclen_coil_l', store=True)
+    miclen_gap = fields.Integer(string='切割间距(mm)', related='product_tmpl_id.miclen_gap', store=True)
+    miclen_condition = fields.Char(string='筛选条件', related='product_tmpl_id.miclen_condition', store=True)
 
     def action_button_consume(self):
-        """点击卷料消耗按钮，打开卷料选料向导"""
+        """点击卷料消耗按钮，打开卷料选料向导
+
+        显式创建 wizard 记录并加载匹配卷材，确保 line_ids 在数据库中存在，
+        这样用户勾选 selected 时 onchange 才能正常触发。
+        """
         self.ensure_one()
-        ctx = {
-            'default_move_id': self.id,
-            'default_product_id': self.product_id.id,
-            'default_coil_id': self.coil_id.id if self.coil_id else False,
-            'default_coil_x': self.coil_x,
-            'default_coil_y': self.coil_y,
-            'default_product_uom_qty': self.product_uom_qty,
-            'default_product_uom': self.product_uom.id,
-        }
-        if self.coil_id:
-            ctx['default_gap'] = self.coil_id.gap
-            ctx['default_consume_way'] = self.coil_id.consume_way
+        wizard = self.env['miclen.mrp.product.coil.wizard'].create({
+            'move_id': self.id,
+            'product_id': self.product_id.id,
+            'product_uom_qty': self.product_uom_qty,
+            'product_uom': self.product_uom.id,
+        })
+        # 直接加载匹配卷材到子表（创建真实的 DB 记录）
+        wizard._load_matching_materials()
         return {
             'type': 'ir.actions.act_window',
             'name': '卷料选料预览',
             'res_model': 'miclen.mrp.product.coil.wizard',
+            'res_id': wizard.id,
             'view_mode': 'form',
             'target': 'new',
-            'context': ctx,
         }

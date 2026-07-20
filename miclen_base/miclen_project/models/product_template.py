@@ -5,6 +5,7 @@ import logging
 
 from odoo import api, fields, models, _
 from odoo.tools.sql import create_column, column_exists
+from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 
@@ -19,10 +20,27 @@ class ProductTemplate(models.Model):
     miclen_category_id = fields.Many2one('miclen.product.category', string='大类', copy=False)
     miclen_details_id = fields.Many2one('miclen.category.details', string='中类', copy=False)
     miclen_subcategory_id = fields.Many2one('miclen.category.subcategory', string='小类', copy=False)
-    miclen_width = fields.Char('宽幅')
+    miclen_width_int = fields.Integer('宽幅(mm)')
+    miclen_is_coil = fields.Boolean('选材规格')
+    miclen_coil_w = fields.Integer(string='规格w(mm)')
+    miclen_coil_l = fields.Integer(string='规格l(mm)')
+    miclen_gap = fields.Integer(string='切割间距(mm)', default=10)
+    miclen_condition = fields.Char(string='筛选条件')
+
+    @api.constrains('miclen_width_int')
+    def _check_miclen_width_positive(self):
+        if self.miclen_width_int < 0:
+            raise ValidationError(_("宽幅(mm)不能为负数！"))
+
+    @api.constrains('miclen_is_coil', 'miclen_coil_w', 'miclen_coil_l')
+    def _check_coil_dimensions(self):
+        """检查卷料规格：当 miclen_is_coil 为 True 时，规格 W 和 L 必须大于 0"""
+        if self.miclen_is_coil:
+            if self.miclen_coil_w <= 0 or self.miclen_coil_l <= 0:
+                raise ValidationError('填写正确选材规格！')
 
     @api.depends('miclen_category_id', 'miclen_details_id',
-                 'miclen_subcategory_id', 'miclen_width')
+                 'miclen_subcategory_id', 'miclen_width_int')
     def _compute_default_code(self):
         # 先调用父类方法（处理变体同步）
         super()._compute_default_code()
@@ -37,8 +55,9 @@ class ProductTemplate(models.Model):
                     parts.append(record.miclen_details_id.name)
                 if record.miclen_subcategory_id:
                     parts.append(record.miclen_subcategory_id.name)
-                if record.miclen_width:
-                    parts.append(record.miclen_width)
+                if record.miclen_width_int != 0:
+                    miclen_width_int = abs(record.miclen_width_int)     # 绝对值
+                    parts.append(str(miclen_width_int))
                 record.default_code = '-'.join(parts) if parts else ''
 
     def assign_users_to_work_type(self):
