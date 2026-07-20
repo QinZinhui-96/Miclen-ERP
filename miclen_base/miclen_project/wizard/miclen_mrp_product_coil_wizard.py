@@ -312,12 +312,17 @@ class MiclenMrpProductCoilWizard(models.TransientModel):
                 "原始组件行已完成（Done），无法替换！"
             ))
 
-        # 如果已有消耗数量，不允许替换（避免丢失已消耗记录）
+        # 如果已有消耗数量，先清零已消耗数量（删除明细行）再替换，
+        # 避免因已消耗数量导致无法替换（原始 move 随后会被删除）
         if origin_move.quantity and origin_move.quantity > 0:
-            raise UserError(_(
-                "原始组件行已有消耗数量（%s），无法替换！\n"
-                "请先取消已消耗的数量后再操作。"
-            ) % origin_move.quantity)
+            _logger.info(
+                "卷材展开: MO=%s 原始组件行(id=%s, product=%s)已有消耗数量 %s，先清零再替换",
+                production.name, origin_move.id,
+                origin_move.product_id.display_name, origin_move.quantity
+            )
+            if origin_move.move_line_ids:
+                origin_move.move_line_ids.sudo().unlink()
+            origin_move.quantity = 0
 
         if self.total_shortage_units > 0:
             raise UserError(_(
@@ -325,18 +330,30 @@ class MiclenMrpProductCoilWizard(models.TransientModel):
                 "请勾选更多卷材行或补充库存后重试。"
             ) % self.total_shortage_units)
 
+        # ---- 仓库与位置：判断是否需要建立 WH/库存 -> 消耗位的 PC 拣货单 ----
+        # 卷材在 origin_move.location_id 被消耗（多步制造时为 WH/生产前）。
+        # 若该位置不是 WH/库存本身，则需要从 WH/库存 调拨过来，
+        # 否则库存会从错误的位置扣减（这正是之前的业务缺陷）。
+        wh = production.picking_type_id.warehouse_id
+        stock_loc = wh.lot_stock_id if wh else False
+        consume_loc = origin_move.location_id  # 卷材消耗位（多步时为 WH/生产前）
+        need_pc = bool(stock_loc and stock_loc.id != consume_loc.id)
+
         # ---- 为每条选中行创建 stock.move ----
         Move = self.env['stock.move']
         new_moves = Move
+        pc_moves = Move
         for line in selected_lines:
             if line.consume_qty <= 0 or not line.product_id:
                 continue
             way_label = "W" if line.consume_way == 'w' else "L"
-            new_move = Move.create({
+
+            # 卷料 move：从消耗位 -> 生产虚拟位置，作为制造单组件
+            coil_move = Move.create({
                 'product_id': line.product_id.id,
                 'product_uom_qty': line.consume_qty,
                 'product_uom': line.uom_id.id or origin_move.product_uom.id,
-                'location_id': origin_move.location_id.id,
+                'location_id': consume_loc.id,
                 'location_dest_id': origin_move.location_dest_id.id,
                 'raw_material_production_id': production.id,
                 'picking_type_id': origin_move.picking_type_id.id if origin_move.picking_type_id else False,
@@ -346,21 +363,56 @@ class MiclenMrpProductCoilWizard(models.TransientModel):
                 'procure_method': 'make_to_stock',
                 'state': 'draft',
             })
-            new_moves += new_move
+            new_moves += coil_move
+
+            # PC 拣货单 move：从 WH/库存 -> 消耗位，给卷料 move 供货
+            if need_pc:
+                pc_move = Move.create({
+                    'product_id': line.product_id.id,
+                    'product_uom_qty': line.consume_qty,
+                    'product_uom': line.uom_id.id or origin_move.product_uom.id,
+                    'location_id': stock_loc.id,
+                    'location_dest_id': consume_loc.id,
+                    'picking_type_id': wh.pbm_type_id.id if (wh and wh.pbm_type_id) else False,
+                    'production_group_id': production.production_group_id.id,
+                    'origin': production.name,
+                    'company_id': origin_move.company_id.id,
+                    'warehouse_id': wh.id if wh else False,
+                    'procure_method': 'make_to_stock',
+                    'state': 'draft',
+                    # move_dest_ids 会自动反写 coil_move.move_orig_ids，
+                    # 使 coil_move 处于 waiting，避免 _adjust_procure_method 重复拉出第二张 PC 单
+                    'move_dest_ids': [(4, coil_move.id)],
+                })
+                pc_moves += pc_move
+
             _logger.info(
-                "卷材展开: MO=%s 创建 move product=%s qty=%s米 方向=%s 单片=%smm 取件=%s",
+                "卷材展开: MO=%s 创建 move product=%s qty=%s米 方向=%s 单片=%smm 取件=%s%s",
                 production.name, line.product_id.display_name,
-                line.consume_qty, way_label, line.unit_mm, line.number_units
+                line.consume_qty, way_label, line.unit_mm, line.number_units,
+                " (已建PC拣货单)" if need_pc else ""
             )
 
         if new_moves:
             origin_move_id = origin_move.id
             origin_move_display = origin_move.product_id.display_name
 
+            # 先取消并清理原始组件行的上游拉动 move（原生 PC 单），避免重复占用库存
+            for up in origin_move.move_orig_ids.filtered(lambda m: m.state not in ('done', 'cancel')):
+                if not (up.move_dest_ids - origin_move):
+                    up.sudo()._action_cancel()
+
+            # 成品 move（生产链下游），删除原始组件行前先记录以便重新挂接
+            dest_moves = origin_move.move_dest_ids
+
             # 如果原始 move 已确认/已分配，先取消（_action_cancel 内部会自动解预留）
             if origin_move.state not in ('draft', 'cancel'):
                 origin_move._action_cancel()
             origin_move.sudo().unlink()
+
+            # 新卷料 move 重新挂接到成品 move，保持生产链完整
+            for mv in new_moves:
+                mv.move_dest_ids = [(6, 0, dest_moves.ids)]
 
             _logger.info(
                 "卷材展开: MO=%s 已删除原始组件行(id=%s, product=%s)，"
@@ -369,12 +421,49 @@ class MiclenMrpProductCoilWizard(models.TransientModel):
                 origin_move_display, len(new_moves)
             )
 
-            # 如果制造单已确认/进行中，新 move 也要确认并尝试分配库存
-            if production.state in ('confirmed', 'progress'):
-                new_moves._action_confirm()
-                new_moves._action_assign()
+            # 创建 PC 拣货单（WH/库存 -> 消耗位），并打上 production_group_id
+            # 使其出现在制造单的 action_view_mo_delivery（关联拣货单）按钮中
+            pc_picking = False
+            if need_pc and pc_moves:
+                pc_picking = self.env['stock.picking'].create({
+                    'picking_type_id': wh.pbm_type_id.id if (wh and wh.pbm_type_id) else False,
+                    'location_id': stock_loc.id,
+                    'location_dest_id': consume_loc.id,
+                    'origin': production.name,
+                    'company_id': production.company_id.id,
+                })
+                pc_moves.write({'picking_id': pc_picking.id})
                 _logger.info(
-                    "卷材展开: MO=%s 已确认并分配 %d 条新 move",
+                    "卷材展开: MO=%s 已创建 PC 拣货单 %s (WH/库存 -> %s)",
+                    production.name, pc_picking.name, consume_loc.display_name
+                )
+
+            # 已确认/进行中的制造单：立即确认 PC 拣货单与新 move
+            # 草稿制造单则留作 draft，待用户确认制造单时由原生 action_confirm
+            # 的 self.picking_ids.filtered(...).action_confirm() 自动确认 PC 拣货单
+            if production.state in ('confirmed', 'progress'):
+                if pc_picking:
+                    pc_picking.action_confirm()
+                    pc_picking.action_assign()
+                    # 当 PC 作业的需求数量(product_uom_qty)与已处理数量(quantity)一致
+                    # （即所有作业行均已完全预留 state=='assigned'）时，自动调用
+                    # 验证按钮(button_validate)将该 PC 拣货单置为已完成(done)。
+                    # 部分可用时不自动验证，避免强行过账产生欠单，留给人工处理。
+                    if pc_picking.move_ids and all(
+                        m.state == 'assigned' for m in pc_picking.move_ids
+                    ):
+                        for mv in pc_picking.move_ids:
+                            if not mv.product_uom.is_zero(mv.product_uom_qty):
+                                mv.quantity = mv.product_uom_qty
+                        pc_picking.button_validate()
+                        _logger.info(
+                            "卷材展开: MO=%s 的 PC 拣货单 %s 已全部预留，已自动验证完成",
+                            production.name, pc_picking.name
+                        )
+                # coil_move 带有 move_orig_ids(PC move)，会被置为 waiting，不重复拉动
+                new_moves._action_confirm()
+                _logger.info(
+                    "卷材展开: MO=%s 已确认 PC 拣货单与 %d 条新 move",
                     production.name, len(new_moves)
                 )
 
