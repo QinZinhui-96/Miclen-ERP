@@ -4,309 +4,253 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0+e-20260116\n"
+"Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-22 06:04+0000\n"
-"PO-Revision-Date: 2026-07-22 06:04+0000\n"
+"POT-Creation-Date: 2026-07-23 02:06+0000\n"
+"PO-Revision-Date: 2026-07-23 02:06+0000\n"
 "Last-Translator: \n"
-"Language-Team: Odoo Translation Team\n"
+"Language-Team: Chinese (Simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "  Escalated to <b>%(user)s</b>."
 msgstr "  已升级至 <b>%(user)s</b>。"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "%(d)s (%(n)s day(s) overdue)"
 msgstr "%(d)s（已逾期 %(n)s 天）"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "%(d)s (today)"
 msgstr "%(d)s（今天）"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "%(d)s (tomorrow)"
 msgstr "%(d)s（明天）"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "(no reason provided)"
 msgstr "（未提供原因）"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "(none)"
 msgstr "（无）"
+
 #. module: dynamic_approval_workflow
 #: model:mail.template,body_html:dynamic_approval_workflow.email_template_approval_request
 msgid ""
-"<div style=\"margin: 0px; padding: 0px;\">
-    <p style=\"margin: 0px;"
-"padding: 0px; font-size: 13px;\">
-        Dear {{"
-"ctx.get('approver_name', 'Approver') }},
-    </p>
-    <br/>
-    <p"
-"style=\"margin: 0px; padding: 0px; font-size: 13px;\">
-        An"
-"approval request requires your action:
-    </p>
-    <br/>
-    <table"
-"style=\"border: 1px solid #dee2e6; border-collapse: collapse; width:"
-"100%; font-size: 13px;\">
-        <tr>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold; width: 35%;\">Reference</td>
-           "
-"<td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{"
-"object.name }}</td>
-        </tr>
-        <tr>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold;\">Document</td>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{"
-"object.res_name }}</td>
-        </tr>
-        <tr>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold;\">Workflow</td>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{"
-"object.config_id.name }}</td>
-        </tr>
-        <tr>
-           "
-"<td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold;\">Stage</td>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{"
-"object.current_stage_id.name }}</td>
-        </tr>
-        <tr>
-      "
-"<td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold;\">Requested By</td>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{"
-"object.requester_id.name }}</td>
-        </tr>
-        {% if"
-"object.deadline %}
-        <tr>
-            <td style=\"padding: 8px"
-"12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight:"
-"bold;\">Deadline</td>
-            <td style=\"padding: 8px 12px;"
-"border: 1px solid #dee2e6; color: #dc3545;\">{{ object.deadline"
-"}}</td>
-        </tr>
-        {% endif %}
-    </table>
-    <br/>
-   "
-"<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">
-       "
-"Please log in to Odoo and review the request at your earliest"
-"convenience.
-    </p>
-    <br/>
-    <p style=\"margin: 0px; padding:"
-"0px; font-size: 13px;\">
-        <a"
-"href=\"/web#model=approval.request&amp;id={{ object.id"
-"}}&amp;view_type=form\" style=\"background-color: #875A7B; color:"
-"#fff; padding: 8px 16px;&#10;                  text-decoration: none;"
-"border-radius: 4px; font-size: 13px;\">
-            Review Request
-   "
-"</a>
-    </p>
-    <br/>
-    <p style=\"margin: 0px; padding: 0px;"
-"font-size: 12px; color: #6c757d;\">
-        This is an automated"
-"notification from your Odoo system.
-    </p>
-</div>
-        "
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Dear {{ ctx.get('approver_name', 'Approver') }},\n"
+"    </p>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        An approval request requires your action:\n"
+"    </p>\n"
+"    <br/>\n"
+"    <table style=\"border: 1px solid #dee2e6; border-collapse: collapse; width: 100%; font-size: 13px;\">\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold; width: 35%;\">Reference</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">Document</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.res_name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">Workflow</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.config_id.name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">Stage</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.current_stage_id.name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">Requested By</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.requester_id.name }}</td>\n"
+"        </tr>\n"
+"        {% if object.deadline %}\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">Deadline</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; color: #dc3545;\">{{ object.deadline }}</td>\n"
+"        </tr>\n"
+"        {% endif %}\n"
+"    </table>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Please log in to Odoo and review the request at your earliest convenience.\n"
+"    </p>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        <a href=\"/web#model=approval.request&amp;id={{ object.id }}&amp;view_type=form\" style=\"background-color: #875A7B; color: #fff; padding: 8px 16px;&#10;                  text-decoration: none; border-radius: 4px; font-size: 13px;\">\n"
+"            Review Request\n"
+"        </a>\n"
+"    </p>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 12px; color: #6c757d;\">\n"
+"        This is an automated notification from your Odoo system.\n"
+"    </p>\n"
+"</div>\n"
+"        "
 msgstr ""
-"<div style=\"margin: 0px; padding: 0px;\">
-    <p style=\"margin: 0px;"
-"padding: 0px; font-size: 13px;\">
-        尊敬的 {{"
-"ctx.get('approver_name', 'Approver') }}：
-    </p>
-    <br/>
-    <p"
-"style=\"margin: 0px; padding: 0px; font-size: 13px;\">
-       "
-"有一项审批请求需要您处理：
-    </p>
-    <br/>
-    <table style=\"border: 1px solid"
-"#dee2e6; border-collapse: collapse; width: 100%; font-size: 13px;\">
- "
-"<tr>
-            <td style=\"padding: 8px 12px; border: 1px solid"
-"#dee2e6; background: #f8f9fa; font-weight: bold; width:"
-"35%;\">参考编号</td>
-            <td style=\"padding: 8px 12px; border:"
-"1px solid #dee2e6;\">{{ object.name }}</td>
-        </tr>
-       "
-"<tr>
-            <td style=\"padding: 8px 12px; border: 1px solid"
-"#dee2e6; background: #f8f9fa; font-weight: bold;\">单据</td>
-           "
-"<td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{"
-"object.res_name }}</td>
-        </tr>
-        <tr>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold;\">工作流</td>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{"
-"object.config_id.name }}</td>
-        </tr>
-        <tr>
-           "
-"<td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold;\">阶段</td>
-            <td style=\"padding:"
-"8px 12px; border: 1px solid #dee2e6;\">{{ object.current_stage_id.name"
-"}}</td>
-        </tr>
-        <tr>
-            <td style=\"padding:"
-"8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight:"
-"bold;\">申请人</td>
-            <td style=\"padding: 8px 12px; border:"
-"1px solid #dee2e6;\">{{ object.requester_id.name }}</td>
-       "
-"</tr>
-        {% if object.deadline %}
-        <tr>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6; background:"
-"#f8f9fa; font-weight: bold;\">截止日期</td>
-            <td"
-"style=\"padding: 8px 12px; border: 1px solid #dee2e6; color:"
-"#dc3545;\">{{ object.deadline }}</td>
-        </tr>
-        {% endif"
-"%}
-    </table>
-    <br/>
-    <p style=\"margin: 0px; padding: 0px;"
-"font-size: 13px;\">
-        请登录 Odoo 并尽快审阅该请求。
-    </p>
-    <br/>
-   "
-"<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">
-        <a"
-"href=\"/web#model=approval.request&amp;id={{ object.id"
-"}}&amp;view_type=form\" style=\"background-color: #875A7B; color:"
-"#fff; padding: 8px 16px;&#10;                  text-decoration: none;"
-"border-radius: 4px; font-size: 13px;\">
-            审阅请求
-        </a>
-"
-"</p>
-    <br/>
-    <p style=\"margin: 0px; padding: 0px; font-size:"
-"12px; color: #6c757d;\">
-        这是来自您的 Odoo 系统的自动通知。
-    </p>
-</div>
-"
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        尊敬的 {{ ctx.get('approver_name', 'Approver') }}：\n"
+"    </p>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        有一项审批请求需要您处理：\n"
+"    </p>\n"
+"    <br/>\n"
+"    <table style=\"border: 1px solid #dee2e6; border-collapse: collapse; width: 100%; font-size: 13px;\">\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold; width: 35%;\">参考编号</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">单据</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.res_name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">工作流</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.config_id.name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">阶段</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.current_stage_id.name }}</td>\n"
+"        </tr>\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">申请人</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6;\">{{ object.requester_id.name }}</td>\n"
+"        </tr>\n"
+"        {% if object.deadline %}\n"
+"        <tr>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; background: #f8f9fa; font-weight: bold;\">截止日期</td>\n"
+"            <td style=\"padding: 8px 12px; border: 1px solid #dee2e6; color: #dc3545;\">{{ object.deadline }}</td>\n"
+"        </tr>\n"
+"        {% endif %}\n"
+"    </table>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        请登录 Odoo 并尽快审阅该请求。\n"
+"    </p>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        <a href=\"/web#model=approval.request&amp;id={{ object.id }}&amp;view_type=form\" style=\"background-color: #875A7B; color: #fff; padding: 8px 16px;&#10;                  text-decoration: none; border-radius: 4px; font-size: 13px;\">\n"
+"            审阅请求\n"
+"        </a>\n"
+"    </p>\n"
+"    <br/>\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 12px; color: #6c757d;\">\n"
+"        这是来自您的 Odoo 系统的自动通知。\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request_line__approver_id
 msgid "Acted By"
 msgstr "操作人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__action
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request_line__action
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_action_wizard_form
 msgid "Action"
 msgstr "操作"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_needaction
 msgid "Action Needed"
 msgstr "需要操作"
+
 #. module: dynamic_approval_workflow
 #: model:mail.template,subject:dynamic_approval_workflow.email_template_approval_request
 msgid "Action Required: Approval Request {{ object.name }}"
 msgstr "需要操作：审批请求 {{ object.name }}"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Actions"
 msgstr "操作"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__active
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_search
 msgid "Active"
 msgstr "生效"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_ids
 msgid "Activities"
 msgstr "活动"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_exception_decoration
 msgid "Activity Exception Decoration"
 msgstr "活动异常装饰"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_state
 msgid "Activity State"
 msgstr "活动状态"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_type_icon
 msgid "Activity Type Icon"
 msgstr "活动类型图标"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 #: model:ir.ui.menu,name:dynamic_approval_workflow.menu_approval_requests
 msgid "All Requests"
 msgstr "全部请求"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "All stages approved by %(user)s. Document is now <b>Approved</b>."
 msgstr "所有阶段已由 %(user)s 审批通过。单据现已<b>审批通过</b>。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_action_wizard_form
 msgid "Approval Action"
 msgstr "审批操作"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model,name:dynamic_approval_workflow.model_approval_action_wizard
 msgid "Approval Action Wizard"
 msgstr "审批操作向导"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__line_ids
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Approval History"
 msgstr "审批历史"
+
 #. module: dynamic_approval_workflow
 #: model:res.groups,name:dynamic_approval_workflow.group_approval_manager
 msgid "Approval Manager"
 msgstr "审批经理"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model,name:dynamic_approval_workflow.model_approval_request
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__request_id
@@ -314,14 +258,17 @@ msgstr "审批经理"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Approval Request"
 msgstr "审批请求"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model,name:dynamic_approval_workflow.model_approval_request_line
 msgid "Approval Request History Line"
 msgstr "审批请求历史明细"
+
 #. module: dynamic_approval_workflow
 #: model:mail.template,name:dynamic_approval_workflow.email_template_approval_request
 msgid "Approval Request: Notify Approver"
 msgstr "审批请求：通知审批人"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_mixin.py:0
@@ -331,75 +278,91 @@ msgstr "审批请求：通知审批人"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_list
 msgid "Approval Requests"
 msgstr "审批请求"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_workflow_config.py:0
 msgid "Approval Requests — %s"
 msgstr "审批请求 — %s"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__stage_ids
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "Approval Stages"
 msgstr "审批阶段"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_mixin__approval_state
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_sale_order__approval_state
 msgid "Approval Status"
 msgstr "审批状态"
+
 #. module: dynamic_approval_workflow
 #: model:res.groups,name:dynamic_approval_workflow.group_approval_user
 msgid "Approval User"
 msgstr "审批用户"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model,name:dynamic_approval_workflow.model_approval_workflow_config
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "Approval Workflow Configuration"
 msgstr "审批工作流配置"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_list
 msgid "Approval Workflow Configurations"
 msgstr "审批工作流配置"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model,name:dynamic_approval_workflow.model_approval_mixin
 msgid "Approval Workflow Mixin"
 msgstr "审批工作流混入类"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model,name:dynamic_approval_workflow.model_approval_workflow_stage
 msgid "Approval Workflow Stage"
 msgstr "审批工作流阶段"
+
 #. module: dynamic_approval_workflow
 #: model:ir.actions.act_window,name:dynamic_approval_workflow.action_approval_workflow_config
 #: model:ir.ui.menu,name:dynamic_approval_workflow.menu_approval_workflow_config
 msgid "Approval Workflows"
 msgstr "审批工作流"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "Approval request <b>%(ref)s</b> created for workflow <b>%(wf)s</b>."
 msgstr "已为工作流 <b>%(wf)s</b> 创建审批请求 <b>%(ref)s</b>。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.actions.server,name:dynamic_approval_workflow.ir_cron_escalate_approval_requests_ir_actions_server
 msgid "Approval: Escalate Overdue Requests"
 msgstr "审批：升级逾期请求"
+
 #. module: dynamic_approval_workflow
 #: model:ir.actions.server,name:dynamic_approval_workflow.action_server_submit_for_approval
 msgid "Approval: Submit for Approval (template)"
 msgstr "审批：提交审批（模板）"
+
 #. module: dynamic_approval_workflow
 #: model:ir.ui.menu,name:dynamic_approval_workflow.menu_approval_root
 #: model:res.groups.privilege,name:dynamic_approval_workflow.res_groups_privilege_approval
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_order_form_dynamic_approval
 msgid "Approvals"
 msgstr "审批"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Approvals Distribution"
 msgstr "审批分布"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Approve"
 msgstr "批准"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
@@ -410,38 +373,47 @@ msgstr "批准"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Approved"
 msgstr "已批准"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__approver_id
 msgid "Approver"
 msgstr "审批人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__field_name
 msgid "Approver Field"
 msgstr "审批人字段"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__group_id
 msgid "Approver Group"
 msgstr "审批人组"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__approver_type
 msgid "Approver Type"
 msgstr "审批人类型"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_search
 msgid "Archived"
 msgstr "已归档"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Are you sure you want to approve this stage?"
 msgstr "确定要批准此阶段吗？"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_attachment_count
 msgid "Attachment Count"
 msgstr "附件数量"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_action_wizard_form
 msgid "Cancel"
 msgstr "取消"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__company_id
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__company_id
@@ -449,23 +421,28 @@ msgstr "取消"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_search
 msgid "Company"
 msgstr "公司"
+
 #. module: dynamic_approval_workflow
 #: model:ir.ui.menu,name:dynamic_approval_workflow.menu_approval_configuration
 msgid "Configuration"
 msgstr "配置"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_action_wizard_form
 msgid "Confirm"
 msgstr "确认"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "Could not load approval data. Please refresh the page."
 msgstr "无法加载审批数据，请刷新页面。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.actions.act_window,help:dynamic_approval_workflow.action_approval_workflow_config
 msgid "Create your first approval workflow"
 msgstr "创建您的第一个审批工作流"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__create_uid
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__create_uid
@@ -474,6 +451,7 @@ msgstr "创建您的第一个审批工作流"
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__create_uid
 msgid "Created by"
 msgstr "创建人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__create_date
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__create_date
@@ -482,42 +460,49 @@ msgstr "创建人"
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__create_date
 msgid "Created on"
 msgstr "创建日期"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__current_approver_ids
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Current Approvers"
 msgstr "当前审批人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__current_stage_id
 msgid "Current Stage"
 msgstr "当前阶段"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_mixin__approval_state
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_sale_order__approval_state
 msgid "Current state in the approval lifecycle."
 msgstr "审批生命周期中的当前状态。"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Dashboard"
 msgstr "仪表板"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request_line__date
 msgid "Date"
 msgstr "日期"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__deadline
 msgid "Deadline"
 msgstr "截止日期"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.actions.act_window,help:dynamic_approval_workflow.action_approval_workflow_config
 msgid ""
-"Define a workflow for any Odoo model and specify the stages
-          "
-"each document must pass through before being approved."
+"Define a workflow for any Odoo model and specify the stages\n"
+"                each document must pass through before being approved."
 msgstr "为任意 Odoo 模型定义工作流，并指定每个单据在通过前必须经过的阶段。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__display_name
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_mixin__display_name
@@ -528,11 +513,13 @@ msgstr "为任意 Odoo 模型定义工作流，并指定每个单据在通过前
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_sale_order__display_name
 msgid "Display Name"
 msgstr "显示名称"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_action_wizard__res_name
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__res_name
 msgid "Display name of the source document at submission time."
 msgstr "提交时源单据的显示名称。"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
@@ -542,103 +529,120 @@ msgstr "提交时源单据的显示名称。"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_list
 msgid "Document"
 msgstr "单据"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__res_id
 msgid "Document ID"
 msgstr "单据 ID"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__res_model
 msgid "Document Model"
 msgstr "单据模型"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_mixin__approval_state__draft
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__sale_order__approval_state__draft
 msgid "Draft"
 msgstr "草稿"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "Due Today"
 msgstr "今天到期"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "Due Tomorrow"
 msgstr "明天到期"
+
 #. module: dynamic_approval_workflow
 #: model:ir.module.category,name:dynamic_approval_workflow.module_category_approval
 msgid "Dynamic Approvals"
 msgstr "动态审批"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_workflow_stage__approver_type__field
 msgid "Dynamic Field"
 msgstr "动态字段"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.stage,name:dynamic_approval_workflow.approval_workflow_stage_template_dynamic_field_1
 msgid "Dynamic User from requester_id"
 msgstr "动态用户（来自 requester_id）"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_list
 msgid "Escalation (days)"
 msgstr "升级（天）"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__escalation_days
 msgid "Escalation After (Days)"
 msgstr "升级期限（天）"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__escalation_user_id
 msgid "Escalation User"
 msgstr "升级用户"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_action_wizard__reason
 msgid ""
-"Explain why the request is being rejected or returned. This will be"
-"visible to the requester."
+"Explain why the request is being rejected or returned. This will be visible "
+"to the requester."
 msgstr "说明请求被拒绝或退回的原因，申请人将能看到此说明。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__domain
 msgid "Filter Domain"
 msgstr "筛选条件"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.stage,name:dynamic_approval_workflow.approval_workflow_stage_template_group_2
 msgid "Final Admin Approval"
 msgstr "最终管理员审批"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_follower_ids
 msgid "Followers"
 msgstr "关注者"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "关注者（业务伙伴）"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
 msgstr "Font Awesome 图标，例如 fa-tasks"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__has_message
 msgid "Has Message"
 msgstr "有消息"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_stage__approver_type
 msgid ""
-"How the approver(s) for this stage are determined:
-• Specific User — a"
-"fixed user you choose below.
-• User Group — all (or any) members of a"
-"security group.
-• Dynamic Field — a Many2one(res.users) field on the"
-"document."
+"How the approver(s) for this stage are determined:\n"
+"• Specific User — a fixed user you choose below.\n"
+"• User Group — all (or any) members of a security group.\n"
+"• Dynamic Field — a Many2one(res.users) field on the document."
 msgstr ""
-"本阶段审批人的确定方式：
-• 指定用户 — 您在下方选择的固定用户。
-• 用户组 — 安全组中的所有（或任意）成员。
-• 动态字段 —"
-"单据上一个 Many2one(res.users) 类型的字段。"
+"本阶段审批人的确定方式：\n"
+"• 指定用户 — 您在下方选择的固定用户。\n"
+"• 用户组 — 安全组中的所有（或任意）成员。\n"
+"• 动态字段 — 单据上一个 Many2one(res.users) 类型的字段。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__is_current_approver
 msgid "I Am Current Approver"
 msgstr "我是当前审批人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__id
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_mixin__id
@@ -649,36 +653,44 @@ msgstr "我是当前审批人"
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_sale_order__id
 msgid "ID"
 msgstr "ID"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_exception_icon
 msgid "Icon"
 msgstr "图标"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__activity_exception_icon
 msgid "Icon to indicate an exception activity."
 msgstr "用于标识异常活动的图标。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__message_needaction
 msgid "If checked, new messages require your attention."
 msgstr "若勾选，新消息需要您关注。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__message_has_error
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "若勾选，部分消息存在发送错误。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__note
 msgid "Internal Notes"
 msgstr "内部备注"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_workflow_config.py:0
 msgid "Invalid domain expression: %s"
 msgstr "无效的域表达式：%s"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_is_follower
 msgid "Is Follower"
 msgstr "是关注者"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__write_uid
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__write_uid
@@ -687,6 +699,7 @@ msgstr "是关注者"
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__write_uid
 msgid "Last Updated by"
 msgstr "最后更新人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__write_date
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__write_date
@@ -695,195 +708,234 @@ msgstr "最后更新人"
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__write_date
 msgid "Last Updated on"
 msgstr "最后更新于"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Loading your approvals..."
 msgstr "正在加载您的审批…"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Loading…"
 msgstr "加载中…"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_config__sequence
 msgid ""
-"Lower sequences are evaluated first when multiple configs target the"
-"same model."
+"Lower sequences are evaluated first when multiple configs target the same "
+"model."
 msgstr "当多个配置指向同一模型时，序号较小的将优先评估。"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.stage,name:dynamic_approval_workflow.approval_workflow_stage_template_single_user_1
 msgid "Manager Approval"
 msgstr "经理审批"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_has_error
 msgid "Message Delivery error"
 msgstr "消息发送错误"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_ids
 msgid "Messages"
 msgstr "消息"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__model_id
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_search
 msgid "Model"
 msgstr "模型"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__my_activity_date_deadline
 msgid "My Activity Deadline"
 msgstr "我的活动截止日期"
+
 #. module: dynamic_approval_workflow
 #: model:ir.ui.menu,name:dynamic_approval_workflow.menu_my_approvals_dashboard
 msgid "My Approvals"
 msgstr "我的审批"
+
 #. module: dynamic_approval_workflow
 #: model:ir.actions.client,name:dynamic_approval_workflow.action_my_approvals_dashboard
 msgid "My Approvals Dashboard"
 msgstr "我的审批仪表板"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "My Pending"
 msgstr "我待处理的"
+
 #. module: dynamic_approval_workflow
 #: model:ir.actions.act_window,name:dynamic_approval_workflow.action_my_pending_approvals
 msgid "My Pending Approvals"
 msgstr "我待审批的"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "My Requests"
 msgstr "我提交的请求"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "My Submitted Requests — %(state)s"
 msgstr "我提交的请求 — %(state)s"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__name
 msgid "Name"
 msgstr "名称"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "New"
 msgstr "新建"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_date_deadline
 msgid "Next Activity Deadline"
 msgstr "下一活动截止日期"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_summary
 msgid "Next Activity Summary"
 msgstr "下一活动摘要"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_type_id
 msgid "Next Activity Type"
 msgstr "下一活动类型"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "No Deadline"
 msgstr "无截止日期"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "No Group"
 msgstr "不分组"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "No Requester"
 msgstr "无申请人"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "No Stage"
 msgstr "无阶段"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "No Workflow"
 msgstr "无工作流"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_mixin.py:0
 msgid "No active approval workflow is configured for model \"%s\"."
 msgstr "模型“%s”未配置生效的审批工作流。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.actions.act_window,help:dynamic_approval_workflow.action_approval_request
 msgid "No approval requests yet"
 msgstr "暂无审批请求"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "No records identified in context (active_model / active_ids)."
 msgstr "上下文中未识别到任何记录（active_model / active_ids）。"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "No requests match your current search/group."
 msgstr "没有符合当前搜索/分组的请求。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "No source document linked to this request."
 msgstr "该请求未关联源单据。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "Notes"
 msgstr "备注"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_needaction_counter
 msgid "Number of Actions"
 msgstr "操作数量"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_config__escalation_days
 msgid ""
-"Number of calendar days after which a still-pending approval request"
-"is considered overdue and the escalation user is notified."
+"Number of calendar days after which a still-pending approval request is "
+"considered overdue and the escalation user is notified."
 msgstr "审批请求在待审批状态持续达到该天数后，将被视为逾期并通知升级用户。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_has_error_counter
 msgid "Number of errors"
 msgstr "错误数量"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__message_needaction_counter
 msgid "Number of messages requiring action"
 msgstr "需要处理的消息数量"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "发送失败的消息数量"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_mixin.py:0
-msgid ""
-"Only records in \"Draft\" or \"Returned\" state can be submitted for"
-"approval."
+msgid "Only records in \"Draft\" or \"Returned\" state can be submitted for approval."
 msgstr "仅“草稿”或“已退回”状态的记录可以提交审批。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Open Document"
 msgstr "打开单据"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_config__domain
 msgid ""
-"Optional Odoo domain to restrict which records this workflow applies"
-"to.  Leave as '[]' (or empty) to match all records of the selected"
-"model.  Example: [('amount_total', '>=', 1000)]"
+"Optional Odoo domain to restrict which records this workflow applies to.  "
+"Leave as '[]' (or empty) to match all records of the selected model.  "
+"Example: [('amount_total', '>=', 1000)]"
 msgstr ""
-"用于限制本工作流适用记录的 Odoo 域条件。留空为 '[]'（或空）表示匹配所选模型的所有记录。示例：[('amount_total',"
-"'>=', 1000)]"
+"用于限制本工作流适用记录的 Odoo 域条件。留空为 '[]'（或空）表示匹配所选模型的所有记录。示例：[('amount_total', '>=', "
+"1000)]"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Overdue"
 msgstr "已逾期"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Pending"
 msgstr "待处理"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_mixin__approval_state__pending_approval
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_request__state__pending_approval
@@ -891,48 +943,58 @@ msgstr "待处理"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Pending Approval"
 msgstr "待审批"
+
 #. module: dynamic_approval_workflow
 #: model:ir.ui.menu,name:dynamic_approval_workflow.menu_my_pending_approvals
 msgid "Pending My Action"
 msgstr "待我处理"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Pending My Approval"
 msgstr "待我审批"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/wizard/approval_action_wizard.py:0
 msgid "Please provide a reason before confirming."
 msgstr "请在确认前填写原因。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "Provide a Reason"
 msgstr "填写原因"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_action_wizard_form
 msgid "Provide a clear reason…"
 msgstr "请填写明确的原因…"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__reason
 msgid "Reason"
 msgstr "原因"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request_line__reason
 msgid "Reason / Comment"
 msgstr "原因 / 备注"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__name
 msgid "Reference"
 msgstr "参考编号"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_action_wizard__action__rejected
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Reject"
 msgstr "拒绝"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
@@ -943,58 +1005,70 @@ msgstr "拒绝"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Rejected"
 msgstr "已拒绝"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_action_wizard__request_name
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Request"
 msgstr "请求"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "Request <b>rejected</b> by %(user)s.  Reason: %(reason)s"
 msgstr "请求已由 %(user)s <b>拒绝</b>。原因：%(reason)s"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "Request <b>returned</b> to requester by %(user)s.  Reason: %(reason)s"
 msgstr "请求已由 %(user)s <b>退回</b>给申请人。原因：%(reason)s"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_action_wizard_form
 msgid "Request Details"
 msgstr "请求详情"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__requester_id
 msgid "Requested By"
 msgstr "申请人"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Requester"
 msgstr "申请人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__request_count
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "Requests"
 msgstr "请求"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__require_all_group_members
 msgid "Require All Group Members"
 msgstr "要求所有组成员"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Reset"
 msgstr "重置"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__activity_user_id
 msgid "Responsible User"
 msgstr "负责人"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_action_wizard__action__returned
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_form
 msgid "Return to Requester"
 msgstr "退回申请人"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
@@ -1005,61 +1079,75 @@ msgstr "退回申请人"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Returned"
 msgstr "已退回"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Review"
 msgstr "查看"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.stage,name:dynamic_approval_workflow.approval_workflow_stage_template_group_1
 msgid "Review by Approval Managers"
 msgstr "审批经理审核"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "短信发送错误"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.stage,name:dynamic_approval_workflow.approval_workflow_stage_sale_order_default_1
 msgid "Sales Manager Approval"
 msgstr "销售经理审批"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model,name:dynamic_approval_workflow.model_sale_order
 msgid "Sales Order"
 msgstr "销售订单"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.config,name:dynamic_approval_workflow.approval_workflow_config_sale_order_default
 msgid "Sales Order Approval"
 msgstr "销售订单审批"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Search"
 msgstr "搜索"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Search Approval Requests"
 msgstr "搜索审批请求"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_search
 msgid "Search Configurations"
 msgstr "搜索配置"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "Select an Odoo model…"
 msgstr "选择 Odoo 模型…"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__sequence
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__sequence
 msgid "Sequence"
 msgstr "序号"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "Settings"
 msgstr "设置"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_workflow_stage__approver_type__user
 msgid "Specific User"
 msgstr "指定用户"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
@@ -1069,200 +1157,238 @@ msgstr "指定用户"
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Stage"
 msgstr "阶段"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_workflow_stage.py:0
 msgid "Stage \"%s\": a field name is required."
 msgstr "阶段“%s”：必须填写字段名称。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_workflow_stage.py:0
 msgid "Stage \"%s\": a specific approver user is required."
 msgstr "阶段“%s”：必须指定审批用户。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_workflow_stage.py:0
 msgid "Stage \"%s\": an approver group is required."
 msgstr "阶段“%s”：必须指定审批组。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid ""
-"Stage <b>%(prev)s</b> approved by %(user)s. Advanced to stage"
+"Stage <b>%(prev)s</b> approved by %(user)s. Advanced to stage "
 "<b>%(next)s</b>."
 msgstr "阶段 <b>%(prev)s</b> 已由 %(user)s 批准。进入阶段 <b>%(next)s</b>。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__name
 msgid "Stage Name"
 msgstr "阶段名称"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__stage_count
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_list
 msgid "Stages"
 msgstr "阶段"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__state
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Status"
 msgstr "状态"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__activity_state
 msgid ""
-"Status based on activities
-Overdue: Due date is already passed
-Today:"
-"Activity date is today
-Planned: Future activities."
-msgstr "基于活动的状态
-逾期：已过截止日期
-今天：活动日期为今天
-计划：未来的活动。"
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：已过截止日期\n"
+"今天：活动日期为今天\n"
+"计划：未来的活动。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.actions.act_window,help:dynamic_approval_workflow.action_approval_request
 msgid ""
-"Submit a document for approval from its form view.  All
-              "
-"requests created by approval workflows will appear here."
+"Submit a document for approval from its form view.  All\n"
+"                requests created by approval workflows will appear here."
 msgstr "在表单视图中提交单据进行审批。所有由审批工作流创建的请求都将显示在此处。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_order_form_dynamic_approval
 msgid "Submit for Approval"
 msgstr "提交审批"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/sale_order.py:0
 msgid "Submit the quotation for approval before confirming it. Order: \"%s\"."
 msgstr "请在确认前提交报价单进行审批。订单：“%s”。"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Submitted By"
 msgstr "提交人"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "Target"
 msgstr "目标"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_config__model_name
 msgid "Technical Model Name"
 msgstr "技术模型名称"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_stage__field_name
 msgid ""
-"Technical name of a Many2one(res.users) field on the source model. "
-"Example: user_id  |  responsible_id  |  reviewer_id"
+"Technical name of a Many2one(res.users) field on the source model.  Example:"
+" user_id  |  responsible_id  |  reviewer_id"
 msgstr ""
-"源模型上一个 Many2one(res.users) 类型字段的技术名称。示例：user_id  |  responsible_id  | "
+"源模型上一个 Many2one(res.users) 类型字段的技术名称。示例：user_id  |  responsible_id  |  "
 "reviewer_id"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.config,name:dynamic_approval_workflow.approval_workflow_config_template_dynamic_field
 msgid "Template: Dynamic Field Approver"
 msgstr "模板：动态字段审批人"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.config,name:dynamic_approval_workflow.approval_workflow_config_template_group
 msgid "Template: Group then Admin Approval"
 msgstr "模板：先组后管理员审批"
+
 #. module: dynamic_approval_workflow
 #: model:approval.workflow.config,name:dynamic_approval_workflow.approval_workflow_config_template_single_user
 msgid "Template: Single User Approval"
 msgstr "模板：单一用户审批"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_config__model_id
 msgid "The Odoo model this workflow applies to."
 msgstr "该工作流所适用的 Odoo 模型。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_mixin.py:0
 msgid "The approval workflow \"%s\" has no stages defined."
 msgstr "审批工作流“%s”未定义任何阶段。"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "This is all approval activity generated across your requests."
 msgstr "这是您所有请求产生的审批活动汇总。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/sale_order.py:0
 msgid ""
-"This quotation is still pending approval and cannot be confirmed yet."
-"Order: \"%s\"."
+"This quotation is still pending approval and cannot be confirmed yet. Order:"
+" \"%s\"."
 msgstr "该报价单仍在等待审批，暂无法确认。订单：“%s”。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/sale_order.py:0
 msgid ""
-"This quotation was rejected. Return it to draft/returned, edit, and"
-"resubmit for approval. Order: \"%s\"."
+"This quotation was rejected. Return it to draft/returned, edit, and resubmit"
+" for approval. Order: \"%s\"."
 msgstr "该报价单已被拒绝。请将其退回草稿/已退回状态，修改后重新提交审批。订单：“%s”。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid "This request is not in \"Pending Approval\" state."
 msgstr "该请求不处于“待审批”状态。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__is_current_approver
 msgid "True when the current user can approve/reject this request."
 msgstr "当当前用户可对该请求进行审批/拒绝时为 True。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr "记录中异常活动的类型。"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/wizard/approval_action_wizard.py:0
 msgid "Unknown action: %s"
 msgstr "未知操作：%s"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/js/my_approvals_dashboard.js:0
 msgid "Upcoming"
 msgstr "即将到期"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_stage__approver_id
 msgid "Used when Approver Type is 'Specific User'."
 msgstr "当“审批人类型”为“指定用户”时使用。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_stage__group_id
 msgid "Used when Approver Type is 'User Group'."
 msgstr "当“审批人类型”为“用户组”时使用。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields.selection,name:dynamic_approval_workflow.selection__approval_workflow_stage__approver_type__group
 msgid "User Group"
 msgstr "用户组"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_stage__escalation_user_id
 msgid ""
-"User who receives a chatter notification when the request exceeds the"
+"User who receives a chatter notification when the request exceeds the "
 "workflow's escalation deadline at this stage."
 msgstr "当请求在本阶段超过工作流升级期限时，接收聊天消息通知的用户。"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__current_approver_ids
 msgid "Users who can act on the current stage."
 msgstr "可对当前阶段进行处理的用户。"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "View All"
 msgstr "查看全部"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "View Requests"
 msgstr "查看请求"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_request__website_message_ids
 msgid "Website Messages"
 msgstr "网站消息"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_request__website_message_ids
 msgid "Website communication history"
 msgstr "网站沟通记录"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,help:dynamic_approval_workflow.field_approval_workflow_stage__require_all_group_members
 msgid ""
-"When enabled and Approver Type is 'User Group', every member of the"
-"group must approve before the stage is considered done. (Currently"
-"implemented as 'any member can approve' when False.)"
+"When enabled and Approver Type is 'User Group', every member of the group "
+"must approve before the stage is considered done. (Currently implemented as "
+"'any member can approve' when False.)"
 msgstr "启用后且“审批人类型”为“用户组”时，必须所有组成员都批准，该阶段才算完成。（当前在未启用时实现为“任一成员批准即可”。）"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
@@ -1271,44 +1397,52 @@ msgstr "启用后且“审批人类型”为“用户组”时，必须所有组
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_request_search
 msgid "Workflow"
 msgstr "工作流"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "Workflow / Stage"
 msgstr "工作流 / 阶段"
+
 #. module: dynamic_approval_workflow
 #: model:ir.model.fields,field_description:dynamic_approval_workflow.field_approval_workflow_stage__config_id
 msgid "Workflow Config"
 msgstr "工作流配置"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid ""
-"You are not authorised to approve or reject this request. Current"
-"approvers: %(approvers)s"
+"You are not authorised to approve or reject this request. Current approvers:"
+" %(approvers)s"
 msgstr "您无权审批或拒绝该请求。当前审批人：%(approvers)s"
+
 #. module: dynamic_approval_workflow
 #. odoo-javascript
 #: code:addons/dynamic_approval_workflow/static/src/xml/my_approvals_dashboard.xml:0
 msgid "You have no pending approvals right now."
 msgstr "您当前没有待审批的事项。"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "[] (matches all records)"
 msgstr "[]（匹配所有记录）"
+
 #. module: dynamic_approval_workflow
 #: model_terms:ir.ui.view,arch_db:dynamic_approval_workflow.view_approval_workflow_config_form
 msgid "e.g. Purchase Order — High Value"
 msgstr "例如：采购单 — 高价值"
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_mixin.py:0
 msgid "res_model"
 msgstr ""
+
 #. module: dynamic_approval_workflow
 #. odoo-python
 #: code:addons/dynamic_approval_workflow/models/approval_request.py:0
 msgid ""
-"⚠️ This approval request has exceeded its deadline (%(deadline)s) and"
+"⚠️ This approval request has exceeded its deadline (%(deadline)s) and "
 "requires urgent attention."
 msgstr "⚠️ 该审批请求已超过截止日期（%(deadline)s），需要紧急处理。"
