@@ -13,15 +13,15 @@
     </record>
 
     <!-- FIXED: correct parent menu id -->
-    <menuitem
-            id="menu_inom_list_view_manager_root"
-            name="List View Manager"
-            parent="base.menu_administration"
-            sequence="100"/>
+<!--    <menuitem-->
+<!--            id="menu_inom_list_view_manager_root"-->
+<!--            name="List View Manager"-->
+<!--            parent="base.menu_administration"-->
+<!--            sequence="100"/>-->
 
-    <menuitem id="menu_inom_list_view_manager_configs"
-              name="Column Configs"
-              parent="menu_inom_list_view_manager_root"
-              action="action_inom_list_view_manager"
-              sequence="10"/>
+<!--    <menuitem id="menu_inom_list_view_manager_configs"-->
+<!--              name="Column Configs"-->
+<!--              parent="menu_inom_list_view_manager_root"-->
+<!--              action="action_inom_list_view_manager"-->
+<!--              sequence="10"/>-->
 </odoo>

@@ -4,10 +4,8 @@ _build/
 # dotfiles
 .*
 !.gitignore
-!.gitkeep
 !.github
 !.mailmap
-!.weblate.json
 # compiled python files
 *.py[co]
 __pycache__/
@@ -22,7 +20,7 @@ status
 odoo/filestore
 # maintenance migration scripts
 odoo/addons/base/maintenance
-# windows installation config file
+# window installation config file
 /odoo.conf
 
 # generated for windows installer?
@@ -51,3 +49,31 @@ package.json
 /man/
 /share/
 /src/
+# ydit
+/venv/
+/ent_useless/
+/community_useless/
+/NVTL_Upgrade_19E/
+/data/
+/Empower/
+/empower_addons/
+/laser_mes_addons/
+/MKL_ent/
+# Python
+*.pyc
+*.pyo
+
+# Odoo
+*.log
+*.pid
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Odoo filestore
+filestore/
